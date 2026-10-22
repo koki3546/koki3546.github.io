@@ -1,185 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="KOKI is a pirate elephant-inspired meme token on Base.">
-  <title>KOKI | The Pirate Elephant</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #101015;
-      color: #f5e9cf;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      line-height: 1.6;
-    }
-    header { padding: 65px 20px 45px; }
-    .emblem { font-size: 70px; }
-    h1 { font-size: 68px; color: #e8b957; margin: 5px 0; }
-    h2 { color: #e8b957; }
-    .tagline { font-size: 21px; }
-   .koki-logo {
-    width: 180px;
-    height: auto;
-    border-radius: 20px;
-    display: block;
-    margin: 0 auto 20px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="KOKI — The Pirate Elephant. A character-driven meme token on Base, inspired by courage, friendship and adventure.">
+<title>KOKI | The Pirate Elephant</title>
+<style>
+:root {
+  --bg: #0c0d12;
+  --panel: #171920;
+  --gold: #e8b957;
+  --muted: #b4b5bd;
 }
-    .koki-nav {
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #f5f3ee;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+a { text-decoration: none; }
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
-  padding: 22px 15px;
-  background: #19191f;
-  border-bottom: 1px solid #e8b957;
+  gap: 28px;
+  padding: 20px;
+  background: rgba(17,18,24,.96);
+  border-bottom: 1px solid #574322;
 }
-
-.koki-nav a {
-  color: #e8b957;
-  text-decoration: none;
+nav a {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 14px;
+  transition: color .2s;
+}
+nav a:hover { color: white; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 75px 20px 100px;
+  background:
+    radial-gradient(ellipse at 50% 42%,
+      #443015 0%, #1b1714 35%, #0c0d12 75%);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent, var(--gold), transparent);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+}
+.logo {
+  display: block;
+  width: min(300px, 70vw);
+  height: auto;
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 0 35px rgba(232,185,87,.20));
+}
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
   font-weight: bold;
 }
-
-.koki-nav a:hover {
-  color: white;
+h1 {
+  font-size: clamp(64px, 12vw, 110px);
+  letter-spacing: 9px;
+  line-height: 1.1;
+  margin: 12px 0;
+  color: var(--gold);
 }
-    .button {
-      display: inline-block;
-      background: #e8b957;
-      color: #161616;
-      padding: 13px 25px;
-      margin: 10px;
-      border-radius: 9px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      max-width: 850px;
-      margin: 25px auto;
-      padding: 30px 24px;
-      background: #1c1c24;
-      border: 1px solid #6b542c;
-      border-radius: 16px;
-    }
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-    .stat {
-      flex: 1 1 180px;
-      padding: 15px;
-      background: #292833;
-      border-radius: 10px;
-    }
-    .stat strong { color: #e8b957; }
-    .address {
-      overflow-wrap: anywhere;
-      font-size: 14px;
-    }
-    footer { padding: 35px 15px; color: #aaa; }
-  </style>
+.hero h2 {
+  font-size: clamp(23px, 4vw, 39px);
+  margin: 18px 0 10px;
+}
+.hero p {
+  color: var(--muted);
+  font-size: 17px;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 7px;
+  font-weight: bold;
+  transition: transform .2s, background .2s;
+}
+.btn:hover { transform: translateY(-3px); }
+.btn-primary {
+  background: var(--gold);
+  color: #121212;
+}
+.btn-secondary {
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 85px 24px;
+}
+.section-title {
+  color: var(--gold);
+  font-size: clamp(28px, 5vw, 39px);
+  text-align: center;
+  margin: 0 0 14px;
+}
+.section-intro {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  color: var(--muted);
+  text-align: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid #3d3527;
+  border-radius: 15px;
+  padding: 35px 28px;
+  transition: transform .2s, border-color .2s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+.card .symbol { font-size: 35px; }
+.card h3 {
+  color: var(--gold);
+  font-size: 22px;
+}
+.card p {
+  color: var(--muted);
+  min-height: 95px;
+}
+.card a {
+  color: var(--gold);
+  font-weight: bold;
+}
+.banner {
+  text-align: center;
+  padding: 75px 24px;
+  background: #17171c;
+  border-top: 1px solid #40321e;
+  border-bottom: 1px solid #40321e;
+}
+.banner h2 {
+  color: var(--gold);
+  font-size: 32px;
+}
+.banner p { color: var(--muted); }
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: #93939c;
+  font-size: 13px;
+}
+footer a { color: var(--gold); }
+@media (max-width: 750px) {
+  nav { gap: 13px; padding: 16px 10px; }
+  nav a { font-size: 12px; }
+  .hero { min-height: 590px; padding: 65px 20px; }
+  .cards { grid-template-columns: 1fr; }
+  .card p { min-height: 0; }
+  .container { padding: 65px 20px; }
+  h1 { letter-spacing: 4px; }
+}
+</style>
 </head>
+
 <body>
- <nav class="koki-nav">
+
+<nav>
   <a href="index.html">Home</a>
   <a href="story.html">Story</a>
   <a href="tokenomics.html">Tokenomics</a>
   <a href="roadmap.html">Roadmap</a>
   <a href="community.html">Community</a>
 </nav>
-  <header>
-    <div class="emblem"><img src="코키이미지1.png" alt="KOKI Pirate Elephant" class="koki-logo"></div>
+
+<header class="hero">
+  <div class="hero-content">
+    <img src="koki-logo.png"
+         alt="KOKI Pirate Elephant Logo"
+         class="logo">
+
+    <div class="eyebrow">Born on Base · Built for Adventure</div>
+
     <h1>KOKI</h1>
-    <p class="tagline">The Pirate Elephant Has Arrived!</p>
-    <p>A little elephant. A big adventure.</p>
-    <a class="button" href="https://x.com/koki3546"
-       target="_blank" rel="noopener noreferrer">Follow KOKI on X</a>
-  </header>
+    <h2>The Pirate Elephant Has Arrived.</h2>
 
-  <main>
-    <section id="home">
-      <h2>Meet KOKI</h2>
-      <p>
-        KOKI is a young pirate elephant with a spirit of adventure.
-        Inspired by KOKI's stories, this community-driven meme token
-        brings together creativity, storytelling and the Base blockchain.
-      </p>
-    </section>
+    <p>
+      A Little Elephant. A Big Adventure.<br>
+      One extraordinary journey beyond the horizon.
+    </p>
 
-    <section id="token">
-      <h2>KOKI Token</h2>
-      <div class="stats">
-        <div class="stat"><strong>Network</strong><p>Base</p></div>
-        <div class="stat"><strong>Symbol</strong><p>KOKI</p></div>
-        <div class="stat"><strong>Total Supply</strong><p>1,000,000,000,000</p></div>
-      </div>
-      <h3>Official Contract</h3>
-      <p class="address">0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6</p>
-      <a class="button"
-         href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
-         target="_blank" rel="noopener noreferrer">View on BaseScan</a>
-    </section>
+    <div class="actions">
+      <a class="btn btn-primary" href="story.html">
+        Explore the Adventure →
+      </a>
+      <a class="btn btn-secondary" href="community.html">
+        Join the Community
+      </a>
+    </div>
+  </div>
+</header>
 
-    <section id="community">
-      <h2>Join the Adventure</h2>
-      <p>Follow KOKI's journey and discover new stories.</p>
-      <a class="button" href="https://x.com/koki3546"
-         target="_blank" rel="noopener noreferrer">@koki3546</a>
-    </section>
-  </main>
+<main>
+  <section class="container">
+    <h2 class="section-title">Discover the KOKI Universe</h2>
+    <p class="section-intro">
+      Meet a fearless little pirate elephant whose journey
+      brings together storytelling, creativity,
+      and a community-driven token on Base.
+    </p>
 
-  <footer>
-    <p>© 2026 KOKI. The adventure begins.</p>
-    <p>KOKI is a meme token. Cryptocurrency involves risk.</p>
-  </footer>
-<section id="story">
-  <h2>🏴‍☠️ KOKI's Adventure</h2>
+    <div class="cards">
+
+      <article class="card">
+        <div class="symbol">🏴‍☠️</div>
+        <h3>The Adventure</h3>
+        <p>
+          Follow KOKI across mysterious oceans,
+          dangerous islands, and unforgettable encounters.
+        </p>
+        <a href="story.html">Discover the Story →</a>
+      </article>
+
+      <article class="card">
+        <div class="symbol">🪙</div>
+        <h3>KOKI Token</h3>
+        <p>
+          Explore the KOKI token on the Base blockchain,
+          including its fixed supply and contract details.
+        </p>
+        <a href="tokenomics.html">View Tokenomics →</a>
+      </article>
+
+      <article class="card">
+        <div class="symbol">🧭</div>
+        <h3>The Road Ahead</h3>
+        <p>
+          Discover the creative vision for KOKI,
+          from original stories to new adventures.
+        </p>
+        <a href="roadmap.html">Explore the Roadmap →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="banner">
+    <h2>Every Legend Begins Somewhere.</h2>
+    <p>
+      The ocean is vast. The journey has just begun.
+    </p>
+    <a class="btn btn-primary" href="story.html">
+      Begin the Journey →
+    </a>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 KOKI — The Pirate Elephant</p>
   <p>
-    KOKI is a young pirate elephant who dreams of
-    exploring the world beyond the horizon.
+    Built on Base ·
+    <a href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+       target="_blank" rel="noopener noreferrer">
+      View Official Contract
+    </a>
   </p>
-  <p>
-    One day, KOKI leaves his familiar home and
-    begins an extraordinary adventure.
-  </p>
-  <p>
-    Through storms, mysterious islands, and unexpected
-    friendships, KOKI discovers the true meaning
-    of courage, freedom, and friendship.
-  </p>
-  <h3>A Little Elephant. A Big Adventure.</h3>
-</section>
-<section id="roadmap">
-  <h2>🗺️ KOKI Roadmap</h2>
+</footer>
 
-  <h3>Phase 1 — The Beginning</h3>
-  <p>
-    KOKI character creation, token deployment,
-    official website, and community launch.
-  </p>
-
-  <h3>Phase 2 — The Adventure</h3>
-  <p>
-    Expand KOKI's stories, grow the community,
-    and develop original character content.
-  </p>
-
-  <h3>Phase 3 — Beyond the Horizon</h3>
-  <p>
-    Explore merchandise, digital collectibles,
-    and new creative collaborations.
-  </p>
-</section>
 </body>
 </html>
-
-
-
-지금은 임시로 🐘🏴‍☠️ 이모지를 사용했어. 나중에 우리가 정한 KOKI 해적 코끼리 로고로 교체할 거야.
-
-코드를 붙여넣었으면 아직 Commit changes는 누르지 말고, 화면을 캡처해서 보여줘. 그다음 저장하고 홈페이지를 공개하자! 🚀
