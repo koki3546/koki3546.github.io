@@ -203,6 +203,18 @@ footer {
 .chapter {
   box-shadow: 0 14px 35px rgba(0,0,0,.25);
 }
+  .chapter-cover {
+  height: 230px;
+  overflow: hidden;
+}
+
+.chapter-cover .chapter-art {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  display: block;
+}
 </style>
 </head>
 
@@ -236,9 +248,11 @@ footer {
   <div class="chapter-grid">
 
     <article class="chapter">
-      <div class="chapter-cover">
-        <img src="koki-logo.png" alt="KOKI">
-      </div>
+    <div class="chapter-cover">
+  <img src="chapter1-cover.png"
+       alt="KOKI sails into the unknown sea"
+       class="chapter-art">
+</div>
 
       <div class="chapter-body">
         <div class="chapter-number">CHAPTER 01</div>
