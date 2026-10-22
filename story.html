@@ -3,74 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore the adventures of KOKI, the pirate elephant.">
 <title>KOKI | The Adventure</title>
 
 <style>
-* {
-  box-sizing: border-box;
+:root {
+  --bg: #0c0d12;
+  --panel: #171920;
+  --gold: #e8b957;
+  --muted: #b4b5bd;
 }
+
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  background: #101015;
-  color: #f5f5f5;
+  background: var(--bg);
+  color: #f5f3ee;
   font-family: Arial, sans-serif;
   line-height: 1.8;
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px;
-  padding: 22px 15px;
-  background: #19191f;
-  border-bottom: 1px solid #e8b957;
+  gap: 28px;
+  padding: 20px;
+  background: #111218;
+  border-bottom: 1px solid #574322;
 }
 
 nav a {
-  color: #e8b957;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav a:hover { color: white; }
+
+.hero {
+  padding: 90px 20px 75px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top,
+      #392915 0%, #0c0d12 70%);
+}
+
+.logo {
+  width: 170px;
+  max-width: 60vw;
+  filter: drop-shadow(0 0 25px #6b4a2344);
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 64px);
+  color: var(--gold);
+  margin: 20px 0 10px;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+.section-title {
+  color: var(--gold);
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.chapter {
+  background: var(--panel);
+  border: 1px solid #443720;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform .2s, border-color .2s;
+}
+
+.chapter:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.chapter-cover {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle, #49351c, #14151a 75%);
+  border-bottom: 1px solid #443720;
+}
+
+.chapter-cover img {
+  width: 125px;
+  height: auto;
+}
+
+.chapter-body { padding: 25px; }
+
+.chapter-number {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.chapter h3 {
+  font-size: 22px;
+  margin: 12px 0;
+}
+
+.chapter p {
+  color: var(--muted);
+  font-size: 14px;
+  min-height: 80px;
+}
+
+.chapter a {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--gold);
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
-  color: white;
-}
-
-.container {
-  max-width: 850px;
-  margin: 60px auto;
-  padding: 25px;
-  text-align: center;
-}
-
-h1, h2 {
-  color: #e8b957;
-}
-
-h1 {
-  font-size: 42px;
-}
-
-.logo {
-  width: 180px;
-  max-width: 100%;
-  border-radius: 20px;
-}
-
-.story {
-  margin-top: 40px;
-  padding: 30px;
-  background: #19191f;
-  border-radius: 15px;
-  text-align: left;
-}
+.coming-soon { opacity: .6; }
 
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 35px;
   color: #999;
+  border-top: 1px solid #292b31;
+}
+
+@media (max-width: 800px) {
+  .chapter-grid { grid-template-columns: 1fr; }
+  nav { gap: 13px; }
+  nav a { font-size: 12px; }
+  .container { padding: 45px 20px; }
+  .chapter p { min-height: 0; }
 }
 </style>
 </head>
@@ -85,53 +173,88 @@ footer {
   <a href="community.html">Community</a>
 </nav>
 
-<div class="container">
-
-  <img src="코키이미지1.png"
+<header class="hero">
+  <img src="koki-logo.png"
        alt="KOKI Pirate Elephant"
        class="logo">
 
   <h1>KOKI's Adventure</h1>
 
-  <p>A Little Elephant. A Big Adventure.</p>
+  <p>
+    Beyond the horizon, a new legend begins.<br>
+    Follow the extraordinary journey of KOKI.
+  </p>
+</header>
 
-  <div class="story">
+<main class="container">
 
-    <h2>Chapter 1 — Beyond the Horizon</h2>
+  <h2 class="section-title">The Adventure Chronicles</h2>
 
-    <p>
-      KOKI was no ordinary elephant.
-      While others dreamed of peaceful days,
-      he dreamed of oceans, distant islands,
-      and adventures beyond the horizon.
-    </p>
+  <div class="chapter-grid">
 
-    <p>
-      One day, carrying nothing but courage
-      and an impossible dream,
-      KOKI decided to leave his familiar world.
-    </p>
+    <article class="chapter">
+      <div class="chapter-cover">
+        <img src="koki-logo.png" alt="KOKI">
+      </div>
 
-    <p>
-      He did not know what awaited him.
-      Storms, mysterious lands, unexpected friends,
-      and dangerous enemies would soon
-      change his destiny forever.
-    </p>
+      <div class="chapter-body">
+        <div class="chapter-number">CHAPTER 01</div>
+        <h3>Beyond the Horizon</h3>
 
-    <p>
-      But every great adventure begins
-      with a single brave step.
-    </p>
+        <p>
+          One little elephant dares to leave
+          everything behind and sail toward
+          an unknown world.
+        </p>
 
-    <h2>To Be Continued...</h2>
+        <a href="chapter1.html">
+          Read Chapter →
+        </a>
+      </div>
+    </article>
+
+    <article class="chapter coming-soon">
+      <div class="chapter-cover">
+        <span style="font-size:60px">🌊</span>
+      </div>
+
+      <div class="chapter-body">
+        <div class="chapter-number">CHAPTER 02</div>
+        <h3>The Unknown Sea</h3>
+
+        <p>
+          A mysterious ocean awaits.
+          What secrets lie beneath the waves?
+        </p>
+
+        <span style="color:#aaa">Coming Soon</span>
+      </div>
+    </article>
+
+    <article class="chapter coming-soon">
+      <div class="chapter-cover">
+        <span style="font-size:60px">🏝️</span>
+      </div>
+
+      <div class="chapter-body">
+        <div class="chapter-number">CHAPTER 03</div>
+        <h3>The Forgotten Island</h3>
+
+        <p>
+          An island lost in time.
+          A discovery that could change everything.
+        </p>
+
+        <span style="color:#aaa">Coming Soon</span>
+      </div>
+    </article>
 
   </div>
 
-</div>
+</main>
 
 <footer>
-  © KOKI — The Pirate Elephant
+  © 2026 KOKI — The Pirate Elephant
 </footer>
 
 </body>
