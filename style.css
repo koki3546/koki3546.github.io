@@ -1,0 +1,156 @@
+/* KOKI Official Website — Shared Design */
+
+:root {
+  --bg: #0c0d12;
+  --panel: #171920;
+  --gold: #e8b957;
+  --muted: #b4b5bd;
+  --border: #443720;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #f5f3ee;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 20px;
+  background: rgba(17,18,24,.97);
+  border-bottom: 1px solid #574322;
+  backdrop-filter: blur(12px);
+}
+
+nav a {
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color .2s;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: #fff;
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+h1, h2 {
+  color: var(--gold);
+}
+
+a {
+  color: var(--gold);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+.card, .phase {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.card {
+  transition: transform .2s, border-color .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+.btn, .button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 7px;
+  background: var(--gold);
+  color: #101015;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform .2s;
+}
+
+.btn:hover, .button:hover {
+  transform: translateY(-3px);
+}
+
+.page-hero {
+  text-align: center;
+  padding: 85px 24px 65px;
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    #392915 0%,
+    #0c0d12 75%
+  );
+}
+
+.page-hero h1 {
+  font-size: clamp(36px, 6vw, 60px);
+}
+
+.page-hero p {
+  color: var(--muted);
+}
+
+.page-logo {
+  display: block;
+  width: 170px;
+  max-width: 60vw;
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 25px rgba(232,185,87,.2));
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: #999;
+  font-size: 13px;
+  border-top: 1px solid #292b31;
+}
+
+@media (max-width: 750px) {
+  nav {
+    gap: 13px;
+    padding: 16px 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 45px 20px;
+  }
+
+  .card, .phase {
+    padding: 22px;
+  }
+}
