@@ -1,33 +1,241 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <style>
-.container {
-  max-width: 900px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Explore KOKI tokenomics on Base, including token supply, contract details, distribution information, and trading status.">
+
+<title>KOKI | Tokenomics</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+:root {
+  --gold: #e8b957;
+  --muted: #b4b5bd;
+  --panel: #171920;
+}
+
+* { box-sizing: border-box; }
+
+.token-hero {
   text-align: center;
+  padding: 75px 20px 65px;
+  background: radial-gradient(
+    ellipse at top,
+    #3d2d1b 0%,
+    #17171d 48%,
+    #0c0d12 90%
+  );
 }
 
-.logo {
+.token-logo {
+  display: block;
   width: 160px;
-  max-width: 60vw;
+  max-width: 55vw;
+  height: auto;
+  margin: 0 auto 20px;
 }
 
-.value {
+.token-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.token-hero h1 {
+  color: var(--gold);
+  font-size: clamp(38px, 7vw, 60px);
+  margin: 15px 0;
+}
+
+.token-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.token-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 65px 24px;
+}
+
+.token-section-title {
+  color: var(--gold);
+  text-align: center;
+  font-size: 31px;
+  margin: 0 0 15px;
+}
+
+.token-section-intro {
+  max-width: 720px;
+  margin: 0 auto 35px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.token-card {
+  padding: 30px 22px;
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid #514027;
+  border-radius: 13px;
+}
+
+.token-card h3 {
+  margin: 0 0 12px;
+  color: #e7e7ec;
+  font-size: 15px;
+}
+
+.token-value {
   color: var(--gold);
   font-size: 23px;
   font-weight: bold;
-}
-
-.contract {
   overflow-wrap: anywhere;
-  font-size: 14px;
 }
-</style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KOKI | Tokenomics</title>
 
+.token-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.feature-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 13px;
+}
+
+.feature {
+  padding: 17px 22px;
+  background: var(--panel);
+  border: 1px solid #403522;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.feature-icon {
+  color: var(--gold);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.contract-box {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px 25px;
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid #70532a;
+  border-radius: 13px;
+}
+
+.contract-address {
+  margin: 20px 0;
+  color: #f5f3ee;
+  font-family: monospace;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.token-button {
+  display: inline-block;
+  padding: 13px 23px;
+  margin: 5px;
+  border-radius: 7px;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: #111;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.token-button.secondary {
+  background: transparent;
+  color: var(--gold);
+}
+
+.token-button:hover {
+  opacity: .85;
+}
+
+.copy-status {
+  color: #c4e7c7;
+  font-size: 13px;
+  min-height: 20px;
+  margin-top: 12px;
+}
+
+.info-box {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px;
+  background: var(--panel);
+  border: 1px solid #514027;
+  border-radius: 13px;
+}
+
+.info-box h3 {
+  color: var(--gold);
+  margin-top: 0;
+}
+
+.info-box p {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.info-box a {
+  color: var(--gold);
+}
+
+.risk-note {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 25px;
+  border: 1px solid #514027;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+@media(max-width:750px) {
+  .token-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .token-container {
+    padding: 50px 20px;
+  }
+
+  .token-hero {
+    padding: 55px 20px;
+  }
+
+  .contract-address {
+    font-size: 12px;
+  }
+}
 </style>
 </head>
 
@@ -35,75 +243,278 @@
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="story.html">Story</a>
   <a href="tokenomics.html">Tokenomics</a>
+  <a href="story.html">Story</a>
   <a href="roadmap.html">Roadmap</a>
   <a href="community.html">Community</a>
 </nav>
-<header class="page-hero">
+
+<header class="token-hero">
+
   <img src="koki-logo.png"
        alt="KOKI Pirate Elephant"
-       class="page-logo">
+       class="token-logo">
 
-  <h1>Join the KOKI Takenomics</h1>
+  <div class="token-label">
+    THE KOKI TOKEN · BASE MAINNET
+  </div>
+
+  <h1>KOKI Tokenomics</h1>
 
   <p>
-    One little elephant. One extraordinary adventure.
-    A world of possibilities.
+    Discover the fundamentals of $KOKI,
+    a story-driven meme token built around
+    the adventures of the Pirate Elephant.
   </p>
+
 </header>
-<div class="container">
 
+<main>
 
+<section class="token-container">
 
-  <div class="card">
-    <h2>Token Name</h2>
-    <div class="value">KOKI</div>
+  <h2 class="token-section-title">
+    Token Overview
+  </h2>
+
+  <p class="token-section-intro">
+    The essential information about KOKI
+    on the Base blockchain.
+  </p>
+
+  <div class="token-grid">
+
+    <div class="token-card">
+      <h3>Token Name</h3>
+      <div class="token-value">KOKI</div>
+    </div>
+
+    <div class="token-card">
+      <h3>Token Symbol</h3>
+      <div class="token-value">$KOKI</div>
+    </div>
+
+    <div class="token-card">
+      <h3>Blockchain</h3>
+      <div class="token-value">Base</div>
+    </div>
+
+    <div class="token-card">
+      <h3>Total Supply</h3>
+      <div class="token-value">
+        1,000,000,000,000
+      </div>
+      <div class="token-note">1 Trillion KOKI</div>
+    </div>
+
+    <div class="token-card">
+      <h3>Token Standard</h3>
+      <div class="token-value">ERC-20</div>
+    </div>
+
+    <div class="token-card">
+      <h3>Network</h3>
+      <div class="token-value">Base Mainnet</div>
+    </div>
+
   </div>
 
-  <div class="card">
-    <h2>Token Symbol</h2>
-    <div class="value">$KOKI</div>
+</section>
+
+<section class="token-container">
+
+  <h2 class="token-section-title">
+    Token Features
+  </h2>
+
+  <p class="token-section-intro">
+    Core token properties as described
+    in the KOKI project information.
+  </p>
+
+  <div class="feature-list">
+
+    <div class="feature">
+      <span class="feature-icon">✓</span>
+      Fixed Initial Supply
+    </div>
+
+    <div class="feature">
+      <span class="feature-icon">✓</span>
+      No Additional Minting Function
+    </div>
+
+    <div class="feature">
+      <span class="feature-icon">✓</span>
+      No Transfer Tax
+    </div>
+
+    <div class="feature">
+      <span class="feature-icon">✓</span>
+      No Blacklist Function
+    </div>
+
   </div>
 
-  <div class="card">
-    <h2>Blockchain</h2>
-    <div class="value">Base</div>
-  </div>
+</section>
 
-  <div class="card">
-    <h2>Total Supply</h2>
-    <div class="value">1,000,000,000,000 KOKI</div>
-  </div>
+<section class="token-container">
 
-  <div class="card">
-    <h2>Token Features</h2>
-    <p>
-      Fixed initial supply<br>
-      No additional minting function<br>
-      No transfer tax<br>
-      No blacklist
-    </p>
-  </div>
+  <h2 class="token-section-title">
+    Official Contract
+  </h2>
 
-  <div class="card">
-    <h2>Official Contract Address</h2>
+  <p class="token-section-intro">
+    Always verify the token contract
+    before interacting with $KOKI.
+  </p>
 
-    <p class="contract">
+  <div class="contract-box">
+
+    <h3>BASE MAINNET CONTRACT ADDRESS</h3>
+
+    <div class="contract-address" id="contractAddress">
       0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6
-    </p>
+    </div>
 
-    <a href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
-       target="_blank" rel="noopener noreferrer">
-      View on BaseScan
+    <button class="token-button"
+            type="button"
+            onclick="copyContract()">
+      Copy Contract Address
+    </button>
+
+    <a class="token-button secondary"
+       href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+       target="_blank"
+       rel="noopener noreferrer">
+      View on BaseScan ↗
     </a>
+
+    <div class="copy-status"
+         id="copyStatus"
+         role="status"
+         aria-live="polite"></div>
+
   </div>
 
-</div>
+</section>
+
+<section class="token-container">
+
+  <h2 class="token-section-title">
+    Token Distribution
+  </h2>
+
+  <div class="info-box">
+
+    <h3>Current Distribution Status</h3>
+
+    <p>
+      KOKI is in its early development stage.
+      The token supply is currently held
+      by the project creator.
+    </p>
+
+    <p>
+      A public token allocation and distribution
+      plan has not yet been finalized.
+      Updates will be published here
+      as the project develops.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="token-container">
+
+  <h2 class="token-section-title">
+    Liquidity & Trading
+  </h2>
+
+  <div class="info-box">
+
+    <h3>Trading Status: Not Yet Confirmed</h3>
+
+    <p>
+      The availability of a public liquidity pool
+      and decentralized exchange trading
+      has not yet been confirmed.
+    </p>
+
+    <p>
+      Please verify current on-chain information
+      before attempting any transaction.
+    </p>
+
+    <p>
+      Official updates will be provided
+      through the KOKI website
+      and community channels.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="token-container">
+
+  <h2 class="token-section-title">
+    Important Information
+  </h2>
+
+  <div class="risk-note">
+    KOKI is a meme token and creative project.
+    Cryptocurrency markets are highly volatile
+    and may involve the loss of all invested funds.
+    This website does not provide financial advice
+    or guarantee any financial return.
+    Always verify the official contract address
+    and conduct independent research.
+  </div>
+
+</section>
+
+</main>
 
 <footer>
-  © KOKI — The Pirate Elephant
+
+  <p>© 2026 KOKI — The Pirate Elephant</p>
+
+  <p>
+    <a href="index.html">Home</a>
+    ·
+    <a href="community.html">Community</a>
+    ·
+    <a href="mailto:aadhzz@hanmail.net">Contact</a>
+  </p>
+
 </footer>
+
+<script>
+const KOKI_CONTRACT =
+  "0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6";
+
+async function copyContract() {
+  const status = document.getElementById("copyStatus");
+
+  try {
+    await navigator.clipboard.writeText(KOKI_CONTRACT);
+    status.textContent = "✓ Contract address copied!";
+  } catch (error) {
+    const address = document.getElementById("contractAddress");
+    const range = document.createRange();
+    const selection = window.getSelection();
+
+    range.selectNodeContents(address);
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    status.textContent =
+      "Address selected. Press Ctrl+C to copy.";
+  }
+}
+</script>
 
 </body>
 </html>
