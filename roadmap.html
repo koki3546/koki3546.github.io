@@ -1,35 +1,248 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KOKI | Roadmap</title>
+
+<meta name="description"
+content="Explore the KOKI roadmap: token development on Base, the KOKI Chronicles, community growth, and future creative plans.">
+
+<title>KOKI | Project Roadmap</title>
 
 <link rel="stylesheet" href="style.css">
-  <style>
-.container {
-  max-width: 900px;
-  text-align: center;
+
+<style>
+:root {
+  --gold: #e8b957;
+  --muted: #b4b5bd;
+  --panel: #171920;
 }
 
-.logo {
-  width: 160px;
-  max-width: 60vw;
+* {
+  box-sizing: border-box;
+}
+
+.roadmap-hero {
+  text-align: center;
+  padding: 75px 20px 65px;
+  background: radial-gradient(
+    ellipse at top,
+    #3d2d1b 0%,
+    #17171d 48%,
+    #0c0d12 90%
+  );
+}
+
+.roadmap-logo {
+  display: block;
+  width: 165px;
+  max-width: 55vw;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.roadmap-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.roadmap-hero h1 {
+  color: var(--gold);
+  font-size: clamp(38px, 7vw, 60px);
+  margin: 15px 0;
+}
+
+.roadmap-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.roadmap-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+.roadmap-title {
+  color: var(--gold);
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 15px;
+}
+
+.roadmap-intro {
+  max-width: 720px;
+  margin: 0 auto 45px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.timeline {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  padding-left: 38px;
+  border-left: 2px solid #70532a;
 }
 
 .phase {
-  text-align: left;
-  border-left: 4px solid var(--gold);
+  position: relative;
+  margin-bottom: 30px;
+  padding: 32px;
+  background: var(--panel);
+  border: 1px solid #514027;
+  border-radius: 13px;
+}
+
+.phase::before {
+  content: "";
+  position: absolute;
+  left: -47px;
+  top: 38px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid #0c0d12;
+}
+
+.phase-number {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.phase h2 {
+  color: #f5f3ee;
+  font-size: 25px;
+  margin: 10px 0 15px;
 }
 
 .phase p {
-  color: #ddd;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-.note {
-  color: #aaa;
+.phase ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.phase li {
+  color: #d7d7dd;
+  padding: 9px 0;
+  border-bottom: 1px solid #343038;
+  line-height: 1.7;
+}
+
+.phase li:last-child {
+  border-bottom: none;
+}
+
+.phase li::before {
+  content: "✦";
+  color: var(--gold);
+  margin-right: 12px;
+}
+
+.status {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.status-complete {
+  background: #173b2a;
+  color: #a5e4bd;
+  border: 1px solid #32674b;
+}
+
+.status-progress {
+  background: #44331c;
+  color: #f3cb7c;
+  border: 1px solid #80602e;
+}
+
+.status-planned {
+  background: #252934;
+  color: #c5cad6;
+  border: 1px solid #50596a;
+}
+
+.roadmap-note {
+  max-width: 850px;
+  margin: 45px auto 0;
+  padding: 25px;
+  background: var(--panel);
+  border: 1px solid #514027;
+  border-radius: 10px;
+  color: var(--muted);
   font-size: 13px;
-  margin-top: 35px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.roadmap-links {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.roadmap-button {
+  display: inline-block;
+  padding: 13px 23px;
+  margin: 7px;
+  background: var(--gold);
+  color: #111;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.roadmap-button.secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.roadmap-button:hover {
+  opacity: .85;
+}
+
+@media(max-width:750px) {
+  .roadmap-container {
+    padding: 55px 20px;
+  }
+
+  .roadmap-hero {
+    padding: 55px 20px;
+  }
+
+  .timeline {
+    padding-left: 23px;
+  }
+
+  .phase {
+    padding: 25px 20px;
+  }
+
+  .phase::before {
+    left: -32px;
+  }
+
+  .phase h2 {
+    font-size: 21px;
+  }
 }
 </style>
 </head>
@@ -38,76 +251,211 @@
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="story.html">Story</a>
   <a href="tokenomics.html">Tokenomics</a>
+  <a href="story.html">Story</a>
   <a href="roadmap.html">Roadmap</a>
   <a href="community.html">Community</a>
 </nav>
-<header class="page-hero">
+
+<header class="roadmap-hero">
+
   <img src="koki-logo.png"
        alt="KOKI Pirate Elephant"
-       class="page-logo">
+       class="roadmap-logo">
 
-  <h1>Join the KOKI Roadmap</h1>
+  <div class="roadmap-label">
+    THE KOKI PROJECT · BASE MAINNET
+  </div>
+
+  <h1>KOKI Roadmap</h1>
 
   <p>
-    One little elephant. One extraordinary adventure.
-    A world of possibilities.
+    From a little pirate elephant
+    to an expanding creative universe.
+    Follow the development of KOKI,
+    its token, stories, and community.
   </p>
+
 </header>
-<div class="container">
 
+<main>
 
-  <div class="phase">
-    <h2>Phase 1 — The Beginning</h2>
-    <p>
-      Create the KOKI character and identity.
-      Deploy the KOKI token on Base.
-      Launch the official website and
-      establish community channels.
-    </p>
-  </div>
+<section class="roadmap-container">
 
-  <div class="phase">
-    <h2>Phase 2 — The Adventure</h2>
-    <p>
-      Expand KOKI's original adventure stories.
-      Introduce new characters, islands,
-      and exciting challenges.
-      Build an engaged global community.
-    </p>
-  </div>
+  <h2 class="roadmap-title">
+    Our Journey So Far
+  </h2>
 
-  <div class="phase">
-    <h2>Phase 3 — The New World</h2>
-    <p>
-      Explore illustrated stories,
-      animations, and digital collectibles.
-      Develop KOKI's creative universe
-      through community participation.
-    </p>
-  </div>
-
-  <div class="phase">
-    <h2>Phase 4 — Beyond the Horizon</h2>
-    <p>
-      Explore merchandise,
-      creative partnerships,
-      and long-term opportunities
-      for the KOKI character brand.
-    </p>
-  </div>
-
-  <p class="note">
-    This roadmap represents current intentions,
-    not guaranteed commitments.
-    Plans may change as the project develops.
+  <p class="roadmap-intro">
+    Every great voyage begins with a first step.
+    Here is what KOKI has achieved
+    and what the project aims to explore next.
   </p>
 
-</div>
+  <div class="timeline">
+
+    <article class="phase">
+
+      <div class="phase-number">
+        PHASE 01
+      </div>
+
+      <h2>The Beginning</h2>
+
+      <span class="status status-complete">
+        COMPLETED
+      </span>
+
+      <p>
+        The foundations of the KOKI project
+        have been established.
+      </p>
+
+      <ul>
+        <li>Created the original KOKI pirate elephant character</li>
+        <li>Deployed the KOKI ERC-20 token on Base Mainnet</li>
+        <li>Launched the official KOKI website</li>
+        <li>Established the official KOKI X account</li>
+        <li>Completed Season One of the KOKI Chronicles — 12 chapters</li>
+      </ul>
+
+    </article>
+
+    <article class="phase">
+
+      <div class="phase-number">
+        PHASE 02
+      </div>
+
+      <h2>Preparing to Sail</h2>
+
+      <span class="status status-progress">
+        IN PROGRESS
+      </span>
+
+      <p>
+        Preparing the KOKI project
+        for broader public discovery
+        and clearer token information.
+      </p>
+
+      <ul>
+        <li>Improve official website pages and navigation</li>
+        <li>Publish token information and contract verification links</li>
+        <li>Connect official X and contact channels</li>
+        <li>Prepare a project FAQ and security guidance</li>
+        <li>Develop a transparent token distribution plan</li>
+        <li>Evaluate liquidity and trading options</li>
+      </ul>
+
+    </article>
+
+    <article class="phase">
+
+      <div class="phase-number">
+        PHASE 03
+      </div>
+
+      <h2>The Open Sea</h2>
+
+      <span class="status status-planned">
+        PLANNED
+      </span>
+
+      <p>
+        Exploring ways to introduce KOKI
+        to a wider audience while continuing
+        the creative journey.
+      </p>
+
+      <ul>
+        <li>Consider decentralized exchange liquidity options</li>
+        <li>Share project updates through official channels</li>
+        <li>Expand community participation and outreach</li>
+        <li>Begin Season Two of the KOKI Chronicles</li>
+        <li>Explore appropriate token information platforms</li>
+      </ul>
+
+    </article>
+
+    <article class="phase">
+
+      <div class="phase-number">
+        PHASE 04
+      </div>
+
+      <h2>Beyond the Horizon</h2>
+
+      <span class="status status-planned">
+        LONG-TERM VISION
+      </span>
+
+      <p>
+        KOKI's long-term creative possibilities
+        extend beyond the token itself.
+      </p>
+
+      <ul>
+        <li>Explore illustrated stories and animations</li>
+        <li>Consider digital collectibles and original artwork</li>
+        <li>Explore KOKI-themed merchandise</li>
+        <li>Seek creative collaborations and partnerships</li>
+        <li>Continue expanding the KOKI universe</li>
+      </ul>
+
+    </article>
+
+  </div>
+
+  <div class="roadmap-note">
+    <strong>Roadmap Disclaimer</strong>
+    <p>
+      This roadmap outlines current goals and intentions,
+      not guaranteed commitments or fixed deadlines.
+      Plans may change based on project development,
+      available resources, and community feedback.
+      No milestone represents a promise of financial returns,
+      token listings, or future market value.
+    </p>
+  </div>
+
+  <div class="roadmap-links">
+
+    <a class="roadmap-button"
+       href="tokenomics.html">
+      Explore $KOKI →
+    </a>
+
+    <a class="roadmap-button secondary"
+       href="story.html">
+      Read the KOKI Chronicles
+    </a>
+
+    <a class="roadmap-button secondary"
+       href="https://x.com/koki3546"
+       target="_blank"
+       rel="noopener noreferrer">
+      Follow @koki3546 ↗
+    </a>
+
+  </div>
+
+</section>
+
+</main>
 
 <footer>
-  © KOKI — The Pirate Elephant
+
+  <p>© 2026 KOKI — The Pirate Elephant</p>
+
+  <p>
+    <a href="index.html">Home</a>
+    ·
+    <a href="community.html">Community</a>
+    ·
+    <a href="mailto:aadhzz@hanmail.net">Contact</a>
+  </p>
+
 </footer>
 
 </body>
