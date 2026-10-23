@@ -1,0 +1,612 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Frequently asked questions about KOKI, the Pirate Elephant meme token on Base. Learn about the token, contract, trading status, security, and community.">
+
+<title>KOKI | Frequently Asked Questions</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+:root {
+  --gold: #e8b957;
+  --muted: #b4b5bd;
+  --panel: #171920;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.faq-hero {
+  text-align: center;
+  padding: 75px 20px 65px;
+  background: radial-gradient(
+    ellipse at top,
+    #3d2d1b 0%,
+    #17171d 48%,
+    #0c0d12 90%
+  );
+}
+
+.faq-logo {
+  display: block;
+  width: 165px;
+  max-width: 55vw;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.faq-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.faq-hero h1 {
+  color: var(--gold);
+  font-size: clamp(38px, 7vw, 60px);
+  margin: 15px 0;
+}
+
+.faq-hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 65px 24px;
+}
+
+.faq-title {
+  color: var(--gold);
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.faq-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  background: var(--panel);
+  border: 1px solid #514027;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.faq-item[open] {
+  border-color: var(--gold);
+}
+
+.faq-item summary {
+  padding: 22px 25px;
+  color: #f5f3ee;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  color: var(--gold);
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-answer {
+  padding: 0 25px 25px;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.faq-answer p {
+  margin: 10px 0;
+}
+
+.faq-answer a {
+  color: var(--gold);
+}
+
+.contract-address {
+  color: var(--gold);
+  font-family: monospace;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.faq-contact {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 25px;
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid #80602e;
+  border-radius: 15px;
+}
+
+.faq-contact h2 {
+  color: var(--gold);
+  margin-top: 0;
+}
+
+.faq-contact p {
+  color: var(--muted);
+}
+
+.faq-button {
+  display: inline-block;
+  margin: 10px 6px;
+  padding: 13px 23px;
+  background: var(--gold);
+  color: #111;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.faq-button.secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.faq-button:hover {
+  opacity: .85;
+}
+
+.faq-warning {
+  margin-top: 45px;
+  padding: 25px;
+  background: var(--panel);
+  border: 1px solid #514027;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  color: #93939c;
+  font-size: 13px;
+  border-top: 1px solid #40321e;
+}
+
+footer a {
+  color: var(--gold);
+}
+
+@media(max-width:750px) {
+  .faq-container {
+    padding: 50px 20px;
+  }
+
+  .faq-hero {
+    padding: 55px 20px;
+  }
+
+  .faq-item summary {
+    padding: 19px;
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    padding: 0 19px 20px;
+  }
+
+  .contract-address {
+    font-size: 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="tokenomics.html">Tokenomics</a>
+  <a href="story.html">Story</a>
+  <a href="roadmap.html">Roadmap</a>
+  <a href="community.html">Community</a>
+  <a href="faq.html" aria-current="page">FAQ</a>
+</nav>
+
+<header class="faq-hero">
+
+  <img src="koki-logo.png"
+       alt="KOKI Pirate Elephant"
+       class="faq-logo">
+
+  <div class="faq-label">
+    KOKI PROJECT · HELP CENTER
+  </div>
+
+  <h1>Frequently Asked Questions</h1>
+
+  <p>
+    New to KOKI?
+    Find answers about the Pirate Elephant,
+    the $KOKI token, Base blockchain,
+    and the project's journey.
+  </p>
+
+</header>
+
+<main>
+
+<section class="faq-container">
+
+  <h2 class="faq-title">
+    About KOKI
+  </h2>
+
+  <p class="faq-intro">
+    Everything you need to know
+    about the KOKI project.
+  </p>
+
+  <details class="faq-item">
+    <summary>What is KOKI?</summary>
+    <div class="faq-answer">
+      <p>
+        KOKI is a story-driven meme token
+        on the Base blockchain.
+        The project is inspired by an original
+        pirate elephant character whose adventures
+        explore courage, friendship, and freedom.
+      </p>
+      <p>
+        KOKI combines creative storytelling
+        with a blockchain-based token project.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>What makes KOKI different?</summary>
+    <div class="faq-answer">
+      <p>
+        KOKI is built around an original fictional
+        universe rather than only a meme image.
+        The KOKI Chronicles feature an ongoing
+        adventure with recurring characters
+        and connected storylines.
+      </p>
+      <p>
+        Season One contains twelve chapters.
+        Future stories are planned.
+      </p>
+      <p>
+        <a href="story.html">
+          Explore the KOKI Chronicles →
+        </a>
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is KOKI a utility token?</summary>
+    <div class="faq-answer">
+      <p>
+        KOKI is currently presented as a meme token
+        and creative project.
+        No specific token utility, income entitlement,
+        or financial return is promised.
+      </p>
+      <p>
+        Any future features would be announced
+        through official project channels.
+      </p>
+    </div>
+  </details>
+
+</section>
+
+<section class="faq-container">
+
+  <h2 class="faq-title">
+    Token Information
+  </h2>
+
+  <p class="faq-intro">
+    Key facts about the $KOKI token.
+  </p>
+
+  <details class="faq-item">
+    <summary>Which blockchain is KOKI on?</summary>
+    <div class="faq-answer">
+      <p>
+        KOKI is an ERC-20 token deployed
+        on Base Mainnet, an Ethereum Layer 2 network.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>What is the total token supply?</summary>
+    <div class="faq-answer">
+      <p>
+        The reported total supply is
+        <strong>1,000,000,000,000 KOKI</strong>
+        (one trillion tokens).
+      </p>
+      <p>
+        You can review the token information
+        on the
+        <a href="tokenomics.html">
+          Tokenomics page
+        </a>.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>What is the official contract address?</summary>
+    <div class="faq-answer">
+      <p>
+        KOKI's official Base contract address is:
+      </p>
+      <p class="contract-address">
+        0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6
+      </p>
+      <p>
+        <a href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+           target="_blank"
+           rel="noopener noreferrer">
+          Verify on BaseScan ↗
+        </a>
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can more KOKI tokens be minted?</summary>
+    <div class="faq-answer">
+      <p>
+        According to the project's stated
+        token specifications, the contract
+        does not include an additional minting function.
+      </p>
+      <p>
+        Users should independently review
+        the smart contract and on-chain information.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How are KOKI tokens distributed?</summary>
+    <div class="faq-answer">
+      <p>
+        KOKI is in an early development stage.
+        The token supply is currently held
+        by the project creator.
+      </p>
+      <p>
+        A public allocation and distribution
+        plan has not yet been finalized.
+        Future updates will be published
+        on the official website.
+      </p>
+    </div>
+  </details>
+
+</section>
+
+<section class="faq-container">
+
+  <h2 class="faq-title">
+    Trading & Safety
+  </h2>
+
+  <p class="faq-intro">
+    Important information before interacting
+    with any cryptocurrency.
+  </p>
+
+  <details class="faq-item">
+    <summary>Where can I buy KOKI?</summary>
+    <div class="faq-answer">
+      <p>
+        An official public trading venue
+        has not yet been announced
+        by the KOKI project.
+      </p>
+      <p>
+        Liquidity and decentralized exchange
+        options are being evaluated.
+        Please do not assume that a token
+        with the same name is the official KOKI.
+      </p>
+      <p>
+        Always verify the contract address
+        before making any transaction.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is KOKI listed on an exchange?</summary>
+    <div class="faq-answer">
+      <p>
+        The project has not announced
+        an official exchange listing.
+        Any future trading arrangements
+        will be communicated through
+        official project channels.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is KOKI an investment?</summary>
+    <div class="faq-answer">
+      <p>
+        KOKI is a meme token and creative project.
+        It does not guarantee profits,
+        token price appreciation,
+        or financial returns.
+      </p>
+      <p>
+        Cryptocurrency assets are speculative
+        and may lose their entire value.
+        Nothing on this website
+        constitutes financial advice.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How can I avoid scams?</summary>
+    <div class="faq-answer">
+      <p>
+        Use only links published
+        on the official KOKI website.
+        Independently verify the Base
+        contract address before interacting
+        with a token or trading platform.
+      </p>
+      <p>
+        Never share your wallet recovery phrase,
+        seed phrase, or private key with anyone.
+        Be cautious of impersonators,
+        fake giveaways, and unsolicited messages.
+      </p>
+    </div>
+  </details>
+
+</section>
+
+<section class="faq-container">
+
+  <h2 class="faq-title">
+    Community & Contact
+  </h2>
+
+  <details class="faq-item">
+    <summary>Where can I follow KOKI?</summary>
+    <div class="faq-answer">
+      <p>
+        Follow the official KOKI account
+        on X for project updates
+        and new stories.
+      </p>
+      <p>
+        <a href="https://x.com/koki3546"
+           target="_blank"
+           rel="noopener noreferrer">
+          Follow @koki3546 on X ↗
+        </a>
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>How can I contact the KOKI project?</summary>
+    <div class="faq-answer">
+      <p>
+        For general questions, media inquiries,
+        and collaboration proposals,
+        email:
+      </p>
+      <p>
+        <a href="mailto:aadhzz@hanmail.net">
+          aadhzz@hanmail.net
+        </a>
+      </p>
+    </div>
+  </details>
+
+  <div class="faq-warning">
+    <strong>Important Notice</strong>
+    <p>
+      KOKI is an early-stage meme token project.
+      Information and future plans may change.
+      No investment return, exchange listing,
+      or trading availability is guaranteed.
+    </p>
+  </div>
+
+</section>
+
+<section class="faq-container">
+
+  <div class="faq-contact">
+
+    <h2>Still Have Questions?</h2>
+
+    <p>
+      Contact the KOKI project directly
+      or join the journey on X.
+    </p>
+
+    <a class="faq-button"
+       href="mailto:aadhzz@hanmail.net?subject=KOKI%20Project%20Question">
+      ✉ Contact KOKI
+    </a>
+
+    <a class="faq-button secondary"
+       href="https://x.com/koki3546"
+       target="_blank"
+       rel="noopener noreferrer">
+      Follow @koki3546 ↗
+    </a>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <p>© 2026 KOKI — The Pirate Elephant</p>
+
+  <p>
+    <a href="index.html">Home</a>
+    ·
+    <a href="tokenomics.html">Tokenomics</a>
+    ·
+    <a href="community.html">Community</a>
+    ·
+    <a href="mailto:aadhzz@hanmail.net">Contact</a>
+  </p>
+
+</footer>
+
+</body>
+</html>
