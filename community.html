@@ -1,32 +1,217 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KOKI | Community</title>
+
+<meta name="description"
+content="Connect with the KOKI community. Contact the KOKI project, explore the Pirate Elephant story, and find official token information.">
+
+<title>KOKI | Community & Contact</title>
 
 <link rel="stylesheet" href="style.css">
-  <style>
-.container {
-  max-width: 900px;
+
+<style>
+:root {
+  --gold: #e8b957;
+  --muted: #b4b5bd;
+  --panel: #171920;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.community-hero {
+  text-align: center;
+  padding: 75px 20px 65px;
+  background: radial-gradient(
+    ellipse at top,
+    #3d2d1b 0%,
+    #17171d 48%,
+    #0c0d12 90%
+  );
+}
+
+.community-logo {
+  display: block;
+  width: 165px;
+  max-width: 55vw;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+.community-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.community-hero h1 {
+  color: var(--gold);
+  font-size: clamp(38px, 7vw, 60px);
+  margin: 15px 0;
+}
+
+.community-hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.community-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+.community-title {
+  color: var(--gold);
+  text-align: center;
+  font-size: 32px;
+  margin: 0 0 15px;
+}
+
+.community-intro {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.community-card {
+  background: var(--panel);
+  border: 1px solid #514027;
+  border-radius: 15px;
+  padding: 35px 28px;
   text-align: center;
 }
 
-.logo {
-  width: 180px;
-  max-width: 60vw;
+.community-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
-.card {
-  margin: 25px 0;
+.community-card h3 {
+  color: var(--gold);
+  font-size: 22px;
+  margin: 10px 0 15px;
 }
 
-.button {
-  margin: 10px;
+.community-card p {
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-.button:hover {
-  background: white;
+.community-button {
+  display: inline-block;
+  padding: 13px 23px;
+  margin-top: 15px;
+  border-radius: 7px;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.community-button.secondary {
+  background: transparent;
+  color: var(--gold);
+}
+
+.community-button:hover {
+  opacity: .85;
+}
+
+.community-status {
+  display: inline-block;
+  padding: 7px 13px;
+  margin-top: 15px;
+  border: 1px solid #6b6252;
+  border-radius: 30px;
+  color: #b4b5bd;
+  font-size: 13px;
+}
+
+.contact-panel {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 45px 30px;
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid #80602e;
+  border-radius: 16px;
+}
+
+.contact-panel h3 {
+  color: var(--gold);
+  font-size: 27px;
+}
+
+.contact-panel p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.contact-email {
+  display: block;
+  margin-top: 25px;
+  color: var(--gold);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.community-note {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 25px;
+  border: 1px solid #514027;
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.community-note a {
+  color: var(--gold);
+}
+
+@media(max-width:750px) {
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-container {
+    padding: 55px 20px;
+  }
+
+  .community-hero {
+    padding: 55px 20px;
+  }
+
+  .contact-panel {
+    padding: 35px 20px;
+  }
 }
 </style>
 </head>
@@ -35,147 +220,227 @@
 
 <nav>
   <a href="index.html">Home</a>
-  <a href="story.html">Story</a>
   <a href="tokenomics.html">Tokenomics</a>
+  <a href="story.html">Story</a>
   <a href="roadmap.html">Roadmap</a>
   <a href="community.html">Community</a>
 </nav>
-<header class="page-hero">
+
+<header class="community-hero">
+
   <img src="koki-logo.png"
        alt="KOKI Pirate Elephant"
-       class="page-logo">
+       class="community-logo">
 
-  <h1>Join the KOKI Community</h1>
+  <div class="community-label">
+    THE KOKI COMMUNITY · BASE
+  </div>
+
+  <h1>Join the KOKI Crew</h1>
 
   <p>
-    One little elephant. One extraordinary adventure.
-    A world of possibilities.
+    Every great adventure begins with a crew.
+    Connect with KOKI, follow the journey,
+    and become part of the Pirate Elephant universe.
   </p>
+
 </header>
-<div class="container">
-  <div class="card">
-    <h2>Welcome Aboard!</h2>
 
-    <p>
-      KOKI is more than a meme token.
-      It is a creative adventure built around
-      an original pirate elephant character.
-    </p>
+<main>
 
-    <p>
-      Follow KOKI's journey, discover new
-      stories, and become part of
-      the adventure.
-    </p>
-  </div>
+<section class="community-container">
 
-  <div class="card">
-    <h2>Follow KOKI on X</h2>
+  <h2 class="community-title">
+    Welcome Aboard!
+  </h2>
 
-    <p>
-      Discover new chapters,
-      character updates,
-      and community announcements.
-    </p>
-
-    <p>
-      The official X account link
-      will be added here.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Explore the Adventure</h2>
-
-    <a href="story.html" class="button">
-      Read KOKI's Story
-    </a>
-
-    <a href="roadmap.html" class="button">
-      Explore the Roadmap
-    </a>
-  </div>
-
-  <div class="card">
-    <h2>Our Community Spirit</h2>
-
-    <p>
-      Creativity. Courage. Friendship.
-      Adventure.
-    </p>
-
-    <p>
-      Together, we can build
-      a universe where imagination
-      has no limits.
-    </p>
-  </div>
-
-</div>
-  
-<section class="contact-section">
-  <h2>Contact KOKI</h2>
-  <p>
-    Have a question about KOKI?
-    Interested in collaborations, partnerships,
-    or community activities?
+  <p class="community-intro">
+    KOKI is a story-driven meme token on Base,
+    inspired by courage, friendship,
+    creativity, and adventure.
+    Discover the project and follow its progress.
   </p>
-  <p>We'd love to hear from you.</p>
 
-  <a class="contact-button"
-     href="mailto:aadhzz@hanmail.net?subject=KOKI%20Project%20Inquiry">
-    ✉ Contact the KOKI Team
-  </a>
+  <div class="community-grid">
 
-  <p class="contact-email">
-    aadhzz@hanmail.net
-  </p>
+    <article class="community-card">
+
+      <div class="community-icon">𝕏</div>
+
+      <h3>Follow KOKI on X</h3>
+
+      <p>
+        Discover project announcements,
+        new stories, character updates,
+        and future community activities.
+      </p>
+
+      <span class="community-status">
+        Official Link To Be Added
+      </span>
+
+    </article>
+
+    <article class="community-card">
+
+      <div class="community-icon">🏴‍☠️</div>
+
+      <h3>The KOKI Chronicles</h3>
+
+      <p>
+        Explore the adventures of KOKI,
+        Finn, Veyra, and their friends.
+        Season One is now complete
+        with twelve chapters.
+      </p>
+
+      <a class="community-button"
+         href="story.html">
+        Read the Story →
+      </a>
+
+    </article>
+
+    <article class="community-card">
+
+      <div class="community-icon">🪙</div>
+
+      <h3>KOKI Token</h3>
+
+      <p>
+        Learn about the KOKI meme token
+        on Base, including token information
+        and the official contract address.
+      </p>
+
+      <a class="community-button"
+         href="tokenomics.html">
+        Explore $KOKI →
+      </a>
+
+    </article>
+
+    <article class="community-card">
+
+      <div class="community-icon">🧭</div>
+
+      <h3>Project Roadmap</h3>
+
+      <p>
+        Follow the KOKI project's
+        development, creative milestones,
+        and future plans.
+      </p>
+
+      <a class="community-button"
+         href="roadmap.html">
+        View Roadmap →
+      </a>
+
+    </article>
+
+  </div>
+
 </section>
 
-<style>
-.contact-section {
-  max-width: 760px;
-  margin: 65px auto;
-  padding: 45px 25px;
-  text-align: center;
-  border: 1px solid #80602e;
-  border-radius: 16px;
-  background: #17171d;
-}
+<section class="community-container">
 
-.contact-section h2 {
-  color: #e8b957;
-  font-size: 30px;
-}
+  <h2 class="community-title">
+    Contact the KOKI Project
+  </h2>
 
-.contact-section p {
-  color: #c6c6cc;
-  line-height: 1.8;
-}
+  <p class="community-intro">
+    Have questions about KOKI?
+    Interested in collaboration,
+    partnerships, or creative opportunities?
+    Get in touch directly.
+  </p>
 
-.contact-button {
-  display: inline-block;
-  margin: 20px 0;
-  padding: 15px 28px;
-  background: #e8b957;
-  color: #111;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-}
+  <div class="contact-panel">
 
-.contact-button:hover {
-  background: #ffd780;
-}
+    <div class="community-icon">✉</div>
 
-.contact-email {
-  font-size: 14px;
-}
-</style>
+    <h3>Let's Talk About KOKI</h3>
 
+    <p>
+      For general questions, project inquiries,
+      media requests, or collaboration proposals,
+      please contact us by email.
+    </p>
+
+    <div class="contact-actions">
+
+      <a class="community-button"
+         href="mailto:aadhzz@hanmail.net?subject=KOKI%20General%20Inquiry">
+        General Inquiry
+      </a>
+
+      <a class="community-button secondary"
+         href="mailto:aadhzz@hanmail.net?subject=KOKI%20Partnership%20Proposal">
+        Partnership Inquiry
+      </a>
+
+    </div>
+
+    <a class="contact-email"
+       href="mailto:aadhzz@hanmail.net">
+      aadhzz@hanmail.net
+    </a>
+
+  </div>
+
+</section>
+
+<section class="community-container">
+
+  <h2 class="community-title">
+    Our Community Spirit
+  </h2>
+
+  <p class="community-intro">
+    Creativity. Courage. Friendship. Adventure.
+    The values that inspire the KOKI Chronicles
+    also shape the project's creative direction.
+  </p>
+
+  <div class="community-note">
+    <p>
+      Please use official KOKI links
+      and independently verify the token contract
+      before interacting with any third-party service.
+    </p>
+
+    <p>
+      Official KOKI Contract on Base:
+      <a href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+         target="_blank"
+         rel="noopener noreferrer">
+        View on BaseScan ↗
+      </a>
+    </p>
+
+    <p>
+      KOKI administrators will never request
+      your wallet seed phrase or private keys.
+    </p>
+  </div>
+
+</section>
+
+</main>
 
 <footer>
-  © KOKI — The Pirate Elephant
+
+  <p>© 2026 KOKI — The Pirate Elephant</p>
+
+  <p>
+    <a href="index.html">Home</a>
+    ·
+    <a href="tokenomics.html">Tokenomics</a>
+    ·
+    <a href="mailto:aadhzz@hanmail.net">Contact</a>
+  </p>
+
 </footer>
 
 </body>
