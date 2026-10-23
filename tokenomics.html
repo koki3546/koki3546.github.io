@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Explore KOKI tokenomics on Base, including its fixed supply, proposed token allocation, creator holdings, contract details, and trading status.">
+content="Explore KOKI tokenomics on Base, including fixed supply, proposed allocation, creator holdings, liquidity management policy, contract details, and trading status.">
 
 <title>KOKI | Tokenomics</title>
-
 <link rel="stylesheet" href="style.css">
 
 <style>
@@ -229,6 +228,7 @@ content="Explore KOKI tokenomics on Base, including its fixed supply, proposed t
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .allocation-bar {
@@ -281,14 +281,11 @@ content="Explore KOKI tokenomics on Base, including its fixed supply, proposed t
 }
 
 .allocation-table td:nth-child(2),
-.allocation-table td:nth-child(3) {
-  text-align: right;
-  white-space: nowrap;
-}
-
+.allocation-table td:nth-child(3),
 .allocation-table th:nth-child(2),
 .allocation-table th:nth-child(3) {
   text-align: right;
+  white-space: nowrap;
 }
 
 .allocation-table tr:last-child td {
@@ -366,6 +363,55 @@ content="Explore KOKI tokenomics on Base, including its fixed supply, proposed t
   margin-bottom: 0;
 }
 
+/* Liquidity management policy */
+.policy-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.policy-card {
+  background: var(--panel);
+  border: 1px solid #514027;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.policy-card h3 {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-size: 17px;
+}
+
+.policy-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.policy-card strong {
+  color: #f1e6cb;
+}
+
+.policy-full {
+  grid-column: 1 / -1;
+}
+
+.policy-status {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(232,185,87,.09);
+  border: 1px solid #70532a;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .risk-note {
   max-width: 850px;
   margin: 0 auto;
@@ -377,9 +423,18 @@ content="Explore KOKI tokenomics on Base, including its fixed supply, proposed t
   line-height: 1.9;
 }
 
+.risk-note p {
+  margin: 0 0 16px;
+}
+
+.risk-note p:last-child {
+  margin-bottom: 0;
+}
+
 @media(max-width:750px) {
   .token-grid,
-  .allocation-description {
+  .allocation-description,
+  .policy-grid {
     grid-template-columns: 1fr;
   }
 
@@ -761,6 +816,111 @@ content="Explore KOKI tokenomics on Base, including its fixed supply, proposed t
 
 </section>
 
+<!-- NEW: LIQUIDITY MANAGEMENT POLICY -->
+
+<section class="token-container">
+
+  <h2 class="token-section-title">
+    Liquidity Management Policy
+  </h2>
+
+  <p class="token-section-intro">
+    KOKI aims to communicate its liquidity
+    plans and management practices transparently.
+    The information below describes the current
+    proposal and its limitations.
+  </p>
+
+  <div class="policy-grid">
+
+    <div class="policy-card">
+      <span class="policy-status">
+        PLANNED · NOT DEPLOYED
+      </span>
+      <h3>Initial Liquidity Proposal</h3>
+      <p>
+        The project is considering an initial
+        <strong>Uniswap v2 ETH / KOKI pool</strong>
+        on Base with approximately
+        <strong>0.01 ETH</strong> and
+        <strong>1,000,000,000 KOKI</strong>.
+        These amounts are provisional and
+        have not been deposited.
+      </p>
+    </div>
+
+    <div class="policy-card">
+      <h3>Liquidity Ownership</h3>
+      <p>
+        If launched as currently proposed,
+        the initial liquidity position would
+        be controlled by the founder-operated
+        project wallet. The founder would
+        retain the ability to manage or
+        withdraw the liquidity position.
+      </p>
+    </div>
+
+    <div class="policy-card">
+      <h3>Liquidity Lock Status</h3>
+      <p>
+        <strong>No liquidity lock has been implemented.</strong>
+        No third-party locker or time-locked
+        liquidity contract is currently in use.
+        The proposed liquidity should not
+        be described as locked or permanently
+        secured.
+      </p>
+    </div>
+
+    <div class="policy-card">
+      <h3>Founder Token Holdings</h3>
+      <p>
+        The initial supply remains under
+        founder control as of this disclosure.
+        The proposed token allocation has
+        not been separated into dedicated
+        wallets. No vesting or token lock
+        is currently active.
+      </p>
+    </div>
+
+    <div class="policy-card policy-full">
+      <h3>Management & Disclosure Principles</h3>
+      <p>
+        The project intends to publish material
+        liquidity additions, withdrawals,
+        ownership changes, and changes to
+        its management approach through
+        official channels.
+        Such announcements are a transparency
+        objective, not an on-chain restriction:
+        the wallet's technical permissions
+        remain unchanged unless a separate
+        enforceable mechanism is implemented.
+      </p>
+    </div>
+
+    <div class="policy-card policy-full">
+      <h3>Liquidity Risks</h3>
+      <p>
+        The proposed pool would be extremely
+        small. Even modest trades could cause
+        substantial price movements and slippage.
+        Trading bots, arbitrage, and concentrated
+        ownership may increase volatility.
+        Liquidity providers can also experience
+        losses relative to holding the assets.
+        There is no guarantee that KOKI holders
+        will be able to sell their tokens at
+        an expected price, or sell them at all.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
 <section class="token-container">
 
   <h2 class="token-section-title">
@@ -772,9 +932,11 @@ content="Explore KOKI tokenomics on Base, including its fixed supply, proposed t
     <h3>Trading Status: Not Officially Launched</h3>
 
     <p>
-      KOKI is exploring decentralized exchange
-      liquidity options on Base, including
-      a potential KOKI / ETH liquidity pool.
+      KOKI is evaluating a potential
+      Uniswap v2 ETH / KOKI liquidity pool
+      on Base. The current proposal is
+      described in the Liquidity Management
+      Policy above.
     </p>
 
     <p>
@@ -812,11 +974,15 @@ content="Explore KOKI tokenomics on Base, including its fixed supply, proposed t
   </h2>
 
   <div class="risk-note">
-    KOKI is a story-driven meme token and creative
-    community project. Holding KOKI does not
-    provide shares in a company, ownership of
-    KOKI intellectual property, dividends,
-    or guaranteed financial returns.
+
+    <p>
+      KOKI is a story-driven meme token and
+      creative community project. Holding
+      KOKI does not provide shares in a
+      company, ownership of KOKI intellectual
+      property, dividends, or guaranteed
+      financial returns.
+    </p>
 
     <p>
       The popularity or commercial success
@@ -838,6 +1004,7 @@ content="Explore KOKI tokenomics on Base, including its fixed supply, proposed t
       Always verify the contract and conduct
       independent research.
     </p>
+
   </div>
 
 </section>
