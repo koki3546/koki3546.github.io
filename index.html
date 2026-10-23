@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="KOKI ($KOKI) is a story-driven meme token on Base. Discover the Pirate Elephant, token information, and the KOKI Chronicles.">
+content="KOKI ($KOKI) is a story-driven meme token on Base. Explore the Pirate Elephant, KOKI Chronicles, official token contract, and live Uniswap v2 liquidity.">
 
 <title>KOKI ($KOKI) | The Pirate Elephant on Base</title>
 
@@ -120,6 +120,19 @@ h1 {
   font-weight: bold;
 }
 
+.live-label {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 7px 15px;
+  border: 1px solid #567c5c;
+  border-radius: 30px;
+  color: #b8e6bd;
+  background: rgba(38,83,48,.18);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 .actions {
   display: flex;
   justify-content: center;
@@ -146,6 +159,11 @@ h1 {
 .btn-secondary {
   color: var(--gold);
   border: 1px solid var(--gold);
+}
+
+.btn-outline {
+  color: #f5f3ee;
+  border: 1px solid #79737a;
 }
 
 .contract-box {
@@ -274,6 +292,70 @@ h1 {
   font-weight: bold;
 }
 
+.liquidity-section {
+  background: #111218;
+  border-top: 1px solid #40321e;
+  border-bottom: 1px solid #40321e;
+}
+
+.liquidity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.liquidity-card {
+  background: var(--panel);
+  border: 1px solid #574322;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.liquidity-card h3 {
+  color: var(--gold);
+  margin-top: 0;
+}
+
+.liquidity-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.liquidity-card strong {
+  color: #f5f3ee;
+}
+
+.pool-address {
+  font-family: monospace;
+  font-size: 12px;
+  color: #e8e8ec;
+  overflow-wrap: anywhere;
+  padding: 12px;
+  background: #0c0d12;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
+.info-note {
+  max-width: 800px;
+  margin: 30px auto 0;
+  padding: 20px 24px;
+  border: 1px solid #70532a;
+  border-radius: 10px;
+  background: rgba(232,185,87,.04);
+  color: #c7c4bd;
+  font-size: 13px;
+}
+
+.info-note strong {
+  color: var(--gold);
+}
+
+.info-note a {
+  color: var(--gold);
+}
+
 .banner {
   text-align: center;
   padding: 75px 24px;
@@ -331,11 +413,14 @@ footer a { color: var(--gold); }
   nav { gap: 13px; padding: 15px 10px; }
   nav a { font-size: 12px; }
   .hero { min-height: 0; padding: 60px 20px; }
-  .cards, .stats { grid-template-columns: 1fr; }
+  .cards, .stats, .liquidity-grid {
+    grid-template-columns: 1fr;
+  }
   .card p { min-height: 0; }
   .container { padding: 65px 20px; }
   h1 { letter-spacing: 4px; }
   .contract-address { font-size: 11px; }
+  .btn { width: 100%; max-width: 350px; }
 }
 </style>
 </head>
@@ -370,6 +455,12 @@ footer a { color: var(--gold); }
       $KOKI · BASE NETWORK
     </div>
 
+    <div>
+      <span class="live-label">
+        ● LIVE ON UNISWAP V2
+      </span>
+    </div>
+
     <p class="hero-description">
       A little elephant. A big adventure.
       Discover KOKI, a character-driven meme token
@@ -378,15 +469,24 @@ footer a { color: var(--gold); }
     </p>
 
     <div class="actions">
+
       <a class="btn btn-primary"
+         href="https://app.uniswap.org/swap?chain=base&amp;inputCurrency=ETH&amp;outputCurrency=0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+         target="_blank"
+         rel="noopener noreferrer">
+        Trade KOKI on Uniswap ↗
+      </a>
+
+      <a class="btn btn-secondary"
          href="tokenomics.html">
         Explore $KOKI →
       </a>
 
-      <a class="btn btn-secondary"
+      <a class="btn btn-outline"
          href="story.html">
         Discover the Story
       </a>
+
     </div>
 
     <div class="contract-box">
@@ -459,6 +559,145 @@ footer a { color: var(--gold); }
 
 </section>
 
+<section class="liquidity-section">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      KOKI Liquidity &amp; Trading
+    </h2>
+
+    <p class="section-intro">
+      KOKI's initial WETH/KOKI liquidity pool
+      was deployed on Uniswap v2 on Base Mainnet
+      on October 23, 2026.
+      Trading quotes are available through Uniswap.
+    </p>
+
+    <div class="liquidity-grid">
+
+      <div class="liquidity-card">
+
+        <h3>Initial Liquidity Deployment</h3>
+
+        <p>
+          <strong>Status:</strong>
+          Deployed on Uniswap v2
+        </p>
+
+        <p>
+          <strong>Initial deposit:</strong>
+          0.01 ETH + 1,000,000,000 KOKI
+        </p>
+
+        <p>
+          <strong>Pool type:</strong>
+          WETH / KOKI · Uniswap v2
+        </p>
+
+        <p>
+          These are the initial deposit amounts,
+          not guaranteed current pool balances
+          or a live liquidity valuation.
+        </p>
+
+        <a href="https://basescan.org/tx/0xfad73821f652e83865dab2eb3df20457f5b9212fff040d37e04b3d7530cea570"
+           target="_blank"
+           rel="noopener noreferrer">
+          Verify Launch Transaction ↗
+        </a>
+
+      </div>
+
+      <div class="liquidity-card">
+
+        <h3>Official Liquidity Pool</h3>
+
+        <p>
+          Verify the pool address and its
+          on-chain activity independently.
+        </p>
+
+        <div class="pool-address">
+          0x74bb775f2bc3a4f85b7d48498725bbddd9716261
+        </div>
+
+        <a href="https://basescan.org/address/0x74bb775f2bc3a4f85b7d48498725bbddd9716261"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Pool on BaseScan ↗
+        </a>
+
+        <p>
+          <strong>Liquidity lock:</strong>
+          Not locked.
+          The liquidity provider can withdraw
+          liquidity from the pool.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="actions">
+
+      <a class="btn btn-primary"
+         href="https://app.uniswap.org/swap?chain=base&amp;inputCurrency=ETH&amp;outputCurrency=0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+         target="_blank"
+         rel="noopener noreferrer">
+        Open Uniswap Trading ↗
+      </a>
+
+      <a class="btn btn-secondary"
+         href="tokenomics.html">
+        Full Tokenomics &amp; Risks →
+      </a>
+
+    </div>
+
+    <div class="info-note">
+
+      <strong>Important Trading &amp; Security Notice</strong>
+
+      <p>
+        Initial liquidity was very small,
+        approximately 0.01 ETH and 1 billion KOKI.
+        Even relatively small trades may cause
+        substantial price impact, slippage,
+        and changes in the token's market price.
+      </p>
+
+      <p>
+        Liquidity provider tokens were not locked
+        at launch. Liquidity may be withdrawn,
+        and trading may become difficult or impossible.
+      </p>
+
+      <p>
+        Uniswap displayed an impersonation warning
+        for KOKI through its security screening.
+        A review request was submitted to Blockaid
+        on October 23, 2026.
+        The warning has not been confirmed as
+        resolved or removed.
+        This request does not constitute
+        security approval or certification.
+      </p>
+
+      <p>
+        KOKI has not undergone an independent
+        security audit. Always verify the
+        official token contract, review the
+        transaction details, and assess the
+        risks before interacting with any token.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
 <section class="container">
 
   <h2 class="section-title">
@@ -479,6 +718,7 @@ footer a { color: var(--gold); }
       <p>
         Discover the token supply,
         contract information,
+        liquidity disclosures,
         and the KOKI project on Base.
       </p>
       <a href="tokenomics.html">
@@ -584,6 +824,10 @@ footer a { color: var(--gold); }
       Official Token Contract
     </a>
     ·
+    <a href="tokenomics.html">
+      Liquidity &amp; Risks
+    </a>
+    ·
     <a href="mailto:aadhzz@hanmail.net">
       Contact
     </a>
@@ -593,6 +837,8 @@ footer a { color: var(--gold); }
     KOKI is a meme token and creative community project.
     Digital assets involve significant risks, including
     the possible loss of their entire value.
+    Initial liquidity is small and not locked.
+    KOKI has not undergone an independent security audit.
     Nothing on this website constitutes financial advice
     or a promise of future returns.
     Always verify the official contract address
