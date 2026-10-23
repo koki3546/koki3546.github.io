@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Explore KOKI tokenomics on Base, including fixed supply, proposed allocation, creator holdings, liquidity management policy, contract details, and trading status.">
+content="Explore KOKI tokenomics on Base, including fixed supply, proposed allocation, creator holdings, live Uniswap v2 liquidity, contract details, and trading risks.">
 
 <title>KOKI | Tokenomics</title>
 <link rel="stylesheet" href="style.css">
@@ -208,7 +208,7 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
   line-height: 1.9;
 }
 
-.info-box a {
+.info-box a:not(.token-button) {
   color: var(--gold);
 }
 
@@ -363,7 +363,6 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
   margin-bottom: 0;
 }
 
-/* Liquidity management policy */
 .policy-grid {
   max-width: 900px;
   margin: 0 auto;
@@ -674,7 +673,7 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
             <td>
               <div class="alloc-name">
                 <span class="alloc-dot alloc-community"></span>
-                Community & Ecosystem
+                Community &amp; Ecosystem
               </div>
             </td>
             <td>30%</td>
@@ -685,7 +684,7 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
             <td>
               <div class="alloc-name">
                 <span class="alloc-dot alloc-content"></span>
-                Story & Content Development
+                Story &amp; Content Development
               </div>
             </td>
             <td>20%</td>
@@ -728,16 +727,19 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
       <div class="allocation-detail">
         <h3>Liquidity Reserve · 10%</h3>
         <p>
-          Intended for potential decentralized
-          exchange liquidity and future trading
-          infrastructure. The full reserve is
-          not intended to be deposited at once.
-          No allocation has yet been deployed.
+          Intended for decentralized exchange
+          liquidity and potential future trading
+          infrastructure. An initial
+          1,000,000,000 KOKI has been deployed
+          to the Uniswap v2 pool.
+          The broader 10% reserve remains
+          a proposed allocation, not a completed
+          segregation of tokens.
         </p>
       </div>
 
       <div class="allocation-detail">
-        <h3>Community & Ecosystem · 30%</h3>
+        <h3>Community &amp; Ecosystem · 30%</h3>
         <p>
           Proposed for future community initiatives,
           reader engagement, and ecosystem activities.
@@ -747,7 +749,7 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
       </div>
 
       <div class="allocation-detail">
-        <h3>Story & Content Development · 20%</h3>
+        <h3>Story &amp; Content Development · 20%</h3>
         <p>
           Proposed to support KOKI storytelling,
           artwork, and possible future creative
@@ -780,16 +782,20 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
 
     <div class="disclosure">
 
-      <h3>Transparency & Current Holdings</h3>
+      <h3>Transparency &amp; Current Holdings</h3>
 
       <p>
-        At the time of this publication,
-        the entire initial supply of
-        1,000,000,000,000 KOKI is held
-        in the creator-controlled wallet.
-        The proposed allocations above
-        have not been transferred into
-        separate wallets or contracts.
+        Following the initial liquidity deployment
+        on October 23, 2026, approximately
+        999,000,000,000 KOKI remained in the
+        founder-operated wallet, while
+        1,000,000,000 KOKI was deposited into
+        the WETH / KOKI pool.
+        The proposed allocations above have
+        not been transferred into separate
+        dedicated wallets or vesting contracts.
+        These figures describe the initial
+        deployment and may change over time.
       </p>
 
       <p>
@@ -816,8 +822,6 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
 
 </section>
 
-<!-- NEW: LIQUIDITY MANAGEMENT POLICY -->
-
 <section class="token-container">
 
   <h2 class="token-section-title">
@@ -825,95 +829,93 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
   </h2>
 
   <p class="token-section-intro">
-    KOKI aims to communicate its liquidity
-    plans and management practices transparently.
-    The information below describes the current
-    proposal and its limitations.
+    KOKI's first liquidity pool launched on
+    Base Mainnet on October 23, 2026.
+    The information below describes the
+    initial deployment and management policy.
   </p>
 
   <div class="policy-grid">
 
     <div class="policy-card">
       <span class="policy-status">
-        PLANNED · NOT DEPLOYED
+        LIVE · DEPLOYED OCTOBER 23, 2026
       </span>
-      <h3>Initial Liquidity Proposal</h3>
+      <h3>Initial Liquidity Deployment</h3>
       <p>
-        The project is considering an initial
-        <strong>Uniswap v2 ETH / KOKI pool</strong>
-        on Base with approximately
+        The initial <strong>Uniswap v2 WETH / KOKI</strong>
+        pool was created on Base with
         <strong>0.01 ETH</strong> and
         <strong>1,000,000,000 KOKI</strong>.
-        These amounts are provisional and
-        have not been deposited.
+        This represents 0.1% of the total KOKI supply.
+        The initial pool value was approximately
+        US$48, based on the starting exchange ratio.
+        Pool balances and value can change with trading.
       </p>
     </div>
 
     <div class="policy-card">
       <h3>Liquidity Ownership</h3>
       <p>
-        If launched as currently proposed,
-        the initial liquidity position would
-        be controlled by the founder-operated
-        project wallet. The founder would
-        retain the ability to manage or
-        withdraw the liquidity position.
+        The initial liquidity was provided by
+        the founder-operated wallet.
+        At launch, this wallet held
+        <strong>100% of the pool's LP position</strong>.
+        This percentage may change as other
+        liquidity providers participate.
+        The founder retains control of the LP tokens.
       </p>
     </div>
 
     <div class="policy-card">
       <h3>Liquidity Lock Status</h3>
       <p>
-        <strong>No liquidity lock has been implemented.</strong>
-        No third-party locker or time-locked
-        liquidity contract is currently in use.
-        The proposed liquidity should not
-        be described as locked or permanently
-        secured.
+        <strong>Liquidity is not locked.</strong>
+        No third-party liquidity locker or
+        time-locked contract has been implemented.
+        The founder-controlled wallet can withdraw
+        its liquidity subject to the pool's
+        available balances and contract rules.
       </p>
     </div>
 
     <div class="policy-card">
       <h3>Founder Token Holdings</h3>
       <p>
-        The initial supply remains under
-        founder control as of this disclosure.
-        The proposed token allocation has
-        not been separated into dedicated
-        wallets. No vesting or token lock
-        is currently active.
+        Following the initial liquidity deployment,
+        approximately <strong>999 billion KOKI</strong>
+        remained in the founder-operated wallet.
+        The proposed allocation categories have
+        not been implemented through separate
+        dedicated wallets or vesting contracts.
+        Wallet balances may change over time.
       </p>
     </div>
 
     <div class="policy-card policy-full">
-      <h3>Management & Disclosure Principles</h3>
+      <h3>Management &amp; Disclosure Principles</h3>
       <p>
-        The project intends to publish material
+        The project intends to disclose material
         liquidity additions, withdrawals,
-        ownership changes, and changes to
-        its management approach through
-        official channels.
-        Such announcements are a transparency
-        objective, not an on-chain restriction:
-        the wallet's technical permissions
-        remain unchanged unless a separate
-        enforceable mechanism is implemented.
+        ownership changes, and management decisions
+        through official channels.
+        These disclosure intentions do not impose
+        on-chain restrictions on the founder wallet.
       </p>
     </div>
 
     <div class="policy-card policy-full">
       <h3>Liquidity Risks</h3>
       <p>
-        The proposed pool would be extremely
-        small. Even modest trades could cause
-        substantial price movements and slippage.
+        The initial pool is extremely small.
+        Even modest trades can cause substantial
+        price movements and slippage.
         Trading bots, arbitrage, and concentrated
-        ownership may increase volatility.
-        Liquidity providers can also experience
-        losses relative to holding the assets.
-        There is no guarantee that KOKI holders
-        will be able to sell their tokens at
-        an expected price, or sell them at all.
+        token ownership can increase volatility.
+        Liquidity providers face impermanent loss
+        and smart contract risks.
+        There is no guarantee that holders can
+        sell KOKI at an expected price or at all.
       </p>
     </div>
 
@@ -924,37 +926,66 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
 <section class="token-container">
 
   <h2 class="token-section-title">
-    Liquidity & Trading
+    Liquidity &amp; Trading
   </h2>
 
   <div class="info-box">
 
-    <h3>Trading Status: Not Officially Launched</h3>
+    <h3>Trading Status: LIVE on Uniswap v2</h3>
 
     <p>
-      KOKI is evaluating a potential
-      Uniswap v2 ETH / KOKI liquidity pool
-      on Base. The current proposal is
-      described in the Liquidity Management
-      Policy above.
+      KOKI's first WETH / KOKI liquidity pool
+      was deployed on Base Mainnet on
+      <strong>October 23, 2026</strong>.
+      Initial liquidity consisted of
+      0.01 ETH and 1,000,000,000 KOKI.
+      The pool uses Uniswap v2's 0.3%
+      swap fee.
     </p>
 
     <p>
-      An official liquidity pool has not yet
-      been launched by the project.
-      No official trading venue is being
-      announced on this page.
+      <strong>Official Pool Contract:</strong>
+    </p>
+
+    <div class="contract-address">
+      0x74bb775f2bc3a4f85b7d48498725bbddd9716261
+    </div>
+
+    <p>
+      <a class="token-button"
+         href="https://app.uniswap.org/swap?chain=base&amp;inputCurrency=ETH&amp;outputCurrency=0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+         target="_blank"
+         rel="noopener noreferrer">
+        Trade KOKI on Uniswap ↗
+      </a>
+
+      <a class="token-button secondary"
+         href="https://basescan.org/address/0x74bb775f2bc3a4f85b7d48498725bbddd9716261"
+         target="_blank"
+         rel="noopener noreferrer">
+        Verify Pool on BaseScan ↗
+      </a>
+
+      <a class="token-button secondary"
+         href="https://basescan.org/tx/0xfad73821f652e83865dab2eb3df20457f5b9212fff040d37e04b3d7530cea570"
+         target="_blank"
+         rel="noopener noreferrer">
+        View Launch Transaction ↗
+      </a>
     </p>
 
     <p>
-      Third parties may independently create
-      pools or trading pairs. Always verify
-      the official contract address, network,
-      and on-chain liquidity before interacting.
+      <strong>Important:</strong>
+      The initial liquidity is not locked.
+      Pool reserves, LP ownership, and market
+      prices can change. Always verify the
+      KOKI token contract, Base network,
+      pool address, and trade details before
+      confirming any transaction.
     </p>
 
     <p>
-      Official updates will be published
+      Official project updates are published
       through the KOKI website and
       <a href="https://x.com/koki3546"
          target="_blank"
