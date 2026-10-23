@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Explore KOKI tokenomics on Base, including token supply, contract details, distribution information, and trading status.">
+content="Explore KOKI tokenomics on Base, including its fixed supply, proposed token allocation, creator holdings, contract details, and trading status.">
 
 <title>KOKI | Tokenomics</title>
 
@@ -112,6 +112,7 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
   color: var(--muted);
   font-size: 13px;
   margin-top: 12px;
+  line-height: 1.6;
 }
 
 .feature-list {
@@ -145,6 +146,10 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
   background: var(--panel);
   border: 1px solid #70532a;
   border-radius: 13px;
+}
+
+.contract-box h3 {
+  color: var(--gold);
 }
 
 .contract-address {
@@ -208,6 +213,159 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
   color: var(--gold);
 }
 
+.allocation-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.plan-badge {
+  display: table;
+  margin: 0 auto 24px;
+  padding: 9px 17px;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  color: var(--gold);
+  background: rgba(232,185,87,.08);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.allocation-bar {
+  display: flex;
+  height: 23px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0 0 25px;
+}
+
+.allocation-bar span {
+  display: block;
+}
+
+.alloc-liquidity { background: #e8b957; }
+.alloc-community { background: #5e94dc; }
+.alloc-content { background: #67b99a; }
+.alloc-founder { background: #ae87d9; }
+.alloc-reserve { background: #9298a4; }
+
+.allocation-table-wrap {
+  overflow-x: auto;
+  border: 1px solid #514027;
+  border-radius: 12px;
+  background: var(--panel);
+}
+
+.allocation-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.allocation-table th,
+.allocation-table td {
+  padding: 18px 20px;
+  text-align: left;
+  border-bottom: 1px solid #35343b;
+}
+
+.allocation-table th {
+  color: var(--gold);
+  background: #202026;
+  font-size: 13px;
+}
+
+.allocation-table td {
+  color: #e6e6eb;
+  font-size: 14px;
+}
+
+.allocation-table td:nth-child(2),
+.allocation-table td:nth-child(3) {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.allocation-table th:nth-child(2),
+.allocation-table th:nth-child(3) {
+  text-align: right;
+}
+
+.allocation-table tr:last-child td {
+  border-bottom: none;
+}
+
+.allocation-table .total-row td {
+  color: var(--gold);
+  font-weight: bold;
+  background: #222026;
+}
+
+.alloc-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alloc-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.allocation-description {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.allocation-detail {
+  background: var(--panel);
+  border: 1px solid #403522;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.allocation-detail h3 {
+  color: var(--gold);
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.allocation-detail p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.disclosure {
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 25px;
+  border: 1px solid #70532a;
+  background: rgba(232,185,87,.05);
+  border-radius: 12px;
+}
+
+.disclosure h3 {
+  color: var(--gold);
+  margin: 0 0 12px;
+}
+
+.disclosure p {
+  color: var(--muted);
+  line-height: 1.9;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.disclosure p:last-child {
+  margin-bottom: 0;
+}
+
 .risk-note {
   max-width: 850px;
   margin: 0 auto;
@@ -220,7 +378,8 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
 }
 
 @media(max-width:750px) {
-  .token-grid {
+  .token-grid,
+  .allocation-description {
     grid-template-columns: 1fr;
   }
 
@@ -234,6 +393,11 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
 
   .contract-address {
     font-size: 12px;
+  }
+
+  .allocation-table th,
+  .allocation-table td {
+    padding: 15px 13px;
   }
 }
 </style>
@@ -329,15 +493,15 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
   </h2>
 
   <p class="token-section-intro">
-    Core token properties as described
-    in the KOKI project information.
+    Core token properties based on the
+    deployed KOKI smart contract.
   </p>
 
   <div class="feature-list">
 
     <div class="feature">
       <span class="feature-icon">✓</span>
-      Fixed Initial Supply
+      Fixed Supply at Deployment
     </div>
 
     <div class="feature">
@@ -403,25 +567,195 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
 <section class="token-container">
 
   <h2 class="token-section-title">
-    Token Distribution
+    Proposed Token Allocation
   </h2>
 
-  <div class="info-box">
+  <p class="token-section-intro">
+    A preliminary allocation framework for
+    KOKI's long-term development.
+    These percentages are proposals,
+    not completed distributions.
+  </p>
 
-    <h3>Current Distribution Status</h3>
+  <div class="allocation-wrap">
 
-    <p>
-      KOKI is in its early development stage.
-      The token supply is currently held
-      by the project creator.
-    </p>
+    <div class="plan-badge">
+      PROPOSED PLAN · NOT YET IMPLEMENTED
+    </div>
 
-    <p>
-      A public token allocation and distribution
-      plan has not yet been finalized.
-      Updates will be published here
-      as the project develops.
-    </p>
+    <div class="allocation-bar"
+         role="img"
+         aria-label="Proposed allocation: 10 percent liquidity, 30 percent community, 20 percent content, 20 percent founder, and 20 percent reserve.">
+      <span class="alloc-liquidity" style="width:10%"></span>
+      <span class="alloc-community" style="width:30%"></span>
+      <span class="alloc-content" style="width:20%"></span>
+      <span class="alloc-founder" style="width:20%"></span>
+      <span class="alloc-reserve" style="width:20%"></span>
+    </div>
+
+    <div class="allocation-table-wrap">
+      <table class="allocation-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Allocation</th>
+            <th>KOKI Amount</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <div class="alloc-name">
+                <span class="alloc-dot alloc-liquidity"></span>
+                Liquidity Reserve
+              </div>
+            </td>
+            <td>10%</td>
+            <td>100,000,000,000</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="alloc-name">
+                <span class="alloc-dot alloc-community"></span>
+                Community & Ecosystem
+              </div>
+            </td>
+            <td>30%</td>
+            <td>300,000,000,000</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="alloc-name">
+                <span class="alloc-dot alloc-content"></span>
+                Story & Content Development
+              </div>
+            </td>
+            <td>20%</td>
+            <td>200,000,000,000</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="alloc-name">
+                <span class="alloc-dot alloc-founder"></span>
+                Founder Long-Term Holdings
+              </div>
+            </td>
+            <td>20%</td>
+            <td>200,000,000,000</td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="alloc-name">
+                <span class="alloc-dot alloc-reserve"></span>
+                Long-Term Project Reserve
+              </div>
+            </td>
+            <td>20%</td>
+            <td>200,000,000,000</td>
+          </tr>
+
+          <tr class="total-row">
+            <td>Total</td>
+            <td>100%</td>
+            <td>1,000,000,000,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="allocation-description">
+
+      <div class="allocation-detail">
+        <h3>Liquidity Reserve · 10%</h3>
+        <p>
+          Intended for potential decentralized
+          exchange liquidity and future trading
+          infrastructure. The full reserve is
+          not intended to be deposited at once.
+          No allocation has yet been deployed.
+        </p>
+      </div>
+
+      <div class="allocation-detail">
+        <h3>Community & Ecosystem · 30%</h3>
+        <p>
+          Proposed for future community initiatives,
+          reader engagement, and ecosystem activities.
+          No reward program or distribution schedule
+          has been finalized.
+        </p>
+      </div>
+
+      <div class="allocation-detail">
+        <h3>Story & Content Development · 20%</h3>
+        <p>
+          Proposed to support KOKI storytelling,
+          artwork, and possible future creative
+          formats. Specific uses and release
+          conditions remain undecided.
+        </p>
+      </div>
+
+      <div class="allocation-detail">
+        <h3>Founder Holdings · 20%</h3>
+        <p>
+          Proposed as the founder's long-term
+          allocation. Vesting, lockup terms,
+          and any future sale policy have
+          not yet been established.
+        </p>
+      </div>
+
+      <div class="allocation-detail">
+        <h3>Long-Term Reserve · 20%</h3>
+        <p>
+          Proposed for future project needs
+          and unforeseen development expenses.
+          Release and management policies
+          will require further disclosure.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="disclosure">
+
+      <h3>Transparency & Current Holdings</h3>
+
+      <p>
+        At the time of this publication,
+        the entire initial supply of
+        1,000,000,000,000 KOKI is held
+        in the creator-controlled wallet.
+        The proposed allocations above
+        have not been transferred into
+        separate wallets or contracts.
+      </p>
+
+      <p>
+        No token vesting, lockup, or
+        automated release mechanism
+        has been implemented.
+        The proposed founder allocation
+        is not currently locked.
+      </p>
+
+      <p>
+        Future token transfers, liquidity
+        deployments, vesting decisions,
+        and changes to this proposed plan
+        should be disclosed through
+        official project channels.
+        On-chain balances may change
+        after this page is published.
+      </p>
+
+    </div>
 
   </div>
 
@@ -435,23 +769,36 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
 
   <div class="info-box">
 
-    <h3>Trading Status: Not Yet Confirmed</h3>
+    <h3>Trading Status: Not Officially Launched</h3>
 
     <p>
-      The availability of a public liquidity pool
-      and decentralized exchange trading
-      has not yet been confirmed.
+      KOKI is exploring decentralized exchange
+      liquidity options on Base, including
+      a potential KOKI / ETH liquidity pool.
     </p>
 
     <p>
-      Please verify current on-chain information
-      before attempting any transaction.
+      An official liquidity pool has not yet
+      been launched by the project.
+      No official trading venue is being
+      announced on this page.
     </p>
 
     <p>
-      Official updates will be provided
-      through the KOKI website
-      and community channels.
+      Third parties may independently create
+      pools or trading pairs. Always verify
+      the official contract address, network,
+      and on-chain liquidity before interacting.
+    </p>
+
+    <p>
+      Official updates will be published
+      through the KOKI website and
+      <a href="https://x.com/koki3546"
+         target="_blank"
+         rel="noopener noreferrer">
+        KOKI's X account
+      </a>.
     </p>
 
   </div>
@@ -465,13 +812,32 @@ content="Explore KOKI tokenomics on Base, including token supply, contract detai
   </h2>
 
   <div class="risk-note">
-    KOKI is a meme token and creative project.
-    Cryptocurrency markets are highly volatile
-    and may involve the loss of all invested funds.
-    This website does not provide financial advice
-    or guarantee any financial return.
-    Always verify the official contract address
-    and conduct independent research.
+    KOKI is a story-driven meme token and creative
+    community project. Holding KOKI does not
+    provide shares in a company, ownership of
+    KOKI intellectual property, dividends,
+    or guaranteed financial returns.
+
+    <p>
+      The popularity or commercial success
+      of KOKI stories does not guarantee
+      token price appreciation.
+    </p>
+
+    <p>
+      Cryptocurrency markets are highly volatile.
+      Limited liquidity can cause extreme price
+      movements, slippage, and difficulty selling
+      tokens. Buyers may lose their entire investment.
+    </p>
+
+    <p>
+      Contract source verification does not
+      constitute an independent security audit.
+      This website does not provide financial advice.
+      Always verify the contract and conduct
+      independent research.
+    </p>
   </div>
 
 </section>
