@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Connect with the KOKI community. Contact the KOKI project, explore the Pirate Elephant story, and find official token information.">
+content="Join the KOKI community. Follow the Pirate Elephant, explore the KOKI Chronicles, verify the Base token contract, and review official Uniswap v2 liquidity information.">
 
 <title>KOKI | Community & Contact</title>
 
@@ -60,6 +60,18 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
   margin: 0 auto;
   color: var(--muted);
   line-height: 1.8;
+}
+
+.launch-label {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 8px 17px;
+  border: 1px solid #32674b;
+  border-radius: 30px;
+  background: #173b2a;
+  color: #a5e4bd;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .community-container {
@@ -123,6 +135,9 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
   color: #111;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
 }
 
 .community-button.secondary {
@@ -140,8 +155,61 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
   margin-top: 15px;
   border: 1px solid #6b6252;
   border-radius: 30px;
-  color: #b4b5bd;
+  color: var(--muted);
   font-size: 13px;
+}
+
+.trading-panel {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 35px;
+  background: var(--panel);
+  border: 1px solid #80602e;
+  border-radius: 15px;
+}
+
+.trading-panel h3 {
+  color: var(--gold);
+  margin-top: 0;
+}
+
+.trading-panel p {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.trading-panel a:not(.community-button) {
+  color: var(--gold);
+}
+
+.contract-address {
+  display: block;
+  padding: 14px;
+  margin: 15px 0;
+  border: 1px solid #514027;
+  border-radius: 7px;
+  background: #0c0d12;
+  color: #f5f3ee;
+  font-family: monospace;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.copy-status {
+  color: #a5e4bd;
+  font-size: 12px;
+  min-height: 20px;
+}
+
+.trading-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.trading-actions .community-button {
+  margin-top: 0;
 }
 
 .contact-panel {
@@ -196,6 +264,22 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
   color: var(--gold);
 }
 
+.community-note strong {
+  color: var(--gold);
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  border-top: 1px solid #40321e;
+  color: #93939c;
+  font-size: 13px;
+}
+
+footer a {
+  color: var(--gold);
+}
+
 @media(max-width:750px) {
   .community-grid {
     grid-template-columns: 1fr;
@@ -212,6 +296,19 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
   .contact-panel {
     padding: 35px 20px;
   }
+
+  .trading-panel {
+    padding: 25px 20px;
+  }
+
+  .trading-actions .community-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contract-address {
+    font-size: 11px;
+  }
 }
 </style>
 </head>
@@ -223,7 +320,7 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
   <a href="tokenomics.html">Tokenomics</a>
   <a href="story.html">Story</a>
   <a href="roadmap.html">Roadmap</a>
-  <a href="community.html">Community</a>
+  <a href="community.html" aria-current="page">Community</a>
   <a href="faq.html">FAQ</a>
 </nav>
 
@@ -234,7 +331,7 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
        class="community-logo">
 
   <div class="community-label">
-    THE KOKI COMMUNITY · BASE
+    THE KOKI COMMUNITY · BASE MAINNET
   </div>
 
   <h1>Join the KOKI Crew</h1>
@@ -244,6 +341,10 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
     Connect with KOKI, follow the journey,
     and become part of the Pirate Elephant universe.
   </p>
+
+  <div class="launch-label">
+    UNISWAP v2 LIQUIDITY DEPLOYED
+  </div>
 
 </header>
 
@@ -276,12 +377,12 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
         and future community activities.
       </p>
 
-     <a class="community-button"
-   href="https://x.com/koki3546"
-   target="_blank"
-   rel="noopener noreferrer">
-  Follow @koki3546 →
-</a>
+      <a class="community-button"
+         href="https://x.com/koki3546"
+         target="_blank"
+         rel="noopener noreferrer">
+        Follow @koki3546 →
+      </a>
 
     </article>
 
@@ -294,7 +395,7 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
       <p>
         Explore the adventures of KOKI,
         Finn, Veyra, and their friends.
-        Season One is now complete
+        Season One is complete
         with twelve chapters.
       </p>
 
@@ -313,7 +414,8 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
 
       <p>
         Learn about the KOKI meme token
-        on Base, including token information
+        on Base, including token supply,
+        liquidity information,
         and the official contract address.
       </p>
 
@@ -332,8 +434,9 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
 
       <p>
         Follow the KOKI project's
-        development, creative milestones,
-        and future plans.
+        completed milestones,
+        ongoing development,
+        and future creative plans.
       </p>
 
       <a class="community-button"
@@ -342,6 +445,124 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
       </a>
 
     </article>
+
+  </div>
+
+</section>
+
+<section class="community-container">
+
+  <h2 class="community-title">
+    Official Token &amp; Trading
+  </h2>
+
+  <p class="community-intro">
+    KOKI's initial liquidity pool was deployed
+    on Uniswap v2 on Base Mainnet
+    on October 23, 2026.
+    Verify all contract and pool information
+    independently before interacting.
+  </p>
+
+  <div class="trading-panel">
+
+    <h3>Official KOKI Contract</h3>
+
+    <p>
+      Network: Base Mainnet<br>
+      Token: KOKI ($KOKI)<br>
+      Total Supply: 1,000,000,000,000 KOKI
+    </p>
+
+    <span class="contract-address"
+          id="contractAddress">
+      0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6
+    </span>
+
+    <button class="community-button"
+            type="button"
+            onclick="copyContract()">
+      Copy Contract Address
+    </button>
+
+    <p class="copy-status"
+       id="copyStatus"
+       role="status"
+       aria-live="polite"></p>
+
+    <h3>Uniswap v2 Liquidity Pool</h3>
+
+    <p>
+      Pair: WETH / KOKI<br>
+      Initial Deposit: 0.01 ETH + 1,000,000,000 KOKI<br>
+      Initial Liquidity Date: October 23, 2026
+    </p>
+
+    <span class="contract-address">
+      0x74bb775f2bc3a4f85b7d48498725bbddd9716261
+    </span>
+
+    <div class="trading-actions">
+
+      <a class="community-button"
+         href="https://app.uniswap.org/swap?chain=base&amp;inputCurrency=ETH&amp;outputCurrency=0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+         target="_blank"
+         rel="noopener noreferrer">
+        Open Uniswap Trading ↗
+      </a>
+
+      <a class="community-button secondary"
+         href="https://basescan.org/address/0x74bb775f2bc3a4f85b7d48498725bbddd9716261"
+         target="_blank"
+         rel="noopener noreferrer">
+        Verify Liquidity Pool ↗
+      </a>
+
+      <a class="community-button secondary"
+         href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+         target="_blank"
+         rel="noopener noreferrer">
+        Verify Token Contract ↗
+      </a>
+
+    </div>
+
+    <p>
+      <strong>Liquidity Disclosure:</strong>
+      The initial liquidity was approximately
+      0.01 ETH and 1 billion KOKI.
+      This is a very small pool.
+      Liquidity provider tokens were not locked
+      at launch, and the liquidity provider
+      can withdraw liquidity.
+      Token holdings were highly concentrated
+      in the creator's wallet.
+    </p>
+
+    <p>
+      <strong>Security Notice:</strong>
+      A Blockaid impersonation warning
+      appeared during Uniswap trading review.
+      A review request was submitted,
+      but no resolution has been confirmed.
+      This warning should not be assumed
+      to have been cleared.
+    </p>
+
+    <p>
+      KOKI is a speculative meme token.
+      Trading can involve substantial price impact,
+      slippage, liquidity risks,
+      and possible total loss.
+      No financial returns are promised.
+    </p>
+
+    <p>
+      Read the
+      <a href="tokenomics.html">
+        Tokenomics and Risk Information →
+      </a>
+    </p>
 
   </div>
 
@@ -408,6 +629,11 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
   </p>
 
   <div class="community-note">
+
+    <p>
+      <strong>Stay Safe in the KOKI Community</strong>
+    </p>
+
     <p>
       Please use official KOKI links
       and independently verify the token contract
@@ -424,9 +650,19 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
     </p>
 
     <p>
-      KOKI administrators will never request
-      your wallet seed phrase or private keys.
+      Never share your wallet recovery phrase,
+      seed phrase, private key, or passwords.
+      Be cautious of impersonators,
+      fake giveaways, and unsolicited messages.
     </p>
+
+    <p>
+      KOKI has not promised any token rewards,
+      guaranteed profits, or exchange listings.
+      Announcements should be verified
+      through official project channels.
+    </p>
+
   </div>
 
 </section>
@@ -442,10 +678,31 @@ content="Connect with the KOKI community. Contact the KOKI project, explore the 
     ·
     <a href="tokenomics.html">Tokenomics</a>
     ·
+    <a href="roadmap.html">Roadmap</a>
+    ·
+    <a href="faq.html">FAQ</a>
+    ·
     <a href="mailto:aadhzz@hanmail.net">Contact</a>
   </p>
 
 </footer>
+
+<script>
+const KOKI_CONTRACT =
+  "0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6";
+
+async function copyContract() {
+  const status = document.getElementById("copyStatus");
+
+  try {
+    await navigator.clipboard.writeText(KOKI_CONTRACT);
+    status.textContent = "✓ Contract address copied!";
+  } catch (error) {
+    status.textContent =
+      "Automatic copy unavailable. Please select and copy the address manually.";
+  }
+}
+</script>
 
 </body>
 </html>
