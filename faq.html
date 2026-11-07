@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Frequently asked questions about KOKI, the Pirate Elephant meme token on Base. Learn about the token, contract, trading status, security, and community.">
+content="Frequently asked questions about KOKI ($KOKI), the Pirate Elephant meme token on Base. Learn about Uniswap v2 trading, liquidity, security warnings, token distribution, and the KOKI community.">
 
 <title>KOKI | Frequently Asked Questions</title>
 
@@ -138,6 +138,10 @@ content="Frequently asked questions about KOKI, the Pirate Elephant meme token o
   color: var(--gold);
 }
 
+.faq-answer strong {
+  color: #f5f3ee;
+}
+
 .contract-address {
   color: var(--gold);
   font-family: monospace;
@@ -189,12 +193,20 @@ content="Frequently asked questions about KOKI, the Pirate Elephant meme token o
   margin-top: 45px;
   padding: 25px;
   background: var(--panel);
-  border: 1px solid #514027;
+  border: 1px solid #80602e;
   border-radius: 10px;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.9;
   text-align: center;
+}
+
+.faq-warning strong {
+  color: var(--gold);
+}
+
+.faq-warning a {
+  color: var(--gold);
 }
 
 footer {
@@ -230,6 +242,11 @@ footer a {
   .contract-address {
     font-size: 12px;
   }
+
+  .faq-button {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 </style>
 </head>
@@ -261,7 +278,7 @@ footer a {
     New to KOKI?
     Find answers about the Pirate Elephant,
     the $KOKI token, Base blockchain,
-    and the project's journey.
+    Uniswap trading, liquidity, and project risks.
   </p>
 
 </header>
@@ -360,7 +377,7 @@ footer a {
     <summary>What is the total token supply?</summary>
     <div class="faq-answer">
       <p>
-        The reported total supply is
+        The total token supply is
         <strong>1,000,000,000,000 KOKI</strong>
         (one trillion tokens).
       </p>
@@ -412,15 +429,28 @@ footer a {
     <summary>How are KOKI tokens distributed?</summary>
     <div class="faq-answer">
       <p>
-        KOKI is in an early development stage.
-        The token supply is currently held
-        by the project creator.
+        At the initial Uniswap v2 liquidity launch,
+        1,000,000,000 KOKI (0.1% of total supply)
+        were deposited into the WETH/KOKI pool.
       </p>
       <p>
-        A public allocation and distribution
-        plan has not yet been finalized.
-        Future updates will be published
-        on the official website.
+        Approximately 999,000,000,000 KOKI
+        remained in the creator's wallet
+        immediately after the launch.
+        These are historical figures,
+        not live balances.
+      </p>
+      <p>
+        The allocation percentages shown
+        on the Tokenomics page are proposed
+        allocations. They have not been fully
+        implemented through separate wallets,
+        token locks, or vesting contracts.
+      </p>
+      <p>
+        <a href="tokenomics.html">
+          Review the Tokenomics disclosures →
+        </a>
       </p>
     </div>
   </details>
@@ -430,31 +460,40 @@ footer a {
 <section class="faq-container">
 
   <h2 class="faq-title">
-    Trading & Safety
+    Trading &amp; Liquidity
   </h2>
 
   <p class="faq-intro">
-    Important information before interacting
-    with any cryptocurrency.
+    Understand how KOKI trading works
+    and what risks are involved.
   </p>
 
   <details class="faq-item">
     <summary>Where can I buy KOKI?</summary>
     <div class="faq-answer">
       <p>
-        An official public trading venue
-        has not yet been announced
-        by the KOKI project.
+        A WETH/KOKI liquidity pool was deployed
+        on Uniswap v2 on Base Mainnet
+        on October 23, 2026.
       </p>
       <p>
-        Liquidity and decentralized exchange
-        options are being evaluated.
-        Please do not assume that a token
-        with the same name is the official KOKI.
+        The Uniswap interface can display
+        a trading quote for KOKI.
+        However, a displayed quote does not
+        guarantee that a transaction will succeed
+        or that liquidity will remain available.
       </p>
       <p>
-        Always verify the contract address
-        before making any transaction.
+        <a href="https://app.uniswap.org/swap?chain=base&amp;inputCurrency=ETH&amp;outputCurrency=0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+           target="_blank"
+           rel="noopener noreferrer">
+          Open KOKI on Uniswap ↗
+        </a>
+      </p>
+      <p>
+        Before proceeding, verify the contract
+        address and review all security warnings,
+        fees, and price impact.
       </p>
     </div>
   </details>
@@ -463,14 +502,178 @@ footer a {
     <summary>Is KOKI listed on an exchange?</summary>
     <div class="faq-answer">
       <p>
-        The project has not announced
-        an official exchange listing.
-        Any future trading arrangements
-        will be communicated through
-        official project channels.
+        KOKI has a liquidity pool on Uniswap v2,
+        a decentralized exchange protocol
+        on Base Mainnet.
+      </p>
+      <p>
+        This is not the same as a centralized
+        exchange listing or an endorsement
+        by Uniswap.
+      </p>
+      <p>
+        No centralized exchange listing
+        is claimed by the project.
       </p>
     </div>
   </details>
+
+  <details class="faq-item">
+    <summary>How much liquidity was initially added?</summary>
+    <div class="faq-answer">
+      <p>
+        The initial liquidity deposit
+        on October 23, 2026 was:
+      </p>
+      <p>
+        <strong>
+          0.01 ETH + 1,000,000,000 KOKI
+        </strong>
+      </p>
+      <p>
+        The pool was created on Uniswap v2
+        using the WETH/KOKI pair.
+      </p>
+      <p>
+        These are the initial deposit amounts.
+        The current balances, market value,
+        and available liquidity can change.
+      </p>
+      <p>
+        <a href="https://basescan.org/tx/0xfad73821f652e83865dab2eb3df20457f5b9212fff040d37e04b3d7530cea570"
+           target="_blank"
+           rel="noopener noreferrer">
+          Verify the liquidity launch transaction ↗
+        </a>
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>What is the official liquidity pool address?</summary>
+    <div class="faq-answer">
+      <p>
+        The official KOKI/WETH Uniswap v2
+        pool contract on Base is:
+      </p>
+      <p class="contract-address">
+        0x74bb775f2bc3a4f85b7d48498725bbddd9716261
+      </p>
+      <p>
+        <a href="https://basescan.org/address/0x74bb775f2bc3a4f85b7d48498725bbddd9716261"
+           target="_blank"
+           rel="noopener noreferrer">
+          Verify the pool on BaseScan ↗
+        </a>
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Is KOKI liquidity locked?</summary>
+    <div class="faq-answer">
+      <p>
+        <strong>No.</strong>
+        The liquidity provider tokens
+        were not locked at launch.
+      </p>
+      <p>
+        The creator held the liquidity
+        provider position at launch
+        and could withdraw liquidity.
+      </p>
+      <p>
+        Liquidity removal may make
+        trading difficult or impossible.
+        There is no guaranteed liquidity
+        lock or minimum liquidity period.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Why does Uniswap show an impersonation warning?</summary>
+    <div class="faq-answer">
+      <p>
+        During a trading quote review,
+        Uniswap displayed an impersonation
+        warning for KOKI provided through
+        Blockaid's security screening.
+      </p>
+      <p>
+        The exact reason for this classification
+        has not been independently established.
+        The warning should not be assumed
+        to be either correct or incorrect
+        without further review.
+      </p>
+      <p>
+        A review request was submitted
+        to Blockaid on October 23, 2026.
+        Submission does not mean the warning
+        has been removed or the token
+        has passed a security review.
+      </p>
+      <p>
+        Users should not ignore security warnings
+        solely because a project disputes them.
+        Verify the contract independently
+        and consider the risks carefully.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Has KOKI been security audited?</summary>
+    <div class="faq-answer">
+      <p>
+        <strong>No independent security audit
+        has been completed or claimed.</strong>
+      </p>
+      <p>
+        A verified contract on BaseScan
+        allows users to inspect published code,
+        but verification is not equivalent
+        to a security audit.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Why can small trades affect the price?</summary>
+    <div class="faq-answer">
+      <p>
+        KOKI's initial liquidity pool
+        was very small.
+      </p>
+      <p>
+        Automated market maker pools
+        adjust token prices according
+        to the pool's token balances.
+        Even relatively small trades
+        can create significant price impact
+        when liquidity is limited.
+      </p>
+      <p>
+        Slippage, transaction fees,
+        and changing pool balances
+        can affect the final amount received.
+      </p>
+    </div>
+  </details>
+
+</section>
+
+<section class="faq-container">
+
+  <h2 class="faq-title">
+    Safety &amp; Risks
+  </h2>
+
+  <p class="faq-intro">
+    Important information before interacting
+    with any cryptocurrency.
+  </p>
 
   <details class="faq-item">
     <summary>Is KOKI an investment?</summary>
@@ -491,6 +694,33 @@ footer a {
   </details>
 
   <details class="faq-item">
+    <summary>What are the main risks of KOKI?</summary>
+    <div class="faq-answer">
+      <p>
+        Key risks include limited liquidity,
+        substantial price volatility,
+        slippage, liquidity withdrawal,
+        smart contract vulnerabilities,
+        and the possible loss
+        of the entire token value.
+      </p>
+      <p>
+        A large portion of the token supply
+        remained in the creator's wallet
+        immediately after launch.
+        Concentrated token ownership
+        can create additional market risks.
+      </p>
+      <p>
+        KOKI has not undergone
+        an independent security audit,
+        and a security screening warning
+        has been reported.
+      </p>
+    </div>
+  </details>
+
+  <details class="faq-item">
     <summary>How can I avoid scams?</summary>
     <div class="faq-answer">
       <p>
@@ -506,6 +736,10 @@ footer a {
         Be cautious of impersonators,
         fake giveaways, and unsolicited messages.
       </p>
+      <p>
+        Do not bypass a security warning
+        without understanding the risk.
+      </p>
     </div>
   </details>
 
@@ -514,7 +748,7 @@ footer a {
 <section class="faq-container">
 
   <h2 class="faq-title">
-    Community & Contact
+    Community &amp; Contact
   </h2>
 
   <details class="faq-item">
@@ -554,10 +788,31 @@ footer a {
   <div class="faq-warning">
     <strong>Important Notice</strong>
     <p>
-      KOKI is an early-stage meme token project.
-      Information and future plans may change.
-      No investment return, exchange listing,
-      or trading availability is guaranteed.
+      KOKI is an early-stage meme token
+      and creative project.
+      Initial liquidity was small and
+      liquidity provider tokens were not locked.
+      Token ownership was highly concentrated
+      at launch. No independent security audit
+      has been completed.
+    </p>
+    <p>
+      A Blockaid impersonation warning
+      was reported and a review request
+      was submitted. Its resolution
+      has not been confirmed.
+    </p>
+    <p>
+      No investment return, future listing,
+      or continuous trading availability
+      is guaranteed.
+      Always verify the
+      <a href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+         target="_blank"
+         rel="noopener noreferrer">
+        official contract
+      </a>
+      before interacting with KOKI.
     </p>
   </div>
 
