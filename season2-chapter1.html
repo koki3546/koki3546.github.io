@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PLV8VJ8P9J');
+</script>
+
+<title>KOKI | Season 2 - Chapter 1: The Second Voyage</title>
+
+<meta name="description" content="The KOKI Chronicles Season Two: The Twelve Stars. Chapter 1 - The Second Voyage.">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0c0d12;
+  color: #f5f3ee;
+  font-family: Arial, sans-serif;
+  line-height: 1.9;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 19px;
+  background: rgba(17,18,24,.97);
+  border-bottom: 1px solid #574322;
+}
+
+nav a {
+  color: #e8b957;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.chapter {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 24px;
+}
+
+.season-label {
+  text-align: center;
+  color: #e8b957;
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+
+h1 {
+  text-align: center;
+  color: #e8b957;
+  font-size: clamp(30px, 6vw, 48px);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaaab5;
+  margin-bottom: 35px;
+}
+
+.cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #574322;
+  box-shadow: 0 0 35px rgba(232,185,87,.12);
+}
+
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 35px 0;
+}
+
+.language-buttons button {
+  background: transparent;
+  border: 1px solid #e8b957;
+  color: #e8b957;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.language-buttons button.active {
+  background: #e8b957;
+  color: #111;
+}
+
+.story-content {
+  max-width: 780px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.story-content p {
+  margin: 0 0 24px;
+}
+
+.story-content strong {
+  color: #e8b957;
+}
+
+.scene-break {
+  color: #e8b957;
+  text-align: center;
+  margin: 40px 0;
+  letter-spacing: 12px;
+}
+
+.quote {
+  border-left: 3px solid #e8b957;
+  padding: 15px 25px;
+  margin: 30px 0;
+  background: #171920;
+  color: #e8b957;
+  font-style: italic;
+}
+
+.ending {
+  text-align: center;
+  color: #e8b957;
+  font-size: 22px;
+  margin: 50px 0;
+}
+
+.chapter-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 40px 0;
+}
+
+.chapter-navigation a {
+  color: #e8b957;
+  border: 1px solid #e8b957;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.chapter-navigation a:hover {
+  background: #e8b957;
+  color: #111;
+}
+
+.coming-soon {
+  color: #888;
+  border: 1px solid #444;
+  padding: 12px 22px;
+  border-radius: 6px;
+}
+
+footer {
+  border-top: 1px solid #574322;
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  padding: 30px 20px;
+}
+
+@media(max-width:750px) {
+  nav {
+    gap: 13px;
+    padding: 15px 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .chapter {
+    padding: 35px 18px;
+  }
+
+  .story-content {
+    font-size: 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="tokenomics.html">Tokenomics</a>
+  <a href="story.html">Story</a>
+  <a href="roadmap.html">Roadmap</a>
+  <a href="community.html">Community</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<main class="chapter">
+
+  <div class="season-label">
+    THE KOKI CHRONICLES · SEASON TWO
+  </div>
+
+  <h1>Chapter 1 — The Second Voyage</h1>
+
+  <div class="subtitle">
+    The Twelve Stars · 열두 별의 비밀
+  </div>
+
+  <img class="cover"
+       src="season2-chapter1-cover.png"
+       alt="KOKI Chronicles Season Two Chapter One The Second Voyage">
+
+  <div class="language-buttons">
+    <button id="enButton"
+            class="active"
+            onclick="showLanguage('en')">
+      English
+    </button>
+
+    <button id="koButton"
+            onclick="showLanguage('ko')">
+      한국어
+    </button>
+  </div>
+
+  <!-- ENGLISH STORY -->
+
+  <article id="englishStory" class="story-content">
+
+    <p>
+      Seven days had passed since KOKI destroyed
+      the Last Compass.
+    </p>
+
+    <p>
+      The scars of the first voyage remained,
+      but the sea seemed peaceful again.
+      Finn had finally found his father, Rowan,
+      and Veyra and Brann stood beside their captain
+      aboard a new ship.
+    </p>
+
+    <p>
+      For the first time in a long while,
+      KOKI believed the ocean had nothing left
+      to take from them.
+    </p>
+
+    <p>
+      He was wrong.
+    </p>
+
+    <div class="scene-break">✦ ✦ ✦</div>
+
+    <p>
+      On the eighth morning, the wind vanished.
+      The sails collapsed, and the waves became
+      as smooth as glass.
+    </p>
+
+    <p>
+      Then Finn noticed something beneath the ship.
+    </p>
+
+    <p>
+      "Captain... there are stars in the water."
+    </p>
+
+    <p>
+      KOKI leaned over the railing.
+      Far below the surface, thousands of tiny lights
+      surrounded the ruins of an enormous city.
+    </p>
+
+    <p>
+      Its towers were upside down.
+      Its streets stretched toward the depths.
+      And something inside the city was moving.
+    </p>
+
+    <p>
+      Suddenly, a bell rang from beneath the ocean.
+    </p>
+
+    <p>
+      Once.
+    </p>
+
+    <p>
+      Twice.
+    </p>
+
+    <p>
+      On the third ring, the sea split open.
+    </p>
+
+    <p>
+      "HOLD ON!" KOKI shouted.
+    </p>
+
+    <p>
+      The ship tilted violently as a colossal
+      whirlpool swallowed everything around them.
+      Brann seized the mast.
+      Veyra fought to secure the sails.
+    </p>
+
+    <p>
+      But Finn slipped across the deck
+      and disappeared over the railing.
+    </p>
+
+    <p>
+      "FINN!"
+    </p>
+
+    <p>
+      Without hesitation, KOKI tied a rope
+      around his waist and jumped.
+    </p>
+
+    <p>
+      Brann screamed after him.
+    </p>
+
+    <p>
+      "CAPTAIN! YOU'LL BOTH DIE!"
+    </p>
+
+    <p>
+      KOKI reached through the darkness
+      and grabbed Finn's hand.
+    </p>
+
+    <p>
+      "Not today."
+    </p>
+
+    <p>
+      As the crew pulled them back,
+      KOKI saw a giant stone figure
+      rising from the submerged city.
+    </p>
+
+    <p>
+      On its forehead burned a golden star.
+    </p>
+
+    <p>
+      The figure opened its eyes.
+    </p>
+
+    <div class="quote">
+      "The first light has awakened.
+      Eleven remain."
+    </div>
+
+    <p>
+      A tremendous wave lifted the ship
+      and hurled it beyond the whirlpool.
+    </p>
+
+    <p>
+      When KOKI opened his eyes again,
+      the mysterious city was gone.
+    </p>
+
+    <p>
+      But a golden symbol had appeared
+      on the wooden deck.
+    </p>
+
+    <p>
+      Twelve stars arranged in a circle.
+      Only one was shining.
+    </p>
+
+    <div class="scene-break">✦ ✦ ✦</div>
+
+    <p>
+      Far away, within the Black Lighthouse,
+      a shadowy figure stood before an ancient map.
+    </p>
+
+    <p>
+      In its hand rested the last surviving
+      fragment of the shattered compass.
+    </p>
+
+    <p>
+      The fragment began to glow.
+    </p>
+
+    <p>
+      "So you survived, little captain."
+    </p>
+
+    <p>
+      The figure slowly smiled.
+    </p>
+
+    <p>
+      "Let us see how many you can save this time."
+    </p>
+
+    <div class="scene-break">✦ ✦ ✦</div>
+
+    <p>
+      Back aboard the ship,
+      Finn looked up at KOKI with trembling eyes.
+    </p>
+
+    <p>
+      "Why did you jump?"
+    </p>
+
+    <p>
+      KOKI adjusted his hat and smiled.
+    </p>
+
+    <div class="quote">
+      "Because a captain keeps his promises."
+    </div>
+
+    <p>
+      He raised the pirate flag once more.
+    </p>
+
+    <p>
+      <strong>NO ONE LEFT BEHIND.</strong>
+    </p>
+
+    <p>
+      Ahead of them, a golden star illuminated
+      a passage through the gathering storm.
+    </p>
+
+    <p>
+      The second voyage had truly begun.
+    </p>
+
+    <div class="ending">
+      To Be Continued...
+    </div>
+
+  </article>
+
+  <!-- KOREAN STORY -->
+
+  <article id="koreanStory"
+           class="story-content"
+           style="display:none;">
+
+    <p>
+      코키가 마지막 나침반을 파괴한 지
+      일주일이 지났다.
+    </p>
+
+    <p>
+      첫 번째 항해의 상처는 여전히 남아 있었지만,
+      바다는 다시 평온해 보였다.
+      핀은 마침내 아버지 로완을 찾았고,
+      베이라와 브란은 새로운 배 위에서
+      선장의 곁을 지키고 있었다.
+    </p>
+
+    <p>
+      코키는 아주 오랜만에 바다가 더 이상
+      자신들에게서 아무것도 빼앗아 가지
+      않을 것이라고 믿었다.
+    </p>
+
+    <p>
+      그러나 그것은 착각이었다.
+    </p>
+
+    <div class="scene-break">✦ ✦ ✦</div>
+
+    <p>
+      여덟 번째 날 아침, 바람이 사라졌다.
+      돛은 힘없이 늘어졌고,
+      바다는 유리처럼 고요해졌다.
+    </p>
+
+    <p>
+      그때 핀이 배 아래에서 무언가를 발견했다.
+    </p>
+
+    <p>
+      "선장님… 바닷속에 별들이 있어요."
+    </p>
+
+    <p>
+      코키는 난간 너머로 몸을 기울였다.
+      깊은 바닷속, 수천 개의 작은 빛이
+      거대한 도시의 폐허를 둘러싸고 있었다.
+    </p>
+
+    <p>
+      도시의 탑들은 거꾸로 서 있었다.
+      거리들은 심해를 향해 뻗어 있었고,
+      도시 한가운데에서는 무언가가 움직이고 있었다.
+    </p>
+
+    <p>
+      갑자기 바닷속에서 종소리가 울려 퍼졌다.
+    </p>
+
+    <p>한 번.</p>
+
+    <p>두 번.</p>
+
+    <p>
+      세 번째 종이 울리는 순간,
+      바다가 갈라졌다.
+    </p>
+
+    <p>
+      "모두 꽉 잡아!"
+      코키가 외쳤다.
+    </p>
+
+    <p>
+      거대한 소용돌이가 주변의 모든 것을
+      집어삼키면서 배가 심하게 기울었다.
+      브란은 돛대를 붙잡았고,
+      베이라는 필사적으로 돛을 고정했다.
+    </p>
+
+    <p>
+      그러나 핀은 갑판 위에서 미끄러지더니
+      난간 너머로 떨어지고 말았다.
+    </p>
+
+    <p>"핀!"</p>
+
+    <p>
+      코키는 한 치의 망설임도 없이
+      허리에 밧줄을 묶고 바다로 뛰어들었다.
+    </p>
+
+    <p>
+      브란이 다급하게 소리쳤다.
+    </p>
+
+    <p>
+      "선장! 그러다 둘 다 죽는다고!"
+    </p>
+
+    <p>
+      코키는 어둠 속으로 손을 뻗어
+      핀의 손을 붙잡았다.
+    </p>
+
+    <p>"적어도 오늘은 아니야."</p>
+
+    <p>
+      동료들이 밧줄을 끌어당기는 순간,
+      코키는 가라앉은 도시에서
+      거대한 석상이 일어서는 모습을 보았다.
+    </p>
+
+    <p>
+      그 석상의 이마에는 황금빛 별이
+      불타오르고 있었다.
+    </p>
+
+    <p>
+      석상이 천천히 눈을 떴다.
+    </p>
+
+    <div class="quote">
+      "첫 번째 빛이 깨어났다.
+      이제 열한 개가 남았다."
+    </div>
+
+    <p>
+      엄청난 파도가 배를 들어 올려
+      소용돌이 밖으로 내던졌다.
+    </p>
+
+    <p>
+      코키가 다시 눈을 떴을 때,
+      신비로운 도시는 사라져 있었다.
+    </p>
+
+    <p>
+      하지만 갑판 위에는 황금빛 문양이
+      새겨져 있었다.
+    </p>
+
+    <p>
+      원형으로 배열된 열두 개의 별.
+      그중 하나만이 빛나고 있었다.
+    </p>
+
+    <div class="scene-break">✦ ✦ ✦</div>
+
+    <p>
+      머나먼 검은 등대 안,
+      정체불명의 인물이 고대 지도 앞에
+      서 있었다.
+    </p>
+
+    <p>
+      그의 손에는 파괴된 나침반의
+      마지막 조각이 놓여 있었다.
+    </p>
+
+    <p>
+      나침반 조각이 빛나기 시작했다.
+    </p>
+
+    <p>
+      "살아남았군, 꼬마 선장."
+    </p>
+
+    <p>
+      그는 천천히 미소를 지었다.
+    </p>
+
+    <p>
+      "이번에는 네가 몇 명이나
+      구할 수 있을지 지켜보지."
+    </p>
+
+    <div class="scene-break">✦ ✦ ✦</div>
+
+    <p>
+      다시 배 위.
+      핀은 떨리는 눈으로 코키를 바라보았다.
+    </p>
+
+    <p>
+      "왜 뛰어드셨어요?"
+    </p>
+
+    <p>
+      코키는 모자를 고쳐 쓰며 미소를 지었다.
+    </p>
+
+    <div class="quote">
+      "선장은 자신이 한 약속을 지키는
+      사람이니까."
+    </div>
+
+    <p>
+      코키는 다시 해적 깃발을 높이 올렸다.
+    </p>
+
+    <p>
+      <strong>
+        그 누구도 뒤에 남겨두지 않는다.
+      </strong>
+    </p>
+
+    <p>
+      그들의 앞에는 황금빛 별 하나가
+      몰려오는 폭풍 사이로 길을 비추고 있었다.
+    </p>
+
+    <p>
+      두 번째 항해가 진정으로 시작되었다.
+    </p>
+
+    <div class="ending">
+      다음 이야기에 계속...
+    </div>
+
+  </article>
+
+  <div class="chapter-navigation">
+
+    <a href="chapter12.html">
+      ← Season One Finale
+    </a>
+
+    <a href="story.html">
+      All Chapters
+    </a>
+
+    <span class="coming-soon">
+      Chapter 2 · Coming Soon
+    </span>
+
+  </div>
+
+</main>
+
+<footer>
+  © 2026 KOKI — The Pirate Elephant<br>
+  The KOKI Chronicles · Season Two
+</footer>
+
+<script>
+function showLanguage(lang) {
+
+  document.getElementById("englishStory").style.display =
+    lang === "en" ? "block" : "none";
+
+  document.getElementById("koreanStory").style.display =
+    lang === "ko" ? "block" : "none";
+
+  document.getElementById("enButton").classList.toggle(
+    "active", lang === "en"
+  );
+
+  document.getElementById("koButton").classList.toggle(
+    "active", lang === "ko"
+  );
+}
+</script>
+
+</body>
+</html>
