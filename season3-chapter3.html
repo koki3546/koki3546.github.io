@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="KOKI Season Three Chapter 3 — The Market of Stolen Hours. KOKI discovers an underground market where time itself is bought and sold.">
+
+<title>KOKI | The Market of Stolen Hours</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-PLV8VJ8P9J');
+</script>
+
+<style>
+
+:root {
+  --bg:#0c0d12;
+  --panel:#171920;
+  --gold:#e8b957;
+  --muted:#b4b5bd;
+  --border:#574322;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:#f5f3ee;
+  font-family:Arial,sans-serif;
+  line-height:1.9;
+}
+
+nav {
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:28px;
+  padding:20px;
+  background:#111218;
+  border-bottom:1px solid var(--border);
+}
+
+nav a {
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:bold;
+  font-size:14px;
+}
+
+nav a:hover {
+  color:white;
+}
+
+.chapter-header {
+  padding:65px 20px 45px;
+  text-align:center;
+  background:radial-gradient(
+    ellipse at center,
+    #392a1b,
+    #0c0d12 70%
+  );
+}
+
+.season-label {
+  color:var(--gold);
+  font-size:13px;
+  letter-spacing:4px;
+  font-weight:bold;
+}
+
+.season-title {
+  color:var(--muted);
+  font-family:Georgia,serif;
+  font-size:23px;
+  margin:15px 0;
+}
+
+.chapter-number {
+  color:var(--gold);
+  font-size:14px;
+  letter-spacing:3px;
+  margin-top:25px;
+}
+
+h1 {
+  font-family:Georgia,serif;
+  font-size:clamp(32px,6vw,58px);
+  color:var(--gold);
+  line-height:1.25;
+  margin:15px 0;
+  text-shadow:0 4px 30px rgba(232,185,87,.25);
+}
+
+.subtitle {
+  color:var(--muted);
+  font-style:italic;
+  font-size:17px;
+}
+
+.cover {
+  max-width:1150px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+.cover img {
+  display:block;
+  width:100%;
+  border:1px solid var(--border);
+  border-radius:15px;
+  box-shadow:0 15px 45px rgba(0,0,0,.5);
+}
+
+.story-container {
+  max-width:850px;
+  margin:45px auto;
+  padding:50px 55px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:15px;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.story-container p {
+  font-family:Georgia,serif;
+  font-size:19px;
+  line-height:1.95;
+  margin:0 0 22px;
+}
+
+.story-container strong {
+  color:var(--gold);
+}
+
+.opening {
+  color:var(--gold);
+  font-size:25px!important;
+  font-weight:bold;
+  text-align:center;
+  margin-bottom:40px!important;
+}
+
+.story-container h2 {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:28px;
+  line-height:1.4;
+  text-align:center;
+  margin:35px 0;
+}
+
+.separator {
+  color:var(--gold);
+  text-align:center;
+  letter-spacing:12px;
+  font-size:21px;
+  margin:45px 0;
+}
+
+.ending {
+  text-align:center;
+  color:var(--gold);
+  font-weight:bold;
+  margin-top:45px;
+}
+
+.to-be-continued {
+  text-align:center;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:25px;
+  letter-spacing:4px;
+  margin:45px 0 15px;
+}
+
+.chapter-navigation {
+  max-width:850px;
+  margin:40px auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.chapter-navigation a,
+.chapter-navigation span {
+  flex:1;
+  min-width:180px;
+  padding:16px 20px;
+  border:1px solid var(--gold);
+  border-radius:8px;
+  text-align:center;
+  color:var(--gold);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.chapter-navigation a:hover {
+  background:var(--gold);
+  color:#111;
+}
+
+.chapter-navigation .disabled {
+  color:#777;
+  border-color:#444;
+  cursor:default;
+}
+
+.community {
+  max-width:850px;
+  margin:50px auto;
+  padding:35px 20px;
+  text-align:center;
+  border-top:1px solid var(--border);
+}
+
+.community h2 {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:27px;
+}
+
+.community p {
+  color:var(--muted);
+}
+
+.community a {
+  display:inline-block;
+  padding:12px 25px;
+  border:1px solid var(--gold);
+  border-radius:7px;
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.community a:hover {
+  background:var(--gold);
+  color:#111;
+}
+
+footer {
+  padding:35px 20px;
+  text-align:center;
+  color:#999;
+  font-size:13px;
+  border-top:1px solid #292b31;
+}
+
+@media(max-width:800px) {
+
+  nav {
+    gap:13px;
+  }
+
+  nav a {
+    font-size:12px;
+  }
+
+  .chapter-header {
+    padding:45px 20px 30px;
+  }
+
+  .story-container {
+    margin:25px 15px;
+    padding:30px 22px;
+  }
+
+  .story-container p {
+    font-size:17px;
+    line-height:1.9;
+  }
+
+  .story-container h2 {
+    font-size:24px;
+  }
+
+  .chapter-navigation {
+    flex-direction:column;
+  }
+
+  .chapter-navigation a,
+  .chapter-navigation span {
+    width:100%;
+  }
+
+  .season-label {
+    letter-spacing:2px;
+    font-size:11px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="story.html">Story</a>
+  <a href="tokenomics.html">Tokenomics</a>
+  <a href="roadmap.html">Roadmap</a>
+  <a href="community.html">Community</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<header class="chapter-header">
+
+  <div class="season-label">
+    THE KOKI CHRONICLES · SEASON THREE
+  </div>
+
+  <div class="season-title">
+    Beyond the Edge of Time
+  </div>
+
+  <div class="chapter-number">
+    CHAPTER 03
+  </div>
+
+  <h1>The Market of Stolen Hours</h1>
+
+  <div class="subtitle">
+    Some things are worth more than time.
+  </div>
+
+</header>
+
+<div class="cover">
+
+  <img
+    src="season3-chapter3-cover.png"
+    alt="KOKI battles the golden mechanical serpent train inside an underwater railway tunnel"
+  >
+
+</div>
+
+<main class="story-container">
+
+<p class="opening">
+The first thing Milo forgot was his mother's face.
+</p>
+
+<p>He sat beneath the broken telescope, staring at the little wooden ship in his hands.</p>
+
+<p>"Captain?"</p>
+
+<p>KOKI sat beside him.</p>
+
+<p>"What is it?"</p>
+
+<p>"I know I had a mother."</p>
+
+<p>Milo's fingers trembled.</p>
+
+<p>"But I can't remember what she looked like."</p>
+
+<p>KOKI felt his heart sink.</p>
+
+<p>Yan examined the device around Milo's wrist.</p>
+
+<p>Another golden light had disappeared.</p>
+
+<p>"Twenty-two hours," she whispered.</p>
+
+<p>KOKI stood.</p>
+
+<p>"Where do they keep the stolen hours?"</p>
+
+<p>Yan looked toward the dark streets below.</p>
+
+<p>"There is a place the Council pretends does not exist."</p>
+
+<p>She opened an ancient map.</p>
+
+<p>"The Market of Stolen Hours."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>I. The Price of a Lifetime</h2>
+
+<p>Beneath the beautiful streets of Aevora lay another city.</p>
+
+<p>A city without sunlight.</p>
+
+<p>Thousands of lanterns illuminated narrow passages filled with merchants, mechanical creatures, and travelers wearing silver masks.</p>
+
+<p>But nobody sold food.</p>
+
+<p>Nobody sold gold.</p>
+
+<p>They sold time.</p>
+
+<p>"Ten years of youth!"</p>
+
+<p>"One perfect summer!"</p>
+
+<p>"Forget your greatest regret!"</p>
+
+<p>KOKI watched an elderly merchant exchange a golden coin for a small glass bottle.</p>
+
+<p>The merchant drank its contents.</p>
+
+<p>His wrinkles disappeared.</p>
+
+<p>His hands became young again.</p>
+
+<p>Beside him, a poor sailor suddenly collapsed.</p>
+
+<p>His hair turned white.</p>
+
+<p>KOKI stopped walking.</p>
+
+<p>"What happened to him?"</p>
+
+<p>Yan answered quietly.</p>
+
+<p>"The merchant bought ten years of his life."</p>
+
+<p>Brann clenched his fists.</p>
+
+<p>"You can buy someone else's years?"</p>
+
+<p>"If they agree to sell them."</p>
+
+<p>KOKI looked at the exhausted sailor.</p>
+
+<p>"And if they have no other way to feed their families?"</p>
+
+<p>Yan said nothing.</p>
+
+<p>KOKI pulled his hat lower.</p>
+
+<p>"This isn't a market."</p>
+
+<p>His eye narrowed.</p>
+
+<p>"It's a prison."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>II. The Merchant of Tomorrow</h2>
+
+<p>At the end of the underground street stood a shop filled with enormous clocks.</p>
+
+<p>Behind its counter sat an ancient tortoise wearing a dark purple coat.</p>
+
+<p>His name was Orven.</p>
+
+<p>One of his eyes had been replaced by a mechanical lens.</p>
+
+<p>"Captain KOKI," he said.</p>
+
+<p>"I have been expecting you."</p>
+
+<p>KOKI placed his sword on the counter.</p>
+
+<p>"I'm looking for a stolen hour."</p>
+
+<p>Orven smiled.</p>
+
+<p>"Everyone is."</p>
+
+<p>"An hour belonging to a boy named Milo."</p>
+
+<p>The merchant's smile disappeared.</p>
+
+<p>He closed the shop door.</p>
+
+<p>"That hour is not for sale."</p>
+
+<p>"Then where is it?"</p>
+
+<p>Orven opened a golden ledger.</p>
+
+<p>Thousands of names appeared across its pages.</p>
+
+<p>Some were glowing.</p>
+
+<p>Others were slowly fading.</p>
+
+<p>He turned to a page near the end.</p>
+
+<p>Milo's name appeared in silver.</p>
+
+<p>Beneath it were twenty-three golden circles.</p>
+
+<p>One had already turned black.</p>
+
+<p>"The Council has identified twenty-three moments that made the boy's existence possible."</p>
+
+<p>KOKI stared at the circles.</p>
+
+<p>"Can we recover them?"</p>
+
+<p>"Perhaps."</p>
+
+<p>Orven pointed toward the deepest part of the underground city.</p>
+
+<p>"The first stolen hour is being transported to the Meridian Tower tonight."</p>
+
+<p>KOKI picked up his sword.</p>
+
+<p>"Then we'll take it back."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>III. The Train Beneath the Ocean</h2>
+
+<p>A mechanical railway stretched beneath the island.</p>
+
+<p>Its tracks disappeared into a tunnel surrounded by seawater.</p>
+
+<p>An enormous golden train waited at the platform.</p>
+
+<p>Inside its armored carriages were thousands of stolen hours.</p>
+
+<p>Meridian soldiers guarded every entrance.</p>
+
+<p>Finn studied the railway.</p>
+
+<p>"That's going to be difficult."</p>
+
+<p>Veyra smiled.</p>
+
+<p>"When has that ever stopped us?"</p>
+
+<p>The train began to move.</p>
+
+<p>KOKI climbed onto a nearby tower.</p>
+
+<p>"Nox! With me!"</p>
+
+<p>The two captains jumped.</p>
+
+<p>They landed on the roof of the final carriage.</p>
+
+<p>Brann and Veyra followed aboard a stolen maintenance vehicle.</p>
+
+<p>Lyra and Yan hurried toward the railway control station.</p>
+
+<p>Finn remained with Milo.</p>
+
+<p>The golden train accelerated.</p>
+
+<p>KOKI drew his sword.</p>
+
+<p>The tunnel opened into an enormous transparent passage beneath the ocean.</p>
+
+<p>Outside, ancient sea creatures swam through the darkness.</p>
+
+<p>Inside, the Meridian Guard emerged from the carriages.</p>
+
+<p>Their golden spears began to glow.</p>
+
+<p>Nox grinned.</p>
+
+<p>"Just like old times?"</p>
+
+<p>KOKI smiled.</p>
+
+<p>"Let's make some new ones."</p>
+
+<p>The soldiers charged.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>IV. The Battle of the Golden Railway</h2>
+
+<p>KOKI blocked the first spear.</p>
+
+<p>Sparks scattered across the roof.</p>
+
+<p>Nox struck a second soldier, sending its mechanical weapon spinning into the darkness.</p>
+
+<p>The train raced through the underwater tunnel.</p>
+
+<p>Suddenly, enormous metal arms unfolded from its engine.</p>
+
+<p>The entire locomotive began transforming.</p>
+
+<p>Brann stared from the maintenance vehicle.</p>
+
+<p>"That is definitely not a normal train!"</p>
+
+<p>The machine rose above the railway.</p>
+
+<p>Its engine became the head of a golden serpent.</p>
+
+<p>Its carriages twisted into a mechanical body.</p>
+
+<p>KOKI grabbed a railing as the creature turned upside down.</p>
+
+<p>Nox nearly fell.</p>
+
+<p>KOKI caught his arm.</p>
+
+<p>"Not today!"</p>
+
+<p>Together, they climbed toward the engine.</p>
+
+<p>The serpent opened its enormous jaws.</p>
+
+<p>Golden light gathered inside its mouth.</p>
+
+<p>At the control station, Lyra discovered a lever connected to the railway's power supply.</p>
+
+<p>"Yan! What happens if we reverse this?"</p>
+
+<p>Yan stared at the mechanism.</p>
+
+<p>"The train will lose its borrowed time."</p>
+
+<p>"Good."</p>
+
+<p>Lyra pulled the lever.</p>
+
+<p>The golden serpent froze.</p>
+
+<p>Its mechanical armor began falling apart.</p>
+
+<p>KOKI leapt through the collapsing machinery.</p>
+
+<p>His sword shattered the lock of the final armored carriage.</p>
+
+<p>Inside, thousands of glass spheres illuminated the darkness.</p>
+
+<p>And among them, one small sphere shone with a familiar silver light.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>V. The Hour of a Paper Boat</h2>
+
+<p>KOKI reached toward the silver sphere.</p>
+
+<p>The world disappeared.</p>
+
+<p>He stood beside a quiet river.</p>
+
+<p>A young mouse was sitting beneath a tree.</p>
+
+<p>Beside him sat an older mouse wearing a simple blue dress.</p>
+
+<p>She was folding a piece of paper.</p>
+
+<p>"Like this," she said gently.</p>
+
+<p>The little mouse tried to copy her.</p>
+
+<p>His paper boat collapsed.</p>
+
+<p>He began to cry.</p>
+
+<p>The woman laughed softly.</p>
+
+<p>"Don't worry, Milo."</p>
+
+<p>She placed another piece of paper in his hands.</p>
+
+<p>"Nothing has to be perfect the first time."</p>
+
+<p>Together, they folded a new boat.</p>
+
+<p>They placed it upon the river.</p>
+
+<p>The little boat floated away.</p>
+
+<p>Milo smiled.</p>
+
+<p>KOKI watched in silence.</p>
+
+<p>This was not an hour before Milo's birth.</p>
+
+<p>It was an hour that had taught him how to hope.</p>
+
+<p>The Council was not merely erasing the events that created his life.</p>
+
+<p>It was dismantling everything that made him who he was.</p>
+
+<p>KOKI closed his hand around the sphere.</p>
+
+<p>"I'm bringing this home."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>VI. Something Worth More Than Time</h2>
+
+<p>The railway collapsed behind them.</p>
+
+<p>KOKI and Nox escaped aboard the maintenance vehicle.</p>
+
+<p>Brann laughed as they raced toward the city.</p>
+
+<p>"Next time, Captain, let's steal an ordinary ship!"</p>
+
+<p>When they returned to the observatory, Milo was asleep.</p>
+
+<p>KOKI placed the silver sphere beside him.</p>
+
+<p>Its light flowed into the boy's chest.</p>
+
+<p>Milo opened his eyes.</p>
+
+<p>For a moment, he stared at the ceiling.</p>
+
+<p>Then tears began rolling down his cheeks.</p>
+
+<p>"I remember."</p>
+
+<p>KOKI knelt beside him.</p>
+
+<p>"What do you remember?"</p>
+
+<p>"My mother."</p>
+
+<p>Milo smiled.</p>
+
+<p>"She taught me how to make paper boats."</p>
+
+<p>KOKI embraced him.</p>
+
+<p>Across the room, Yan examined the golden device.</p>
+
+<p>One of its missing lights had returned.</p>
+
+<p>But the countdown had not stopped.</p>
+
+<p>Twenty-one hours remained.</p>
+
+<p>"We recovered one hour," Yan said.</p>
+
+<p>"But the Council still has the others."</p>
+
+<p>KOKI looked toward the Meridian Tower.</p>
+
+<p>"Then we keep going."</p>
+
+<p>Suddenly, Orven's golden ledger opened by itself.</p>
+
+<p>A new name appeared beneath Milo's.</p>
+
+<p>Finn.</p>
+
+<p>Then another.</p>
+
+<p>Veyra.</p>
+
+<p>Brann.</p>
+
+<p>Lyra.</p>
+
+<p>Nox.</p>
+
+<p>Finally, a seventh name appeared.</p>
+
+<p>KOKI.</p>
+
+<p>Yan stepped backward.</p>
+
+<p>"No..."</p>
+
+<p>Every name began to glow crimson.</p>
+
+<p>Far above the city, Director Vaelor stood before an enormous clock.</p>
+
+<p>"Begin the correction."</p>
+
+<p>Seven golden needles moved simultaneously.</p>
+
+<p>And somewhere in the harbor, KOKI's ship began to disappear.</p>
+
+<div class="ending">
+
+<p>
+<strong>
+The Council was no longer hunting one boy.
+</strong>
+</p>
+
+<p>
+<strong>
+It was erasing the entire crew.
+</strong>
+</p>
+
+</div>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<div class="to-be-continued">
+  TO BE CONTINUED...
+</div>
+
+</main>
+
+<div class="chapter-navigation">
+
+  <a href="season3-chapter2.html">
+    ← Previous Chapter
+  </a>
+
+  <a href="story.html#season3">
+    All Chapters
+  </a>
+
+  <span class="disabled">
+    Next Chapter · Coming Soon
+  </span>
+
+</div>
+
+<section class="community">
+
+  <div class="season-label">
+    THE ADVENTURE CONTINUES
+  </div>
+
+  <h2>NO ONE LEFT BEHIND.</h2>
+
+  <p>
+    One Captain. Endless Adventures.<br>
+    Follow KOKI and discover what lies beyond the edge of time.
+  </p>
+
+  <a
+    href="https://x.com/KokiAdventures"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Follow KOKI on X →
+  </a>
+
+</section>
+
+<footer>
+
+  © 2026 KOKI — The Pirate Elephant<br>
+
+  The KOKI Chronicles · Season Three<br>
+
+  Beyond the Edge of Time
+
+</footer>
+
+</body>
+</html>
