@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="The KOKI Chronicles — Season One: The Forgotten Sea and Season Two: The Twelve Stars. All 24 chapters complete.">
+<meta name="description" content="The KOKI Chronicles — The Forgotten Sea, The Twelve Stars, and Beyond the Edge of Time. Three seasons and 25 chapters of epic pirate adventures.">
 <title>KOKI | The KOKI Chronicles</title>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
@@ -93,7 +93,7 @@ h1 {
 }
 .season-selector {
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:24px;
   margin-bottom:65px;
 }
@@ -108,6 +108,8 @@ h1 {
   padding:0;
   font-family:inherit;
   cursor:pointer;
+  display:flex;
+  flex-direction:column;
   transition:transform .2s,border-color .2s;
 }
 .season-card:hover {
@@ -121,10 +123,16 @@ h1 {
 .season-card img {
   display:block;
   width:100%;
-  height:280px;
+  height:230px;
   object-fit:cover;
 }
-.season-card-body {padding:25px}
+.season-card-body {
+  padding:25px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
 .season-label {
   color:var(--gold);
   font-size:12px;
@@ -134,12 +142,15 @@ h1 {
 .season-card h2 {
   color:var(--gold);
   font-family:Georgia,serif;
-  font-size:30px;
-  margin:10px 0;
+  font-size:26px;
+  line-height:1.3;
+  margin:10px 0 18px;
 }
 .season-card p {
   color:var(--muted);
   font-size:14px;
+  line-height:1.8;
+  flex:1;
 }
 .status {
   display:inline-block;
@@ -154,8 +165,14 @@ h1 {
   color:#c9c9ce;
   background:#292b31;
 }
+.status-ongoing {
+  color:var(--gold);
+  background:#352a17;
+  border-color:var(--gold);
+}
 .season-button {
   display:block;
+  width:100%;
   text-align:center;
   border:1px solid var(--gold);
   border-radius:7px;
@@ -182,7 +199,7 @@ h1 {
 .season-heading p {color:var(--muted)}
 .chapter-grid {
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:24px;
 }
 .chapter {
@@ -234,6 +251,33 @@ h1 {
   font-weight:bold;
 }
 .chapter a:hover {color:white}
+.new-chapter {
+  border-color:var(--gold);
+}
+.coming-soon {
+  margin-top:35px;
+  padding:35px 25px;
+  text-align:center;
+  border:1px dashed var(--border);
+  border-radius:15px;
+  background:linear-gradient(135deg,#171920,#111218);
+}
+.coming-soon h3 {
+  font-family:Georgia,serif;
+  color:var(--gold);
+  font-size:25px;
+  margin:10px 0;
+}
+.coming-soon p {
+  color:var(--muted);
+  font-size:14px;
+}
+.coming-soon a {
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:bold;
+}
+.coming-soon a:hover {color:white}
 .closing {
   margin-top:70px;
   padding:40px 20px;
@@ -254,6 +298,7 @@ footer {
   border-top:1px solid #292b31;
 }
 [hidden] {display:none!important}
+
 @media(max-width:800px) {
   .chapter-grid,.season-selector {
     grid-template-columns:1fr;
@@ -266,6 +311,7 @@ footer {
   nav a {font-size:12px}
   .container {padding:45px 20px}
   .chapter p {min-height:0}
+  .season-card h2 {font-size:28px}
 }
 </style>
 </head>
@@ -289,7 +335,7 @@ footer {
   <h1>The KOKI Chronicles</h1>
   <p>
     One Captain. Endless Adventures.<br>
-    Two Seasons · 24 Chapters · Complete
+    Three Seasons · 25 Chapters · The Adventure Continues
   </p>
 </header>
 
@@ -299,10 +345,13 @@ footer {
 
 <div class="season-selector">
 
+  <!-- SEASON ONE CARD -->
+
   <button class="season-card"
           id="season1Button"
           type="button"
           aria-pressed="false"
+          aria-controls="season1"
           onclick="showSeason(1)">
     <img src="chapter1-cover.png"
          alt="KOKI Season One The Forgotten Sea">
@@ -324,10 +373,13 @@ footer {
     </div>
   </button>
 
-  <button class="season-card active"
+  <!-- SEASON TWO CARD -->
+
+  <button class="season-card"
           id="season2Button"
           type="button"
-          aria-pressed="true"
+          aria-pressed="false"
+          aria-controls="season2"
           onclick="showSeason(2)">
     <img src="season2-cover.png"
          alt="KOKI Season Two The Twelve Stars"
@@ -346,6 +398,34 @@ footer {
       </p>
       <span class="season-button">
         Explore Season Two
+      </span>
+    </div>
+  </button>
+
+  <!-- SEASON THREE CARD -->
+
+  <button class="season-card active"
+          id="season3Button"
+          type="button"
+          aria-pressed="true"
+          aria-controls="season3"
+          onclick="showSeason(3)">
+    <img src="season3-chapter1-cover.png"
+         alt="KOKI Season Three Beyond the Edge of Time">
+    <div class="season-card-body">
+      <div class="season-label">SEASON THREE</div>
+      <h2>Beyond the Edge of Time</h2>
+      <span class="status status-ongoing">
+        1 CHAPTER · ONGOING
+      </span>
+      <p>
+        A ship falls from tomorrow.
+        A civilization challenges the laws of time.
+        And KOKI must protect his friends
+        from a future that threatens to erase them.
+      </p>
+      <span class="season-button">
+        Explore Season Three
       </span>
     </div>
   </button>
@@ -515,7 +595,7 @@ footer {
 
 <!-- SEASON TWO -->
 
-<section id="season2" class="season-section">
+<section id="season2" class="season-section" hidden>
 
   <div class="season-heading">
     <div class="season-label">
@@ -674,42 +754,169 @@ footer {
   </div>
 </section>
 
+<!-- SEASON THREE -->
+
+<section id="season3" class="season-section">
+
+  <div class="season-heading">
+    <div class="season-label">
+      THE KOKI CHRONICLES · SEASON THREE
+    </div>
+
+    <h2>Beyond the Edge of Time</h2>
+
+    <p>The Third Voyage · 1 of 12 Chapters · Ongoing</p>
+
+    <p>
+      Yesterday is gone.<br>
+      Tomorrow has not yet come.<br>
+      But somewhere between them, a new adventure awaits.
+    </p>
+  </div>
+
+  <div class="chapter-grid">
+
+    <!-- SEASON THREE CHAPTER 01 -->
+
+    <article class="chapter new-chapter">
+      <div class="chapter-cover">
+        <img src="season3-chapter1-cover.png"
+             alt="KOKI and his crew witness a burning pirate ship falling through a broken sky"
+             loading="lazy">
+      </div>
+
+      <div class="chapter-body">
+        <div class="chapter-number">
+          CHAPTER 01 · NEW
+        </div>
+
+        <h3>The Ship That Arrived Tomorrow</h3>
+
+        <p>
+          A burning ship falls from a shattered sky.
+          A mysterious messenger brings a warning
+          from tomorrow. And KOKI discovers that
+          even time itself can threaten the people
+          he has sworn to protect.
+        </p>
+
+        <a href="season3-chapter1.html">
+          Read Chapter →
+        </a>
+      </div>
+    </article>
+
+    <!-- ADD SEASON THREE CHAPTER 02 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 03 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 04 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 05 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 06 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 07 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 08 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 09 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 10 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 11 HERE -->
+
+    <!-- ADD SEASON THREE CHAPTER 12 HERE -->
+
+  </div>
+
+  <div class="coming-soon">
+
+    <div class="season-label">
+      THE ADVENTURE CONTINUES
+    </div>
+
+    <h3>More Chapters Coming Soon</h3>
+
+    <p>
+      A new world awaits beyond the edge of time.<br>
+      The third voyage has only just begun.
+    </p>
+
+    <a href="https://x.com/KokiAdventures"
+       target="_blank"
+       rel="noopener noreferrer">
+      Follow KOKI on X →
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CLOSING -->
+
 <section class="closing">
+
   <h2>NO ONE LEFT BEHIND.</h2>
+
   <p>A captain. A promise. A thousand adventures.</p>
-  <p>Two seasons. Twenty-four chapters. One unforgettable voyage.</p>
+
+  <p>
+    Three seasons. Twenty-five chapters.
+    An adventure without end.
+  </p>
+
 </section>
 
 </main>
 
 <footer>
   © 2026 KOKI — The Pirate Elephant<br>
-  The KOKI Chronicles · Seasons One &amp; Two Complete
+  The KOKI Chronicles · Seasons One &amp; Two Complete · Season Three Ongoing
 </footer>
 
 <script>
+
+const totalSeasons=3;
+
 function showSeason(season,scrollToSection=true) {
-  const season1=document.getElementById("season1");
-  const season2=document.getElementById("season2");
-  const button1=document.getElementById("season1Button");
-  const button2=document.getElementById("season2Button");
 
-  season1.hidden=season!==1;
-  season2.hidden=season!==2;
+  if(!Number.isInteger(season) ||
+     season<1 ||
+     season>totalSeasons) {
+    return;
+  }
 
-  button1.classList.toggle("active",season===1);
-  button2.classList.toggle("active",season===2);
+  for(let i=1;i<=totalSeasons;i++) {
 
-  button1.setAttribute("aria-pressed",season===1);
-  button2.setAttribute("aria-pressed",season===2);
+    const section=document.getElementById("season"+i);
+    const button=document.getElementById("season"+i+"Button");
+    const isActive=i===season;
 
-  if(typeof gtag==="function") {
-    gtag("event","select_season",{
-      season_number:season
-    });
+    section.hidden=!isActive;
+
+    button.classList.toggle("active",isActive);
+
+    button.setAttribute(
+      "aria-pressed",
+      String(isActive)
+    );
   }
 
   if(scrollToSection) {
+
+    if(typeof gtag==="function") {
+      gtag("event","select_season",{
+        season_number:season
+      });
+    }
+
+    history.replaceState(
+      null,
+      "",
+      "#season"+season
+    );
+
     document.getElementById("season"+season)
       .scrollIntoView({
         behavior:"smooth",
@@ -718,9 +925,24 @@ function showSeason(season,scrollToSection=true) {
   }
 }
 
-if(window.location.hash==="#season1") {
-  showSeason(1,false);
+function loadSeasonFromHash() {
+
+  const match=window.location.hash.match(/^#season([1-3])$/);
+
+  if(match) {
+    showSeason(Number(match[1]),false);
+  } else {
+    showSeason(3,false);
+  }
 }
+
+loadSeasonFromHash();
+
+window.addEventListener(
+  "hashchange",
+  loadSeasonFromHash
+);
+
 </script>
 
 </body>
