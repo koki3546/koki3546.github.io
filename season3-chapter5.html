@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="KOKI Season Three Chapter 5 — The Kingdom of Unwritten History. KOKI discovers a forgotten kingdom where Milo has become a king, and risks everything to save a world that was never meant to exist.">
+
+<title>KOKI | The Kingdom of Unwritten History</title>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-PLV8VJ8P9J');
+</script>
+
+<style>
+
+:root {
+  --bg:#0c0d12;
+  --panel:#171920;
+  --gold:#e8b957;
+  --muted:#b4b5bd;
+  --border:#574322;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:#f5f3ee;
+  font-family:Arial,sans-serif;
+  line-height:1.9;
+}
+
+nav {
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:28px;
+  padding:20px;
+  background:#111218;
+  border-bottom:1px solid var(--border);
+}
+
+nav a {
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:bold;
+  font-size:14px;
+}
+
+nav a:hover {
+  color:white;
+}
+
+.chapter-header {
+  padding:65px 20px 45px;
+  text-align:center;
+  background:radial-gradient(
+    ellipse at center,
+    #392a1b,
+    #0c0d12 70%
+  );
+}
+
+.season-label {
+  color:var(--gold);
+  font-size:13px;
+  letter-spacing:4px;
+  font-weight:bold;
+}
+
+.season-title {
+  color:var(--muted);
+  font-family:Georgia,serif;
+  font-size:23px;
+  margin:15px 0;
+}
+
+.chapter-number {
+  color:var(--gold);
+  font-size:14px;
+  letter-spacing:3px;
+  margin-top:25px;
+}
+
+h1 {
+  font-family:Georgia,serif;
+  font-size:clamp(32px,6vw,58px);
+  color:var(--gold);
+  line-height:1.25;
+  margin:15px 0;
+  text-shadow:0 4px 30px rgba(232,185,87,.25);
+}
+
+.subtitle {
+  color:var(--muted);
+  font-style:italic;
+  font-size:17px;
+}
+
+.cover {
+  max-width:1150px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+.cover img {
+  display:block;
+  width:100%;
+  border:1px solid var(--border);
+  border-radius:15px;
+  box-shadow:0 15px 45px rgba(0,0,0,.5);
+}
+
+.story-container {
+  max-width:850px;
+  margin:45px auto;
+  padding:50px 55px;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:15px;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.story-container p {
+  font-family:Georgia,serif;
+  font-size:19px;
+  line-height:1.95;
+  margin:0 0 22px;
+}
+
+.story-container strong {
+  color:var(--gold);
+}
+
+.opening {
+  color:var(--gold);
+  font-size:25px!important;
+  font-weight:bold;
+  text-align:center;
+  margin-bottom:40px!important;
+}
+
+.story-container h2 {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:28px;
+  line-height:1.4;
+  text-align:center;
+  margin:35px 0;
+}
+
+.separator {
+  color:var(--gold);
+  text-align:center;
+  letter-spacing:12px;
+  font-size:21px;
+  margin:45px 0;
+}
+
+.ending {
+  text-align:center;
+  color:var(--gold);
+  font-weight:bold;
+  margin-top:45px;
+}
+
+.countdown {
+  margin:45px 0;
+  padding:35px 20px;
+  border:1px solid var(--gold);
+  border-radius:12px;
+  background:linear-gradient(
+    135deg,
+    #201a12,
+    #111218
+  );
+  text-align:center;
+  box-shadow:0 0 30px rgba(232,185,87,.08);
+}
+
+.countdown-number {
+  font-family:Georgia,serif;
+  font-size:clamp(42px,9vw,72px);
+  color:var(--gold);
+  letter-spacing:5px;
+  line-height:1.3;
+}
+
+.countdown-label {
+  color:var(--muted);
+  font-size:12px;
+  letter-spacing:4px;
+  margin-top:12px;
+}
+
+.to-be-continued {
+  text-align:center;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:25px;
+  letter-spacing:4px;
+  margin:45px 0 15px;
+}
+
+.chapter-navigation {
+  max-width:850px;
+  margin:40px auto;
+  padding:0 20px;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.chapter-navigation a,
+.chapter-navigation span {
+  flex:1;
+  min-width:180px;
+  padding:16px 20px;
+  border:1px solid var(--gold);
+  border-radius:8px;
+  text-align:center;
+  color:var(--gold);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.chapter-navigation a:hover {
+  background:var(--gold);
+  color:#111;
+}
+
+.chapter-navigation .disabled {
+  color:#777;
+  border-color:#444;
+  cursor:default;
+}
+
+.community {
+  max-width:850px;
+  margin:50px auto;
+  padding:35px 20px;
+  text-align:center;
+  border-top:1px solid var(--border);
+}
+
+.community h2 {
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:27px;
+}
+
+.community p {
+  color:var(--muted);
+}
+
+.community a {
+  display:inline-block;
+  padding:12px 25px;
+  border:1px solid var(--gold);
+  border-radius:7px;
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.community a:hover {
+  background:var(--gold);
+  color:#111;
+}
+
+footer {
+  padding:35px 20px;
+  text-align:center;
+  color:#999;
+  font-size:13px;
+  border-top:1px solid #292b31;
+}
+
+@media(max-width:800px) {
+
+  nav {
+    gap:13px;
+  }
+
+  nav a {
+    font-size:12px;
+  }
+
+  .chapter-header {
+    padding:45px 20px 30px;
+  }
+
+  .story-container {
+    margin:25px 15px;
+    padding:30px 22px;
+  }
+
+  .story-container p {
+    font-size:17px;
+    line-height:1.9;
+  }
+
+  .story-container h2 {
+    font-size:24px;
+  }
+
+  .chapter-navigation {
+    flex-direction:column;
+  }
+
+  .chapter-navigation a,
+  .chapter-navigation span {
+    width:100%;
+  }
+
+  .season-label {
+    letter-spacing:2px;
+    font-size:11px;
+  }
+
+  .countdown-number {
+    letter-spacing:3px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="story.html">Story</a>
+  <a href="tokenomics.html">Tokenomics</a>
+  <a href="roadmap.html">Roadmap</a>
+  <a href="community.html">Community</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<header class="chapter-header">
+
+  <div class="season-label">
+    THE KOKI CHRONICLES · SEASON THREE
+  </div>
+
+  <div class="season-title">
+    Beyond the Edge of Time
+  </div>
+
+  <div class="chapter-number">
+    CHAPTER 05
+  </div>
+
+  <h1>The Kingdom of Unwritten History</h1>
+
+  <div class="subtitle">
+    Every world deserves a chance to exist.
+  </div>
+
+</header>
+
+<div class="cover">
+
+  <img
+    src="season3-chapter5-cover.png"
+    alt="KOKI sails through the collapsing kingdom of Eldoria as a colossal six-armed golden guardian rises behind him"
+  >
+
+</div>
+
+<main class="story-container">
+
+<p class="opening">
+The guardian's sword did not cut flesh.
+</p>
+
+<p>It cut history.</p>
+
+<p>KOKI narrowly escaped its first attack.</p>
+
+<p>Behind him, an entire mountain appeared, aged a thousand years, and collapsed into dust.</p>
+
+<p>"Don't let that sword touch you!" Nox shouted.</p>
+
+<p>The guardian raised its enormous weapon again.</p>
+
+<p>"You belong to a history that no longer exists."</p>
+
+<p>KOKI tightened his grip on his sword.</p>
+
+<p>"Then history has made a mistake."</p>
+
+<p>The guardian struck.</p>
+
+<p>KOKI turned the wheel sharply.</p>
+
+<p>The ship sailed beneath the enormous blade and crashed through the first golden doorway.</p>
+
+<p>A brilliant light swallowed everything.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>I. The Kingdom That Should Not Exist</h2>
+
+<p>When KOKI opened his eyes, the ocean was gone.</p>
+
+<p>His ship was falling through the sky.</p>
+
+<p>Below him stretched an enormous kingdom surrounded by mountains and waterfalls.</p>
+
+<p>Golden towers rose above magnificent forests.</p>
+
+<p>Flying vessels traveled between floating islands.</p>
+
+<p>Thousands of colorful flags danced in the wind.</p>
+
+<p>"Nox! The sails!"</p>
+
+<p>The two captains pulled the ropes.</p>
+
+<p>The sails opened just before the ship struck a river flowing through the capital.</p>
+
+<p>Water exploded across the streets.</p>
+
+<p>Royal soldiers surrounded the vessel.</p>
+
+<p>Their commander raised his spear.</p>
+
+<p>"Intruders! Kneel before the Kingdom of Eldoria!"</p>
+
+<p>KOKI climbed onto the railing.</p>
+
+<p>"We're looking for a friend."</p>
+
+<p>The commander ignored him.</p>
+
+<p>"His Majesty will decide your fate."</p>
+
+<p>The soldiers escorted them toward an enormous palace.</p>
+
+<p>Above its entrance stood a golden statue of a mouse wearing a royal crown.</p>
+
+<p>KOKI stopped.</p>
+
+<p>He recognized the face.</p>
+
+<p>"Milo?"</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>II. The Boy Who Became a King</h2>
+
+<p>The palace doors opened.</p>
+
+<p>Hundreds of royal guards stood beneath enormous golden pillars.</p>
+
+<p>At the far end of the chamber sat a young mouse king.</p>
+
+<p>He wore a magnificent blue cloak and a crown decorated with silver stars.</p>
+
+<p>KOKI ran forward.</p>
+
+<p>"MILO!"</p>
+
+<p>The guards immediately lowered their spears.</p>
+
+<p>The king raised his hand.</p>
+
+<p>"Who are you?"</p>
+
+<p>KOKI stared at him.</p>
+
+<p>"It's me. Your captain."</p>
+
+<p>The king looked confused.</p>
+
+<p>"I have never sailed aboard a pirate ship."</p>
+
+<p>Nox stepped closer to KOKI.</p>
+
+<p>"Time moves differently here."</p>
+
+<p>KOKI looked around the palace.</p>
+
+<p>Paintings depicted Milo growing from a frightened child into a beloved ruler.</p>
+
+<p>There were portraits of battles, celebrations, and peaceful villages.</p>
+
+<p>In one painting, Milo stood beside his mother.</p>
+
+<p>She was alive.</p>
+
+<p>KOKI slowly lowered his sword.</p>
+
+<p>The Council had not simply imprisoned Milo.</p>
+
+<p>It had given him another life.</p>
+
+<p>A life in which he had everything he had ever lost.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>III. The Secret Beneath the Crown</h2>
+
+<p>That evening, Milo invited the two strangers to dine with him.</p>
+
+<p>He listened patiently as KOKI described their adventures.</p>
+
+<p>The forgotten seas.</p>
+
+<p>The falling stars.</p>
+
+<p>The paper boats.</p>
+
+<p>But none of the stories awakened his memories.</p>
+
+<p>"I'm sorry," Milo said.</p>
+
+<p>"Perhaps you have mistaken me for someone else."</p>
+
+<p>Suddenly, an enormous bell rang outside the palace.</p>
+
+<p>The servants froze.</p>
+
+<p>Milo's expression changed.</p>
+
+<p>"Take our guests somewhere safe."</p>
+
+<p>KOKI stood.</p>
+
+<p>"What's happening?"</p>
+
+<p>"The Night of Renewal."</p>
+
+<p>Beyond the windows, the stars began disappearing.</p>
+
+<p>Across the capital, buildings turned transparent.</p>
+
+<p>An elderly rabbit vanished while holding his granddaughter's hand.</p>
+
+<p>A mother disappeared from the doorway of her home.</p>
+
+<p>Entire streets faded into darkness.</p>
+
+<p>Milo rushed toward the palace balcony.</p>
+
+<p>"Not again!"</p>
+
+<p>KOKI followed him.</p>
+
+<p>"What is happening to your kingdom?"</p>
+
+<p>Milo removed his crown.</p>
+
+<p>Inside it, a golden clock was turning backward.</p>
+
+<p>"Every night, this kingdom loses a piece of its history."</p>
+
+<p>He looked toward the disappearing city.</p>
+
+<p>"And every morning, everyone forgets what was lost."</p>
+
+<p>KOKI understood.</p>
+
+<p>Eldoria was not a second chance.</p>
+
+<p>It was a dying history desperately trying to survive.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>IV. The Army of Forgotten Kings</h2>
+
+<p>The ground beneath the palace trembled.</p>
+
+<p>From the mountains emerged an army of enormous stone warriors.</p>
+
+<p>Each wore the broken crown of a forgotten king.</p>
+
+<p>Their armor carried the names of civilizations that had never existed.</p>
+
+<p>At the center marched a colossal knight with six golden arms.</p>
+
+<p>Its chest contained a burning hourglass.</p>
+
+<p>A voice thundered across the capital.</p>
+
+<p>"THE UNWRITTEN HISTORY MUST END."</p>
+
+<p>Milo drew his royal sword.</p>
+
+<p>"Protect the citizens!"</p>
+
+<p>Thousands of soldiers rushed toward the city walls.</p>
+
+<p>KOKI turned to Nox.</p>
+
+<p>"Bring the ship."</p>
+
+<p>Nox smiled.</p>
+
+<p>"I was hoping you'd say that."</p>
+
+<p>KOKI seized a rope hanging from a passing royal airship.</p>
+
+<p>He swung above the rooftops as the stone army entered the capital.</p>
+
+<p>The colossal knight raised its weapons.</p>
+
+<p>KOKI landed upon its shoulder and struck its golden armor.</p>
+
+<p>The impact shook the entire city.</p>
+
+<p>The knight threw him into the air.</p>
+
+<p>At that moment, the familiar black pirate flag appeared above the rooftops.</p>
+
+<p>Nox stood at the wheel of their flying ship.</p>
+
+<p>"CAPTAIN! YOUR RIDE!"</p>
+
+<p>KOKI grabbed the descending rope with his trunk.</p>
+
+<p>The ship turned sharply between the golden towers.</p>
+
+<p>Its cannons thundered.</p>
+
+<p>Stone warriors collapsed into clouds of ancient dust.</p>
+
+<p>Below them, Milo fought beside his soldiers.</p>
+
+<p>KOKI looked down at the young king.</p>
+
+<p>Even without his memories, Milo had become someone who refused to abandon others.</p>
+
+<p>Some things, KOKI realized, could survive even the destruction of history.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>V. The Last Paper Boat</h2>
+
+<p>The colossal knight shattered the palace gates.</p>
+
+<p>Milo rushed inside.</p>
+
+<p>His mother stood beneath the golden pillars.</p>
+
+<p>Her body was slowly becoming transparent.</p>
+
+<p>"Mother!"</p>
+
+<p>He ran toward her.</p>
+
+<p>She smiled and placed a small paper boat in his hands.</p>
+
+<p>"Do you remember what I taught you?"</p>
+
+<p>Milo began to cry.</p>
+
+<p>"Nothing has to be perfect the first time."</p>
+
+<p>KOKI entered the chamber.</p>
+
+<p>The knight's enormous shadow fell across them.</p>
+
+<p>Milo embraced his mother.</p>
+
+<p>"I won't let you disappear."</p>
+
+<p>She gently touched his cheek.</p>
+
+<p>"My dear boy."</p>
+
+<p>"You cannot spend your entire life trying to keep yesterday alive."</p>
+
+<p>The paper boat began glowing.</p>
+
+<p>Images appeared around Milo.</p>
+
+<p>A pirate ship.</p>
+
+<p>A laughing crew.</p>
+
+<p>A captain with a scar upon his cheek.</p>
+
+<p>A pair of arms embracing him after a terrible battle.</p>
+
+<p>Milo turned toward KOKI.</p>
+
+<p>His eyes widened.</p>
+
+<p>"Captain?"</p>
+
+<p>KOKI smiled.</p>
+
+<p>"Welcome back, Milo."</p>
+
+<p>The young king looked at his mother.</p>
+
+<p>"Will I lose you again?"</p>
+
+<p>She kissed his forehead.</p>
+
+<p>"You will carry me wherever you go."</p>
+
+<p>Her golden light flowed into the paper boat.</p>
+
+<p>Milo closed his eyes.</p>
+
+<p>For the first time, he understood that remembering someone was different from refusing to let them go.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>VI. The Captain Who Refused to Choose</h2>
+
+<p>The golden knight entered the palace.</p>
+
+<p>Its hourglass burned brighter.</p>
+
+<p>"THE KINGDOM WILL BE ERASED."</p>
+
+<p>Milo gripped his paper boat.</p>
+
+<p>KOKI raised his sword.</p>
+
+<p>"No."</p>
+
+<p>The knight stopped.</p>
+
+<p>"THIS HISTORY HAS NO RIGHT TO EXIST."</p>
+
+<p>KOKI looked at the frightened citizens gathering outside.</p>
+
+<p>"Tell that to the people living here."</p>
+
+<p>Nox brought the ship beside the palace balcony.</p>
+
+<p>"Captain! We have to leave!"</p>
+
+<p>KOKI looked toward the thousands of citizens.</p>
+
+<p>He could rescue Milo.</p>
+
+<p>He could escape before the kingdom disappeared.</p>
+
+<p>But he could not abandon an entire world simply because someone had decided it should never have existed.</p>
+
+<p>"Milo, does this kingdom have a harbor?"</p>
+
+<p>The young king nodded.</p>
+
+<p>"Then tell everyone to bring their ships."</p>
+
+<p>KOKI climbed aboard his vessel.</p>
+
+<p>Nox stared at him.</p>
+
+<p>"You're planning to evacuate an entire kingdom?"</p>
+
+<p>KOKI raised the pirate flag.</p>
+
+<p>"We've done more impossible things."</p>
+
+<p>The royal fleet gathered beneath the collapsing sky.</p>
+
+<p>Hundreds of vessels followed KOKI toward the golden doorway.</p>
+
+<p>The colossal knight pursued them.</p>
+
+<p>KOKI turned his ship around.</p>
+
+<p>"NOX! TAKE THEM THROUGH!"</p>
+
+<p>He sailed directly toward the knight.</p>
+
+<p>The creature raised its six enormous weapons.</p>
+
+<p>KOKI aimed his cannons at the burning hourglass.</p>
+
+<p>"FIRE!"</p>
+
+<p>The hourglass shattered.</p>
+
+<p>A storm of golden sand swept across the kingdom.</p>
+
+<p>The doorway expanded.</p>
+
+<p>One by one, the royal vessels escaped into the ocean of discarded histories.</p>
+
+<p>KOKI's ship followed just as Eldoria disappeared behind them.</p>
+
+<p>But its people survived.</p>
+
+<p>Milo stood beside KOKI, holding his mother's paper boat.</p>
+
+<p>Behind them sailed an entire fleet of refugees from a history that had never been written.</p>
+
+<p>Nox laughed.</p>
+
+<p>"We came here to rescue one mouse."</p>
+
+<p>KOKI smiled.</p>
+
+<p>"Plans change."</p>
+
+<p>Suddenly, the paper boat pointed toward another distant light.</p>
+
+<p>A terrible sound echoed across the darkness.</p>
+
+<p>Thousands of hammers striking metal.</p>
+
+<p>Beyond the next doorway stood an enormous fortress surrounded by rivers of molten iron.</p>
+
+<p>At its center, a familiar figure was chained to a gigantic machine.</p>
+
+<p>Brann.</p>
+
+<p>But something was terribly wrong.</p>
+
+<p>His enormous hammer was being used to forge weapons capable of destroying entire histories.</p>
+
+<p>And standing beside him was Director Vaelor.</p>
+
+<div class="ending">
+
+<p>
+<strong>
+Nineteen hours remained.
+</strong>
+</p>
+
+</div>
+
+<div class="countdown">
+
+  <div class="countdown-number">
+    19:00:00
+  </div>
+
+  <div class="countdown-label">
+    TIME REMAINING
+  </div>
+
+</div>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<div class="to-be-continued">
+  TO BE CONTINUED...
+</div>
+
+</main>
+
+<div class="chapter-navigation">
+
+  <a href="season3-chapter4.html">
+    ← Previous Chapter
+  </a>
+
+  <a href="story.html#season3">
+    All Chapters
+  </a>
+
+  <span class="disabled">
+    Next Chapter · Coming Soon
+  </span>
+
+</div>
+
+<section class="community">
+
+  <div class="season-label">
+    THE ADVENTURE CONTINUES
+  </div>
+
+  <h2>NO ONE LEFT BEHIND.</h2>
+
+  <p>
+    One Captain. Endless Adventures.<br>
+    Follow KOKI and discover what lies beyond the edge of time.
+  </p>
+
+  <a
+    href="https://x.com/KokiAdventures"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Follow KOKI on X →
+  </a>
+
+</section>
+
+<footer>
+
+  © 2026 KOKI — The Pirate Elephant<br>
+
+  The KOKI Chronicles · Season Three<br>
+
+  Beyond the Edge of Time
+
+</footer>
+
+</body>
+</html>
