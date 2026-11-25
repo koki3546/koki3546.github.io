@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 4 - The Ship That Never Sailed | KOKI</title>
+
+<meta name="description" content="KOKI Season 3: Beyond the Edge of Time. Chapter 4 - The Ship That Never Sailed. KOKI confronts a rewritten past and fights to reclaim the friendships that made his life worth living.">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-PLV8VJ8P9J');
+</script>
+
+<style>
+:root {
+    --bg:#0c0d12;
+    --panel:#171920;
+    --gold:#e8b957;
+    --text:#e5e5e5;
+    --muted:#9ca3af;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+nav {
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(12,13,18,.96);
+    border-bottom:1px solid #292929;
+    padding:14px 24px;
+}
+
+.nav-inner {
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:var(--gold);
+    font-size:23px;
+    font-weight:bold;
+}
+
+.logo img {
+    width:48px;
+    height:48px;
+    object-fit:contain;
+}
+
+.nav-links {
+    display:flex;
+    flex-wrap:wrap;
+    gap:23px;
+}
+
+.nav-links a {
+    color:#ddd;
+    text-decoration:none;
+    font-size:15px;
+    transition:.2s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color:var(--gold);
+}
+
+.hero {
+    position:relative;
+    min-height:580px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(12,13,18,.08),
+            rgba(12,13,18,.25) 45%,
+            #0c0d12 100%
+        ),
+        url('season3-chapter4-cover.png')
+        center center / cover no-repeat;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    text-align:center;
+    padding:90px 24px 55px;
+}
+
+.hero-content {
+    max-width:1000px;
+}
+
+.season-label {
+    color:var(--gold);
+    font-size:14px;
+    font-weight:bold;
+    letter-spacing:5px;
+    text-transform:uppercase;
+}
+
+.season-title {
+    font-family:Georgia,serif;
+    font-size:25px;
+    color:#ddd;
+    margin:18px 0;
+}
+
+.chapter-label {
+    color:var(--gold);
+    letter-spacing:4px;
+    font-size:13px;
+    margin-top:30px;
+}
+
+h1 {
+    font-family:Georgia,serif;
+    font-size:clamp(36px,6vw,66px);
+    color:var(--gold);
+    line-height:1.15;
+    margin:18px 0;
+    text-shadow:0 3px 20px #000;
+}
+
+.hero-description {
+    color:#c8c8c8;
+    font-family:Georgia,serif;
+    font-style:italic;
+    line-height:1.8;
+}
+
+.story {
+    max-width:850px;
+    padding:25px 30px 65px;
+    margin:auto;
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:19px;
+    line-height:1.95;
+}
+
+.story p {
+    margin:0 0 22px;
+}
+
+.opening {
+    font-size:27px;
+    font-weight:bold;
+    color:var(--gold);
+}
+
+.story h2 {
+    color:var(--gold);
+    font-size:28px;
+    text-align:center;
+    font-weight:normal;
+    margin:55px 0 35px;
+}
+
+.separator {
+    color:var(--gold);
+    text-align:center;
+    letter-spacing:14px;
+    margin:50px 0;
+    font-size:20px;
+}
+
+.highlight {
+    color:#f1d9a2;
+    font-weight:bold;
+}
+
+.countdown {
+    margin:45px 0;
+    padding:35px 20px;
+    text-align:center;
+    border:1px solid var(--gold);
+    border-radius:12px;
+    background:linear-gradient(135deg,#201a12,#111218);
+}
+
+.countdown-number {
+    font-family:Georgia,serif;
+    font-size:clamp(45px,9vw,72px);
+    color:var(--gold);
+    line-height:1.2;
+    letter-spacing:5px;
+}
+
+.countdown-label {
+    color:var(--muted);
+    font-family:Arial,sans-serif;
+    font-size:13px;
+    letter-spacing:4px;
+    margin-top:12px;
+}
+
+.continued {
+    text-align:center;
+    color:var(--gold);
+    font-size:27px;
+    letter-spacing:3px;
+    margin:65px 0 35px;
+}
+
+.end-card {
+    background:var(--panel);
+    border:1px solid #343039;
+    border-radius:14px;
+    padding:35px 25px;
+    margin-top:45px;
+    text-align:center;
+}
+
+.end-card h3 {
+    color:var(--gold);
+    font-family:Georgia,serif;
+    font-size:28px;
+    font-weight:normal;
+    margin:0 0 12px;
+}
+
+.end-card p {
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.8;
+}
+
+.chapter-navigation {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+    margin:40px 0 10px;
+}
+
+.chapter-navigation a,
+.chapter-navigation span {
+    padding:13px 20px;
+    border:1px solid var(--gold);
+    border-radius:7px;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    text-decoration:none;
+    color:var(--gold);
+}
+
+.chapter-navigation a:hover {
+    background:var(--gold);
+    color:#111;
+}
+
+.chapter-navigation .coming-soon {
+    color:#777;
+    border-color:#444;
+}
+
+footer {
+    border-top:1px solid #292929;
+    padding:40px 20px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.9;
+}
+
+footer a {
+    text-decoration:none;
+    color:var(--gold);
+}
+
+.motto {
+    color:var(--gold);
+    font-weight:bold;
+    letter-spacing:3px;
+    margin:15px 0;
+}
+
+@media(max-width:768px) {
+
+    nav {
+        padding:12px;
+    }
+
+    .nav-inner {
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .nav-links {
+        justify-content:center;
+        gap:15px;
+    }
+
+    .nav-links a {
+        font-size:13px;
+    }
+
+    .hero {
+        min-height:450px;
+        padding:60px 18px 35px;
+    }
+
+    .season-label {
+        font-size:11px;
+        letter-spacing:3px;
+    }
+
+    .season-title {
+        font-size:21px;
+    }
+
+    .story {
+        font-size:17px;
+        padding:20px 22px 45px;
+        line-height:1.9;
+    }
+
+    .opening {
+        font-size:23px;
+    }
+
+    .story h2 {
+        font-size:24px;
+    }
+
+    .chapter-navigation {
+        flex-direction:column;
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-inner">
+
+<a class="logo" href="index.html">
+<img src="koki-logo.png" alt="KOKI Logo">
+KOKI
+</a>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="story.html" class="active">Story</a>
+<a href="tokenomics.html">Tokenomics</a>
+<a href="roadmap.html">Roadmap</a>
+<a href="community.html">Community</a>
+<a href="faq.html">FAQ</a>
+</div>
+
+</div>
+</nav>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="season-label">
+The Adventures of KOKI · Season III
+</div>
+
+<div class="season-title">
+Beyond the Edge of Time
+</div>
+
+<div class="chapter-label">
+CHAPTER 04
+</div>
+
+<h1>The Ship That Never Sailed</h1>
+
+<div class="hero-description">
+What if a life without pain<br>
+was also a life without the ones you loved?
+</div>
+
+</div>
+
+</header>
+
+<main class="story">
+
+<p class="opening">The ocean was disappearing.</p>
+
+<p>KOKI reached the harbor just as the mast of his beloved ship dissolved into golden dust.</p>
+
+<p>"BRANN! THE ROPES!"</p>
+
+<p>Brann jumped onto the pier and grabbed the mooring line.</p>
+
+<p>But the rope vanished between his fingers.</p>
+
+<p>The sails disappeared.</p>
+
+<p>The cannons disappeared.</p>
+
+<p>The wooden deck upon which they had shared countless adventures faded into nothingness.</p>
+
+<p>Then Finn looked at KOKI.</p>
+
+<p>"Excuse me..."</p>
+
+<p>The little sailor stepped backward.</p>
+
+<p>"Who are you?"</p>
+
+<p>KOKI froze.</p>
+
+<p>The Council was not simply destroying his ship.</p>
+
+<p>It was destroying the journey that had brought them together.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>I. The Island He Never Left</h2>
+
+<p>A golden wave swept across the harbor.</p>
+
+<p>KOKI closed his eyes.</p>
+
+<p>When he opened them, he was standing beneath a familiar tree.</p>
+
+<p>The ocean was calm.</p>
+
+<p>Fishing boats rested beside a wooden pier.</p>
+
+<p>Children laughed along the beach.</p>
+
+<p>He recognized every house, every path, and every distant mountain.</p>
+
+<p>It was the island where his adventure had begun.</p>
+
+<p>But something was different.</p>
+
+<p>His reflection appeared in the water.</p>
+
+<p>There was no scar upon his cheek.</p>
+
+<p>No eyepatch.</p>
+
+<p>No pirate hat.</p>
+
+<p>He was wearing the simple clothes of a fisherman.</p>
+
+<p>"KOKI!"</p>
+
+<p>An elderly neighbor waved from the village.</p>
+
+<p>"You're going to be late for dinner!"</p>
+
+<p>KOKI stared toward the horizon.</p>
+
+<p>"Where is my ship?"</p>
+
+<p>The neighbor laughed.</p>
+
+<p>"What ship? You've never left this island."</p>
+
+<p>KOKI felt a terrible emptiness.</p>
+
+<p>He ran toward the beach where his first wooden boat had once waited.</p>
+
+<p>It was still there.</p>
+
+<p>Its sails were torn.</p>
+
+<p>Its compass was broken.</p>
+
+<p>But its hull had never touched the ocean.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>II. The Happiness He Could Have Had</h2>
+
+<p>As the sun descended, KOKI walked through the village.</p>
+
+<p>Everyone knew him.</p>
+
+<p>Everyone welcomed him.</p>
+
+<p>There were no enemies.</p>
+
+<p>No terrible battles.</p>
+
+<p>No nights spent wondering whether his friends would survive until morning.</p>
+
+<p>A warm meal waited inside his little house.</p>
+
+<p>Photographs covered the walls.</p>
+
+<p>In every photograph, KOKI was smiling.</p>
+
+<p>For a moment, he wondered what his life might have been if he had never sailed beyond the horizon.</p>
+
+<p>Then a voice spoke behind him.</p>
+
+<p>"Beautiful, isn't it?"</p>
+
+<p>Director Vaelor stood beside the doorway.</p>
+
+<p>"You could have lived a peaceful life."</p>
+
+<p>KOKI turned.</p>
+
+<p>"Where are my friends?"</p>
+
+<p>"Living their own lives. Far away from you."</p>
+
+<p>Vaelor approached the photographs.</p>
+
+<p>"No scars. No sacrifices. No suffering."</p>
+
+<p>He smiled.</p>
+
+<p>"Isn't this what everyone ultimately wants?"</p>
+
+<p>KOKI looked at the smiling elephant in the photographs.</p>
+
+<p>Then he noticed something.</p>
+
+<p>There was not a single photograph of Finn.</p>
+
+<p>Not one of Brann, Veyra, Lyra, Nox, or Milo.</p>
+
+<p>He turned toward Vaelor.</p>
+
+<p>"You removed my pain."</p>
+
+<p>"Yes."</p>
+
+<p class="highlight">"But you also removed everything that made my life worth living."</p>
+
+<p>Vaelor's smile disappeared.</p>
+
+<p>KOKI walked past him.</p>
+
+<p>"I'm leaving."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>III. The Ocean Without a Horizon</h2>
+
+<p>KOKI pushed his little wooden boat into the water.</p>
+
+<p>The villagers gathered along the beach.</p>
+
+<p>"Don't go!"</p>
+
+<p>"There is nothing beyond the horizon!"</p>
+
+<p>"You have everything you need here!"</p>
+
+<p>KOKI raised the torn sail.</p>
+
+<p>"I've heard that before."</p>
+
+<p>The wind carried his boat away from the island.</p>
+
+<p>But as he approached the horizon, the ocean suddenly rose into the sky.</p>
+
+<p>An enormous wall of golden water surrounded the world.</p>
+
+<p>Within it, thousands of clocks turned backward.</p>
+
+<p>Vaelor's voice thundered above the waves.</p>
+
+<p>"You cannot escape a history that has already been rewritten!"</p>
+
+<p>The golden ocean transformed.</p>
+
+<p>Enormous mechanical sea creatures emerged from the waves.</p>
+
+<p>Their bodies were covered in clocks.</p>
+
+<p>Their eyes burned with stolen sunlight.</p>
+
+<p>KOKI reached for his sword.</p>
+
+<p>It was gone.</p>
+
+<p>He had never become a pirate.</p>
+
+<p>He had never learned to fight.</p>
+
+<p>But somewhere inside him, the courage remained.</p>
+
+<p>KOKI seized a wooden oar.</p>
+
+<p class="highlight">"Then I'll write it again!"</p>
+
+<p>The first creature attacked.</p>
+
+<p>He turned his boat sharply, narrowly escaping its enormous jaws.</p>
+
+<p>A second creature shattered the mast.</p>
+
+<p>A third rose beneath the hull.</p>
+
+<p>The little boat was breaking apart.</p>
+
+<p>Then, from somewhere beyond the golden wall, a familiar voice shouted.</p>
+
+<p>"CAPTAIN!"</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>IV. The Sailor Who Remembered</h2>
+
+<p>A silver blade pierced the golden ocean.</p>
+
+<p>The wall cracked.</p>
+
+<p>Nox emerged aboard a small black vessel.</p>
+
+<p>His coat was torn.</p>
+
+<p>His face was covered in scratches.</p>
+
+<p>But he was smiling.</p>
+
+<p>"Did you really think I'd let you have another adventure without me?"</p>
+
+<p>KOKI laughed.</p>
+
+<p>"Nox!"</p>
+
+<p>The two vessels collided as another mechanical creature attacked.</p>
+
+<p>Nox threw his silver sword toward KOKI.</p>
+
+<p>"Catch!"</p>
+
+<p>KOKI caught the blade with his trunk before gripping its handle.</p>
+
+<p>The moment he touched it, his scar returned.</p>
+
+<p>His pirate coat appeared.</p>
+
+<p>His eyepatch covered his right eye.</p>
+
+<p>The false history began to fracture.</p>
+
+<p>Nox pointed toward the golden wall.</p>
+
+<p>"The Council can erase our meetings. But it can't completely erase the choices we've already made."</p>
+
+<p>Together, the two captains sailed directly toward the largest creature.</p>
+
+<p>It opened its enormous jaws.</p>
+
+<p>KOKI climbed onto the broken mast.</p>
+
+<p>"NOW!"</p>
+
+<p>Nox turned the vessel.</p>
+
+<p>KOKI leapt through the air and drove the silver blade into the creature's golden clock.</p>
+
+<p>The entire ocean trembled.</p>
+
+<p>Thousands of cracks spread across the sky.</p>
+
+<p>Beyond them, KOKI saw fragments of another world.</p>
+
+<p>Brann working alone in a distant shipyard.</p>
+
+<p>Veyra imprisoned aboard a forgotten warship.</p>
+
+<p>Lyra wandering through a library of endless books.</p>
+
+<p>Finn standing beside a wrecked boat.</p>
+
+<p>And Milo, sitting alone beneath a tree.</p>
+
+<p>KOKI reached toward them.</p>
+
+<p>The golden wall shattered.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>V. A Ship Built from Memories</h2>
+
+<p>KOKI and Nox fell into a vast ocean of darkness.</p>
+
+<p>Pieces of broken ships floated among thousands of glowing memories.</p>
+
+<p>A wooden plank drifted toward KOKI.</p>
+
+<p>He recognized it immediately.</p>
+
+<p>It was part of his ship.</p>
+
+<p>Upon its surface, someone had carved four words.</p>
+
+<p class="highlight">NO ONE LEFT BEHIND.</p>
+
+<p>KOKI held the plank against his chest.</p>
+
+<p>Then another piece of wood appeared.</p>
+
+<p>And another.</p>
+
+<p>A familiar sail descended from the darkness.</p>
+
+<p>Brann's hammer emerged from a golden light.</p>
+
+<p>Finn's old rope wrapped itself around the mast.</p>
+
+<p>Veyra's compass appeared beside the wheel.</p>
+
+<p>Lyra's lantern illuminated the deck.</p>
+
+<p>Every memory became a piece of the ship.</p>
+
+<p>Every friendship became something the Council could not completely destroy.</p>
+
+<p>The vessel slowly rebuilt itself beneath KOKI's feet.</p>
+
+<p>Nox watched in astonishment.</p>
+
+<p>"How is this possible?"</p>
+
+<p>KOKI placed his hand upon the wheel.</p>
+
+<p>"Because a ship isn't just made of wood."</p>
+
+<p>He looked toward the distant lights.</p>
+
+<p class="highlight">"It's made of everyone who sailed aboard it."</p>
+
+<p>The sails opened.</p>
+
+<p>The cannons returned.</p>
+
+<p>The pirate flag rose into the darkness.</p>
+
+<p>And for the first time in a world without wind, the ship began to move.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>VI. The Captain Against Tomorrow</h2>
+
+<p>Far above Aevora, Director Vaelor watched his enormous clock begin to crack.</p>
+
+<p>"Impossible."</p>
+
+<p>One of the Meridian officers approached him.</p>
+
+<p>"Director, the pirate has escaped the corrected timeline."</p>
+
+<p>Vaelor stared at the instrument.</p>
+
+<p>"Where is he going?"</p>
+
+<p>The officer hesitated.</p>
+
+<p>"Into the discarded histories."</p>
+
+<p>Vaelor's face turned pale.</p>
+
+<p>Beneath the Meridian Tower, an ancient machine began to awaken.</p>
+
+<p>It had remained silent for a thousand years.</p>
+
+<p>Seven enormous doors opened.</p>
+
+<p>Behind each door waited a different past.</p>
+
+<p>Meanwhile, KOKI stood upon the deck of his restored ship.</p>
+
+<p>Five distant lights appeared across the endless darkness.</p>
+
+<p>One for each of his missing companions.</p>
+
+<p>Nox stood beside him.</p>
+
+<p>"Which one do we follow first?"</p>
+
+<p>KOKI looked at the smallest light.</p>
+
+<p>It was fading faster than the others.</p>
+
+<p>"Milo."</p>
+
+<p>He turned the wheel.</p>
+
+<p>The ship accelerated toward the unknown.</p>
+
+<p>But as they approached the first doorway, a terrifying figure emerged from the darkness.</p>
+
+<p>It wore a golden crown.</p>
+
+<p>Its enormous body was formed from broken clocks and forgotten centuries.</p>
+
+<p>It carried a sword upon which entire civilizations appeared and disappeared.</p>
+
+<p>Nox slowly drew his weapon.</p>
+
+<p>"What is that?"</p>
+
+<p>The creature opened its eyes.</p>
+
+<p>"I am the guardian of everything that never happened."</p>
+
+<p>KOKI stepped forward.</p>
+
+<p>The pirate flag rose behind him.</p>
+
+<p class="highlight">"Then you're about to witness something new."</p>
+
+<p>The creature raised its sword.</p>
+
+<p>And the battle for yesterday began.</p>
+
+<p class="highlight">Twenty hours remained.</p>
+
+<div class="countdown">
+
+<div class="countdown-number">
+20:00:00
+</div>
+
+<div class="countdown-label">
+TIME REMAINING
+</div>
+
+</div>
+
+<div class="continued">
+TO BE CONTINUED...
+</div>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<section class="end-card">
+
+<div class="season-label">
+Season III · Chapter 04
+</div>
+
+<h3>The Ship That Never Sailed</h3>
+
+<p>Beyond the Edge of Time</p>
+
+<p>
+A life without pain is not always a life worth living.<br>
+Every scar carries a story.<br>
+Every friendship is a reason to sail again.
+</p>
+
+<div class="motto">
+NO ONE LEFT BEHIND
+</div>
+
+<p>Thank you for sailing with KOKI.</p>
+
+</section>
+
+<div class="chapter-navigation">
+
+<a href="season3-chapter3.html">
+← Previous Chapter
+</a>
+
+<a href="story.html#season3">
+All Chapters
+</a>
+
+<span class="coming-soon">
+Next Chapter · Coming Soon
+</span>
+
+</div>
+
+</main>
+
+<footer>
+
+<div class="motto">
+NO ONE LEFT BEHIND
+</div>
+
+<p>The Adventures of KOKI</p>
+
+<p>
+<a href="https://x.com/KokiAdventures"
+target="_blank"
+rel="noopener noreferrer">
+Follow KOKI on X
+</a>
+</p>
+
+<p>© 2026 KOKI. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
