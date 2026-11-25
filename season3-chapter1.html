@@ -1,0 +1,905 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 1 - The Ship That Arrived Tomorrow | KOKI</title>
+
+<meta name="description" content="KOKI Season 3: Beyond the Edge of Time. Chapter 1 - The Ship That Arrived Tomorrow. A new adventure begins.">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PLV8VJ8P9J');
+</script>
+
+<style>
+:root {
+    --bg: #0c0d12;
+    --panel: #171920;
+    --gold: #e8b957;
+    --text: #e5e5e5;
+    --muted: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(12,13,18,.96);
+    border-bottom: 1px solid #292929;
+    padding: 14px 24px;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--gold);
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 15px;
+    transition: .2s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: var(--gold);
+}
+
+.hero {
+    position: relative;
+    min-height: 580px;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(12,13,18,.08),
+            rgba(12,13,18,.25) 45%,
+            #0c0d12 100%
+        ),
+        url('season3-chapter1-cover.png')
+        center center / cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 24px 55px;
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.season-label {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.season-title {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #ddd;
+    margin: 18px 0;
+}
+
+.chapter-label {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 6vw, 66px);
+    color: var(--gold);
+    line-height: 1.15;
+    margin: 18px 0;
+    text-shadow: 0 3px 20px #000;
+}
+
+.hero-description {
+    color: #c8c8c8;
+    font-family: Georgia, serif;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.story {
+    max-width: 850px;
+    padding: 25px 30px 65px;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 1.95;
+}
+
+.story p {
+    margin: 0 0 22px;
+}
+
+.opening {
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.story h2 {
+    color: var(--gold);
+    font-size: 28px;
+    text-align: center;
+    font-weight: normal;
+    margin: 55px 0 35px;
+}
+
+.separator {
+    color: var(--gold);
+    text-align: center;
+    letter-spacing: 14px;
+    margin: 50px 0;
+    font-size: 20px;
+}
+
+.letter {
+    background: #171920;
+    border-left: 3px solid var(--gold);
+    padding: 25px 30px;
+    margin: 35px 0;
+    border-radius: 6px;
+    font-style: italic;
+    color: #f1d9a2;
+}
+
+.letter p:last-child {
+    margin-bottom: 0;
+}
+
+.continued {
+    text-align: center;
+    color: var(--gold);
+    font-size: 27px;
+    letter-spacing: 3px;
+    margin: 65px 0 35px;
+}
+
+.end-card {
+    background: var(--panel);
+    border: 1px solid #343039;
+    border-radius: 14px;
+    padding: 35px 25px;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.end-card h3 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0 0 12px;
+}
+
+.end-card p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.chapter-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin: 40px 0 10px;
+}
+
+.chapter-navigation a,
+.chapter-navigation span {
+    padding: 13px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--gold);
+}
+
+.chapter-navigation a:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+.chapter-navigation .coming-soon {
+    color: #777;
+    border-color: #444;
+}
+
+footer {
+    border-top: 1px solid #292929;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--gold);
+}
+
+.motto {
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin: 15px 0;
+}
+
+@media(max-width: 768px) {
+
+    nav {
+        padding: 12px;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 60px 18px 35px;
+    }
+
+    .season-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .season-title {
+        font-size: 21px;
+    }
+
+    .story {
+        font-size: 17px;
+        padding: 20px 22px 45px;
+        line-height: 1.9;
+    }
+
+    .opening {
+        font-size: 23px;
+    }
+
+    .story h2 {
+        font-size: 24px;
+    }
+
+    .chapter-navigation {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-inner">
+
+<a class="logo" href="index.html">
+<img src="koki-logo.png" alt="KOKI Logo">
+KOKI
+</a>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="story.html" class="active">Story</a>
+<a href="tokenomics.html">Tokenomics</a>
+<a href="roadmap.html">Roadmap</a>
+<a href="community.html">Community</a>
+<a href="faq.html">FAQ</a>
+</div>
+
+</div>
+</nav>
+
+<header class="hero">
+<div class="hero-content">
+
+<div class="season-label">
+The Adventures of KOKI · Season III
+</div>
+
+<div class="season-title">
+Beyond the Edge of Time
+</div>
+
+<div class="chapter-label">
+CHAPTER 01
+</div>
+
+<h1>The Ship That Arrived Tomorrow</h1>
+
+<div class="hero-description">
+Every horizon holds a new beginning.<br>
+But what if tomorrow has already happened?
+</div>
+
+</div>
+</header>
+
+<main class="story">
+
+<p class="opening">The first cannonball fell from a cloudless sky.</p>
+
+<p>It struck the ocean less than twenty feet from KOKI's ship, sending a towering wall of water across the deck.</p>
+
+<p>Milo screamed.</p>
+
+<p>Brann dropped his breakfast.</p>
+
+<p>Finn grabbed the wheel.</p>
+
+<p>"Where did that come from?"</p>
+
+<p>KOKI drew his sword.</p>
+
+<p>Above them stretched a perfectly blue sky.</p>
+
+<p>There were no enemy ships.</p>
+
+<p>No islands.</p>
+
+<p>Not even a cloud.</p>
+
+<p>Then a second cannonball fell.</p>
+
+<p>And a third.</p>
+
+<p>"EVERYONE BELOW DECK!" KOKI shouted.</p>
+
+<p>Nox looked upward.</p>
+
+<p>His golden eye narrowed.</p>
+
+<p>"Captain..."</p>
+
+<p>The sky was beginning to crack.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>I. Thirty-Seven Days of Peace</h2>
+
+<p>Thirty-seven days had passed since the seven friends escaped the silver sea.</p>
+
+<p>For the first time in months, their lives had become wonderfully ordinary.</p>
+
+<p>Brann complained about the food.</p>
+
+<p>Finn complained about Brann.</p>
+
+<p>Veyra challenged Nox to sword fights that neither of them ever admitted losing.</p>
+
+<p>Lyra spent her evenings studying unfamiliar constellations.</p>
+
+<p>And Milo had begun building a wooden fleet large enough to conquer the kitchen.</p>
+
+<p>KOKI loved every moment of it.</p>
+
+<p>He had spent so long fighting to bring his friends home that he had almost forgotten what it meant simply to live beside them.</p>
+
+<p>One evening, Nox found him sitting at the bow.</p>
+
+<p>"Getting bored?"</p>
+
+<p>KOKI smiled.</p>
+
+<p>"Not at all."</p>
+
+<p>"Thirty-seven days without monsters, ancient kings, or collapsing worlds."</p>
+
+<p>"Sounds wonderful."</p>
+
+<p>Nox laughed.</p>
+
+<p>"You're becoming a terrible pirate."</p>
+
+<p>KOKI looked toward the sunset.</p>
+
+<p>"Perhaps being a good pirate isn't about finding trouble."</p>
+
+<p>Nox sat beside him.</p>
+
+<p>"Then what is it about?"</p>
+
+<p>KOKI watched a flock of seabirds disappear beyond the horizon.</p>
+
+<p>"Being free enough to decide where tomorrow takes you."</p>
+
+<p>Neither captain knew how cruel those words would soon become.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>II. The Broken Sky</h2>
+
+<p>The crack above the ship widened.</p>
+
+<p>Beyond it lay another ocean.</p>
+
+<p>An ocean hanging upside down in the heavens.</p>
+
+<p>Ships sailed across its surface.</p>
+
+<p>Lightning flashed beneath its waves.</p>
+
+<p>And enormous creatures moved through the darkness between its stars.</p>
+
+<p>Lyra stared upward.</p>
+
+<p>"That's impossible."</p>
+
+<p>Brann looked at her.</p>
+
+<p>"You said that about the last twelve impossible things we survived."</p>
+
+<p>"This is different!"</p>
+
+<p>A burning ship appeared within the opening.</p>
+
+<p>Its masts were broken.</p>
+
+<p>Its sails were covered in flames.</p>
+
+<p>Figures ran desperately across its deck.</p>
+
+<p>Then gravity seemed to change.</p>
+
+<p>The vessel fell from the sky.</p>
+
+<p>"TURN THE SHIP!" KOKI roared.</p>
+
+<p>Finn spun the wheel.</p>
+
+<p>The burning vessel crashed into the ocean beside them.</p>
+
+<p>The impact lifted KOKI's ship almost completely out of the water.</p>
+
+<p>Cannons broke loose.</p>
+
+<p>Barrels rolled across the deck.</p>
+
+<p>Veyra grabbed Milo before he was thrown overboard.</p>
+
+<p>For several terrifying seconds, the ship balanced upon the crest of an enormous wave.</p>
+
+<p>Then it crashed back into the sea.</p>
+
+<p>Silence followed.</p>
+
+<p>KOKI rose slowly.</p>
+
+<p>The other vessel floated beside them.</p>
+
+<p>Its black sails hung in ruins.</p>
+
+<p>Nox approached the railing.</p>
+
+<p>His expression changed.</p>
+
+<p>"KOKI."</p>
+
+<p>"What?"</p>
+
+<p>"Look at its flag."</p>
+
+<p>Through the smoke, a torn pirate flag fluttered in the wind.</p>
+
+<p>Upon it was the unmistakable symbol of an elephant.</p>
+
+<p>KOKI stopped breathing.</p>
+
+<p>The burning ship was theirs.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>III. The Other Deck</h2>
+
+<p>"That isn't possible," Finn whispered.</p>
+
+<p>The two vessels floated side by side.</p>
+
+<p>Every detail was identical.</p>
+
+<p>The same cannons.</p>
+
+<p>The same carved railings.</p>
+
+<p>Even the crooked wooden step Brann had promised to repair three weeks earlier.</p>
+
+<p>But the other ship looked as though it had survived a hundred battles.</p>
+
+<p>Its hull was covered in deep scars.</p>
+
+<p>Its deck was stained with ash.</p>
+
+<p>And no one was moving.</p>
+
+<p>KOKI tied a rope around his waist.</p>
+
+<p>"I'm going aboard."</p>
+
+<p>Nox grabbed his arm.</p>
+
+<p>"Not alone."</p>
+
+<p>The two captains crossed together.</p>
+
+<p>Their boots landed upon the ruined deck.</p>
+
+<p>KOKI looked toward the captain's chair.</p>
+
+<p>It was empty.</p>
+
+<p>Beside it lay a small wooden ship.</p>
+
+<p>Painted gold.</p>
+
+<p>KOKI recognized it immediately.</p>
+
+<p>Milo's gift.</p>
+
+<p>The little vessel that had room for everyone.</p>
+
+<p>But something was different.</p>
+
+<p>Six tiny figures remained upon its deck.</p>
+
+<p>The seventh was missing.</p>
+
+<p>Nox picked it up.</p>
+
+<p>Neither captain spoke.</p>
+
+<p>Then a faint sound came from beneath the stairs.</p>
+
+<p>Someone was breathing.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>IV. The Messenger</h2>
+
+<p>A young woman lay beneath the wreckage.</p>
+
+<p>Her silver coat was torn.</p>
+
+<p>A strange mechanical device surrounded her left wrist.</p>
+
+<p>KOKI knelt beside her.</p>
+
+<p>"Can you hear me?"</p>
+
+<p>Her eyes opened.</p>
+
+<p>She looked at his hat.</p>
+
+<p>His eyepatch.</p>
+
+<p>His red scarf.</p>
+
+<p>Then tears filled her eyes.</p>
+
+<p>"Captain KOKI..."</p>
+
+<p>"You know me?"</p>
+
+<p>The woman began to laugh and cry at the same time.</p>
+
+<p>"I found you."</p>
+
+<p>Nox lifted the broken timber from her legs.</p>
+
+<p>"Who are you?"</p>
+
+<p>"My name is Yan."</p>
+
+<p>KOKI helped her sit upright.</p>
+
+<p>"Where did you come from?"</p>
+
+<p>Yan looked toward the burning sails.</p>
+
+<p>"Tomorrow."</p>
+
+<p>Nox frowned.</p>
+
+<p>"What does that mean?"</p>
+
+<p>Yan reached into her coat and pulled out a small metal cylinder.</p>
+
+<p>Inside was a folded letter.</p>
+
+<p>She placed it in KOKI's hands.</p>
+
+<p>"You told me to give you this."</p>
+
+<p>KOKI unfolded the paper.</p>
+
+<p>The handwriting was his own.</p>
+
+<p>But the message contained only three sentences.</p>
+
+<div class="letter">
+
+<p>Do not sail toward the island with two suns.</p>
+
+<p>Do not trust the clocks.</p>
+
+<p>And whatever happens, do not let Milo disappear.</p>
+
+</div>
+
+<p>KOKI read the final sentence again.</p>
+
+<p>His hands began to tremble.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>V. The First Missing Hour</h2>
+
+<p>Back aboard their ship, Lyra examined Yan's strange device.</p>
+
+<p>Its hands moved backward.</p>
+
+<p>Finn brought fresh water.</p>
+
+<p>Brann prepared bandages.</p>
+
+<p>Veyra stood beside Milo.</p>
+
+<p>KOKI placed the letter on the captain's table.</p>
+
+<p>"Tell us everything."</p>
+
+<p>Yan looked at the seven friends.</p>
+
+<p>"Beyond the eastern ocean lies a civilization called Aevora."</p>
+
+<p>Lyra leaned forward.</p>
+
+<p>"I've never heard of it."</p>
+
+<p>"You wouldn't have. Its people discovered how to remove hours from history."</p>
+
+<p>Brann stared at her.</p>
+
+<p>"Remove hours?"</p>
+
+<p>"An hour of suffering. An hour of war. An hour in which someone died."</p>
+
+<p>Milo looked up.</p>
+
+<p>"They can bring people back?"</p>
+
+<p>Yan lowered her head.</p>
+
+<p>"That was what we believed."</p>
+
+<p>She turned the device upon her wrist.</p>
+
+<p>"But time is not an empty ocean. Every hour belongs somewhere. Every moment touches another."</p>
+
+<p>The device stopped ticking.</p>
+
+<p>"When we began removing the moments we feared, something began removing us."</p>
+
+<p>Outside, the ship's bell rang.</p>
+
+<p>Once.</p>
+
+<p>Twice.</p>
+
+<p>Then thirteen times.</p>
+
+<p>Lyra rushed toward the window.</p>
+
+<p>The sun had vanished.</p>
+
+<p>Stars filled the sky.</p>
+
+<p>A moment earlier, it had been morning.</p>
+
+<p>Finn ran onto the deck.</p>
+
+<p>"CAPTAIN!"</p>
+
+<p>KOKI followed.</p>
+
+<p>The burning vessel was gone.</p>
+
+<p>The crack in the sky had disappeared.</p>
+
+<p>And upon the eastern horizon stood an enormous island.</p>
+
+<p>Golden towers rose above its mountains.</p>
+
+<p>Waterfalls flowed upward into the clouds.</p>
+
+<p>Two brilliant suns hung above its shores.</p>
+
+<p>Yan stepped onto the deck.</p>
+
+<p>Her face turned pale.</p>
+
+<p>"No..."</p>
+
+<p>KOKI looked at the letter.</p>
+
+<p>Then at the island.</p>
+
+<p>"We turn around."</p>
+
+<p>Finn grabbed the wheel.</p>
+
+<p>But the ship continued moving east.</p>
+
+<p>The sails were empty.</p>
+
+<p>The wind had stopped.</p>
+
+<p>Something beneath the ocean was pulling them toward the island.</p>
+
+<p>Then Veyra screamed.</p>
+
+<p>"MILO!"</p>
+
+<p>KOKI turned.</p>
+
+<p>The boy stood beside the railing.</p>
+
+<p>His wooden toy fell from his hands.</p>
+
+<p>For a moment, his body became transparent.</p>
+
+<p>KOKI ran toward him.</p>
+
+<p>He grabbed Milo's hand.</p>
+
+<p>"Captain?"</p>
+
+<p>"I'm here."</p>
+
+<p>Milo looked down at his fading fingers.</p>
+
+<p>"What's happening to me?"</p>
+
+<p>KOKI pulled him into his arms.</p>
+
+<p>"Whatever it is, we're going to stop it."</p>
+
+<p>Above the island, the two suns began to move in opposite directions.</p>
+
+<p>And somewhere beneath its golden towers, an ancient clock began counting backward.</p>
+
+<div class="continued">
+TO BE CONTINUED...
+</div>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<section class="end-card">
+
+<div class="season-label">Season III · Chapter 01</div>
+
+<h3>The Ship That Arrived Tomorrow</h3>
+
+<p>Beyond the Edge of Time</p>
+
+<p>
+Yesterday is gone.<br>
+Tomorrow has not yet come.<br>
+But somewhere between them, a new adventure awaits.
+</p>
+
+<div class="motto">
+NO ONE LEFT BEHIND
+</div>
+
+<p>Thank you for sailing with KOKI.</p>
+
+</section>
+
+<div class="chapter-navigation">
+
+<a href="season2-chapter12.html">
+← Previous Chapter
+</a>
+
+<a href="story.html">
+All Chapters
+</a>
+
+<span class="coming-soon">
+Next Chapter · Coming Soon
+</span>
+
+</div>
+
+</main>
+
+<footer>
+
+<div class="motto">
+NO ONE LEFT BEHIND
+</div>
+
+<p>The Adventures of KOKI</p>
+
+<p>
+<a href="https://x.com/KokiAdventures"
+target="_blank"
+rel="noopener noreferrer">
+Follow KOKI on X
+</a>
+</p>
+
+<p>© 2026 KOKI. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
