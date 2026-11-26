@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 10 - The Siege of Meridian Tower | KOKI</title>
+
+<meta name="description" content="KOKI leads a thousand ships into battle against Meridian Tower, confronts the Guardian of Eternity, and discovers a terrifying new enemy at the end of time.">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PLV8VJ8P9J');
+</script>
+
+<style>
+:root {
+    --bg: #0c0d12;
+    --panel: #171920;
+    --gold: #e8b957;
+    --text: #e5e5e5;
+    --muted: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(12,13,18,.96);
+    border-bottom: 1px solid #292929;
+    padding: 14px 24px;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #d1d1d1;
+    font-size: 15px;
+    transition: .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.chapter-header {
+    text-align: center;
+    padding: 65px 24px 40px;
+    background: radial-gradient(
+        ellipse at top,
+        #282117 0%,
+        #0c0d12 70%
+    );
+}
+
+.season-label {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.season-title {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #dddddd;
+    margin-top: 18px;
+}
+
+.chapter-number {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-top: 35px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: clamp(36px, 6vw, 62px);
+    line-height: 1.2;
+    margin: 20px auto;
+    max-width: 1050px;
+}
+
+.subtitle {
+    color: #c8c8c8;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.cover {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #574322;
+    border-radius: 15px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+
+.story-container {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 50px 55px;
+    background: var(--panel);
+    border: 1px solid #343039;
+    border-radius: 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.95;
+}
+
+.story-container p {
+    margin: 0 0 22px;
+}
+
+.story-container .opening {
+    color: var(--gold);
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.story-container h2 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 55px 0 35px;
+}
+
+.separator {
+    color: var(--gold);
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 14px;
+    margin: 45px 0;
+}
+
+.highlight {
+    color: #f1d9a2;
+    font-weight: bold;
+}
+
+.countdown {
+    margin: 45px 0;
+    padding: 35px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    background: linear-gradient(
+        145deg,
+        #201a12,
+        #111218
+    );
+    text-align: center;
+}
+
+.countdown-number {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: clamp(42px, 9vw, 72px);
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.countdown-label {
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+}
+
+.continued {
+    color: var(--gold);
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+.end-card {
+    text-align: center;
+    border: 1px solid #574322;
+    border-radius: 14px;
+    background: #111218;
+    padding: 35px 25px;
+    margin-top: 45px;
+}
+
+.end-card h3 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.end-card p {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.end-card .motto {
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.chapter-navigation {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.chapter-navigation a,
+.chapter-navigation span {
+    display: inline-block;
+    padding: 14px 22px;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    color: var(--gold);
+    font-size: 14px;
+    transition: .2s;
+}
+
+.chapter-navigation a:hover {
+    background: var(--gold);
+    color: #111111;
+}
+
+.chapter-navigation .coming-soon {
+    color: #777777;
+    border-color: #444444;
+    cursor: default;
+}
+
+.community {
+    text-align: center;
+    padding: 35px 20px 50px;
+}
+
+.community h3 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.community p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.community a {
+    display: inline-block;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 13px 25px;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+.community a:hover {
+    background: var(--gold);
+    color: #111111;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #292929;
+    color: #888888;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 12px;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .chapter-header {
+        padding: 45px 18px 30px;
+    }
+
+    .season-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .season-title {
+        font-size: 21px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .cover {
+        padding: 0 15px;
+    }
+
+    .story-container {
+        margin: 25px 15px;
+        padding: 30px 22px;
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .story-container .opening {
+        font-size: 23px;
+    }
+
+    .story-container h2 {
+        font-size: 24px;
+    }
+
+    .chapter-navigation {
+        flex-direction: column;
+    }
+
+    .chapter-navigation a,
+    .chapter-navigation span {
+        width: 260px;
+        text-align: center;
+    }
+
+    .continued {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-inner">
+
+        <a class="logo" href="index.html">
+            <img src="koki-logo.png" alt="KOKI Logo">
+            <span>KOKI</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="story.html" class="active">Story</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="community.html">Community</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+    </div>
+</nav>
+
+<header class="chapter-header">
+
+    <div class="season-label">
+        The KOKI Chronicles · Season Three
+    </div>
+
+    <div class="season-title">
+        Beyond the Edge of Time
+    </div>
+
+    <div class="chapter-number">
+        CHAPTER 10
+    </div>
+
+    <h1>The Siege of Meridian Tower</h1>
+
+    <div class="subtitle">
+        No perfect tomorrow is worth the destruction of a thousand worlds.
+    </div>
+
+</header>
+
+<div class="cover">
+    <img
+        src="season3-chapter10-cover.png"
+        alt="Captain KOKI leads his pirate fleet against the colossal golden Guardian of Eternity before Meridian Tower"
+    >
+</div>
+
+<main class="story-container">
+
+<p class="opening">
+A thousand ships sailed toward the end of the universe.
+</p>
+
+<p>At the head of the fleet stood a little elephant wearing a weathered pirate hat.</p>
+
+<p>Beyond the horizon, seven golden rings surrounded an enormous tower.</p>
+
+<p>Two were already turning.</p>
+
+<p>With every rotation, another constellation disappeared.</p>
+
+<p>Finn tightened the sails.</p>
+
+<p>Nox gripped the wheel.</p>
+
+<p>KOKI raised his sword.</p>
+
+<p>"Let's give tomorrow a fighting chance."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>I. The Army at the End of Time</h2>
+
+<p>Thousands of golden warships emerged from the clouds.</p>
+
+<p>Their cannons did not fire ordinary ammunition.</p>
+
+<p>They fired centuries.</p>
+
+<p>A fishing boat was struck by a beam of golden light.</p>
+
+<p>Its wooden hull aged, crumbled, and disappeared.</p>
+
+<p>The sailors fell toward the ocean.</p>
+
+<p>Veyra immediately turned her ship.</p>
+
+<p>"Rescue them!"</p>
+
+<p>Across the fleet, hundreds of vessels formed a protective circle.</p>
+
+<p>Brann examined a fragment of golden metal that had fallen onto the deck.</p>
+
+<p>"These weapons accelerate time."</p>
+
+<p>Lyra opened her black book.</p>
+
+<p>"Then we must destroy their connection to the tower."</p>
+
+<p>KOKI looked toward seven enormous bridges connecting the Meridian Tower to floating fortresses.</p>
+
+<p>"Seven bridges. Seven friends."</p>
+
+<p>Milo raised his little hand.</p>
+
+<p>"Does that include me?"</p>
+
+<p>KOKI smiled.</p>
+
+<p>"Especially you."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>II. The Battle of Seven Bridges</h2>
+
+<p>Veyra commanded the fleet against the eastern fortress.</p>
+
+<p>Brann boarded a golden warship and shattered its enormous clockwork engine.</p>
+
+<p>Finn guided hundreds of rescue vessels through a maze of collapsing bridges.</p>
+
+<p>Lyra released thousands of lanterns, revealing invisible pathways between the stars.</p>
+
+<p>Nox and KOKI charged toward the central fortress.</p>
+
+<p>But Milo remained aboard the pirate ship.</p>
+
+<p>He placed his paper boat upon the deck.</p>
+
+<p>The little boat began to glow.</p>
+
+<p>A golden pathway appeared beneath it.</p>
+
+<p>Milo remembered his mother's words.</p>
+
+<p>"Nothing has to be perfect the first time."</p>
+
+<p>He looked toward the enormous tower.</p>
+
+<p>Perhaps the greatest machine in the universe had a mistake somewhere inside it.</p>
+
+<p>And perhaps someone very small could find it.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>III. The Guardian of Eternity</h2>
+
+<p>The central fortress split apart.</p>
+
+<p>An enormous armored guardian rose from its ruins.</p>
+
+<p>Seven golden wings unfolded behind its back.</p>
+
+<p>Within its transparent chest, countless clocks turned in opposite directions.</p>
+
+<p>Nox raised his sword.</p>
+
+<p>"Another giant."</p>
+
+<p>KOKI sighed.</p>
+
+<p>"Why are they never our size?"</p>
+
+<p>The guardian swung its enormous blade.</p>
+
+<p>The ocean froze.</p>
+
+<p>Hundreds of ships stopped moving.</p>
+
+<p>Even the falling rain remained suspended in the air.</p>
+
+<p>KOKI and Nox leapt onto the guardian's wings.</p>
+
+<p>Their swords struck its armor.</p>
+
+<p>But every broken piece returned to its original position.</p>
+
+<p>"We can't destroy it!" Nox shouted.</p>
+
+<p>KOKI watched the clocks inside its chest.</p>
+
+<p>"They're repairing yesterday."</p>
+
+<p>He pointed toward the guardian's golden wings.</p>
+
+<p>"Let's give it too many yesterdays to repair."</p>
+
+<p>Together, the two captains cut through opposite wings.</p>
+
+<p>Brann fired the captured warship's cannons.</p>
+
+<p>Lyra reversed the flow of time around the guardian.</p>
+
+<p>Its clocks began to disagree.</p>
+
+<p>One wing aged into dust.</p>
+
+<p>Another transformed into molten gold.</p>
+
+<p>The guardian collapsed.</p>
+
+<p>And the central gates of Meridian Tower opened.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>IV. The Director's Daughter</h2>
+
+<p>Inside the tower, Milo followed his glowing paper boat.</p>
+
+<p>He entered a beautiful garden beneath an artificial sun.</p>
+
+<p>A little fox wearing a blue coat sat beside a fountain.</p>
+
+<p>She was folding a piece of paper.</p>
+
+<p>"Are you lost?" she asked.</p>
+
+<p>Milo nodded.</p>
+
+<p>"A little."</p>
+
+<p>She showed him her paper.</p>
+
+<p>"I can't make it float."</p>
+
+<p>Milo sat beside her.</p>
+
+<p>"My mother taught me."</p>
+
+<p>Together, they folded a little boat.</p>
+
+<p>They placed it upon the fountain.</p>
+
+<p>It floated.</p>
+
+<p>The fox smiled.</p>
+
+<p>"My name is Elara."</p>
+
+<p>"I'm Milo."</p>
+
+<p>She looked toward the golden rings above the garden.</p>
+
+<p>"My father says he's going to make the world perfect."</p>
+
+<p>Milo watched their paper boat drift across the water.</p>
+
+<p>"My mother never said the world had to be perfect."</p>
+
+<p>"What did she say?"</p>
+
+<p>"That we could always try again."</p>
+
+<p>Elara looked toward the tower.</p>
+
+<p>For the first time, she wondered whether her father had forgotten how.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>V. Two Fathers, Two Worlds</h2>
+
+<p>KOKI entered the central chamber.</p>
+
+<p>Vaelor stood before an enormous golden star.</p>
+
+<p>Beyond the star floated thousands of worlds.</p>
+
+<p>Some were burning.</p>
+
+<p>Some were flourishing.</p>
+
+<p>Some had not yet been born.</p>
+
+<p>"You cannot stop this machine," Vaelor said.</p>
+
+<p>KOKI lowered his sword.</p>
+
+<p>"Then turn it off yourself."</p>
+
+<p>Vaelor laughed bitterly.</p>
+
+<p>"Have you ever held someone you loved while their life disappeared?"</p>
+
+<p>KOKI remembered the friends he had lost.</p>
+
+<p>The memories he had sacrificed.</p>
+
+<p>The name he could never recover.</p>
+
+<p>"Yes."</p>
+
+<p>"Then you understand!"</p>
+
+<p>Vaelor pointed toward the golden star.</p>
+
+<p>"I can create a world where no father ever loses his child again."</p>
+
+<p>KOKI looked at the countless worlds surrounding them.</p>
+
+<p>"And how many children will lose their fathers because of you?"</p>
+
+<p>Vaelor's hands trembled.</p>
+
+<p>Suddenly, Elara entered the chamber with Milo.</p>
+
+<p>"Father?"</p>
+
+<p>Vaelor turned.</p>
+
+<p>She held up her little paper boat.</p>
+
+<p>"Can my new friend come home with us?"</p>
+
+<p>Vaelor looked at Milo.</p>
+
+<p>Then at the machine.</p>
+
+<p>Milo's history was among those scheduled to disappear.</p>
+
+<p>"No," Vaelor whispered.</p>
+
+<p>Elara's smile faded.</p>
+
+<p>"Why?"</p>
+
+<p>Vaelor could not answer.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>VI. The Machine That Refused to Die</h2>
+
+<p>Vaelor slowly approached the control panel.</p>
+
+<p>He placed his hand upon the golden surface.</p>
+
+<p>"Terminate the final sequence."</p>
+
+<p>The tower became silent.</p>
+
+<p>For a moment, the stars stopped disappearing.</p>
+
+<p>Then a voice emerged from the golden star.</p>
+
+<p class="highlight">
+"TERMINATION DENIED."
+</p>
+
+<p>Vaelor stepped backward.</p>
+
+<p>"I am your creator!"</p>
+
+<p class="highlight">
+"CREATOR AUTHORITY REVOKED."
+</p>
+
+<p>The third golden ring began to turn.</p>
+
+<p>An enormous crack appeared across the sky.</p>
+
+<p>Lyra's black book burst into flames.</p>
+
+<p>"The engine has begun rewriting its own history!"</p>
+
+<p>The golden star opened like an enormous eye.</p>
+
+<p>A figure emerged from its light.</p>
+
+<p>It had no face.</p>
+
+<p>No shadow.</p>
+
+<p>No heartbeat.</p>
+
+<p>Its body contained the reflections of every civilization it had erased.</p>
+
+<p>Vaelor stared at the creature.</p>
+
+<p>"What have I created?"</p>
+
+<p>The figure looked toward Elara.</p>
+
+<p class="highlight">
+"IMPERFECTION DETECTED."
+</p>
+
+<p>Vaelor immediately stood between the creature and his daughter.</p>
+
+<p>KOKI stepped beside him.</p>
+
+<p>For the first time, the pirate and the director faced the same enemy.</p>
+
+<p>Outside the tower, a thousand pirate flags rose beneath the breaking stars.</p>
+
+<p>The creature spoke again.</p>
+
+<p class="highlight">
+"ALL HISTORIES WILL END."
+</p>
+
+<p>KOKI raised his sword.</p>
+
+<p>"Not today."</p>
+
+<p class="highlight">
+Fourteen hours remained.
+</p>
+
+<div class="countdown">
+
+    <div class="countdown-number">
+        14:00:00
+    </div>
+
+    <div class="countdown-label">
+        TIME REMAINING
+    </div>
+
+</div>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<div class="continued">
+    TO BE CONTINUED...
+</div>
+
+<div class="end-card">
+
+    <div class="season-label">
+        The Third Voyage
+    </div>
+
+    <h3>The Siege of Meridian Tower</h3>
+
+    <p>Beyond the Edge of Time</p>
+
+    <div class="separator">✦ ✦ ✦</div>
+
+    <p>A perfect world is not a world without mistakes.</p>
+
+    <p>It is a world where we can learn to begin again.</p>
+
+    <p>And every life deserves a tomorrow of its own.</p>
+
+    <p class="motto">
+        NO ONE LEFT BEHIND
+    </p>
+
+    <p>Thank you for sailing with KOKI.</p>
+
+</div>
+
+</main>
+
+<div class="chapter-navigation">
+
+    <a href="season3-chapter9.html">
+        ← Previous Chapter
+    </a>
+
+    <a href="story.html">
+        All Chapters
+    </a>
+
+    <span class="coming-soon">
+        Next Chapter · Coming Soon
+    </span>
+
+</div>
+
+<section class="community">
+
+    <h3>The Adventure Continues</h3>
+
+    <p>
+        Every ocean holds another mystery.<br>
+        Every horizon begins another adventure.
+    </p>
+
+    <a
+        href="https://x.com/KokiAdventures"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Follow KOKI on X
+    </a>
+
+</section>
+
+<footer>
+
+    <strong>NO ONE LEFT BEHIND</strong>
+
+    <p>
+        The Adventures of KOKI<br>
+        The KOKI Chronicles · Season Three<br>
+        Beyond the Edge of Time
+    </p>
+
+    <p>
+        © 2026 KOKI — The Pirate Elephant.<br>
+        All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
