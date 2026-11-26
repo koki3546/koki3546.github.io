@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 12 - The Dawn of a Thousand Tomorrows | KOKI</title>
+
+<meta name="description" content="The epic finale of KOKI Season Three. Captain KOKI and his friends fight for the future of a thousand worlds as the final second of eternity comes to an end.">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PLV8VJ8P9J');
+</script>
+
+<style>
+
+:root {
+    --bg: #0c0d12;
+    --panel: #171920;
+    --gold: #e8b957;
+    --text: #e5e5e5;
+    --muted: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(12,13,18,.96);
+    border-bottom: 1px solid #292929;
+    padding: 14px 24px;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #d1d1d1;
+    font-size: 15px;
+    transition: .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.chapter-header {
+    text-align: center;
+    padding: 65px 24px 40px;
+    background: radial-gradient(
+        ellipse at top,
+        #282117 0%,
+        #0c0d12 70%
+    );
+}
+
+.season-label {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.season-title {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #dddddd;
+    margin-top: 18px;
+}
+
+.chapter-number {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-top: 35px;
+}
+
+.finale-badge {
+    display: inline-block;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    background: rgba(232,185,87,.08);
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 22px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: clamp(36px, 6vw, 62px);
+    line-height: 1.2;
+    margin: 20px auto;
+    max-width: 1050px;
+}
+
+.subtitle {
+    color: #c8c8c8;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.cover {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #574322;
+    border-radius: 15px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+
+.story-container {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 50px 55px;
+    background: var(--panel);
+    border: 1px solid #343039;
+    border-radius: 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.95;
+}
+
+.story-container p {
+    margin: 0 0 22px;
+}
+
+.story-container .opening {
+    color: var(--gold);
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.story-container h2 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 55px 0 35px;
+}
+
+.separator {
+    color: var(--gold);
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 14px;
+    margin: 45px 0;
+}
+
+.highlight {
+    color: #f1d9a2;
+    font-weight: bold;
+}
+
+.countdown {
+    margin: 45px 0;
+    padding: 35px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    background: linear-gradient(
+        145deg,
+        #201a12,
+        #111218
+    );
+    text-align: center;
+}
+
+.countdown-number {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: clamp(42px, 9vw, 72px);
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.countdown-label {
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+}
+
+.epilogue {
+    margin-top: 55px;
+    padding: 30px;
+    background: linear-gradient(
+        145deg,
+        #10131c,
+        #0c0d12
+    );
+    border: 1px solid #393c48;
+    border-radius: 12px;
+}
+
+.epilogue h2 {
+    margin-top: 10px;
+}
+
+.season-end {
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+.season-end h2 {
+    font-size: clamp(25px, 5vw, 38px);
+    letter-spacing: 3px;
+    color: var(--gold);
+    margin: 20px 0;
+}
+
+.season-end p {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.end-card {
+    text-align: center;
+    border: 1px solid var(--gold);
+    border-radius: 14px;
+    background: radial-gradient(
+        ellipse at top,
+        #282117,
+        #111218 75%
+    );
+    padding: 45px 25px;
+    margin-top: 45px;
+}
+
+.end-card h3 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+.end-card p {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.end-card .motto {
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-top: 35px;
+}
+
+.completion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.completion-item {
+    border: 1px solid #574322;
+    border-radius: 10px;
+    padding: 20px 10px;
+    background: rgba(0,0,0,.18);
+}
+
+.completion-number {
+    color: var(--gold);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.completion-label {
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+.next-voyage {
+    margin-top: 40px;
+    padding: 30px 20px;
+    border-top: 1px solid #574322;
+}
+
+.next-voyage h3 {
+    font-size: 26px;
+}
+
+.chapter-navigation {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.chapter-navigation a,
+.chapter-navigation span {
+    display: inline-block;
+    padding: 14px 22px;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    color: var(--gold);
+    font-size: 14px;
+    transition: .2s;
+}
+
+.chapter-navigation a:hover {
+    background: var(--gold);
+    color: #111111;
+}
+
+.chapter-navigation .coming-soon {
+    color: #777777;
+    border-color: #444444;
+    cursor: default;
+}
+
+.community {
+    text-align: center;
+    padding: 35px 20px 50px;
+}
+
+.community h3 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.community p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.community a {
+    display: inline-block;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 13px 25px;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+.community a:hover {
+    background: var(--gold);
+    color: #111111;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #292929;
+    color: #888888;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 12px;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .chapter-header {
+        padding: 45px 18px 30px;
+    }
+
+    .season-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .season-title {
+        font-size: 21px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .cover {
+        padding: 0 15px;
+    }
+
+    .story-container {
+        margin: 25px 15px;
+        padding: 30px 22px;
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .story-container .opening {
+        font-size: 23px;
+    }
+
+    .story-container h2 {
+        font-size: 24px;
+    }
+
+    .epilogue {
+        padding: 22px 16px;
+    }
+
+    .completion {
+        gap: 8px;
+    }
+
+    .completion-item {
+        padding: 15px 5px;
+    }
+
+    .completion-number {
+        font-size: 26px;
+    }
+
+    .completion-label {
+        font-size: 10px;
+    }
+
+    .chapter-navigation {
+        flex-direction: column;
+    }
+
+    .chapter-navigation a,
+    .chapter-navigation span {
+        width: 260px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .countdown-number {
+        letter-spacing: 3px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="nav-inner">
+
+        <a class="logo" href="index.html">
+            <img src="koki-logo.png" alt="KOKI Logo">
+            <span>KOKI</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="story.html" class="active">Story</a>
+
+            <a href="tokenomics.html">Tokenomics</a>
+
+            <a href="roadmap.html">Roadmap</a>
+
+            <a href="community.html">Community</a>
+
+            <a href="faq.html">FAQ</a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<header class="chapter-header">
+
+    <div class="season-label">
+        The KOKI Chronicles · Season Three
+    </div>
+
+    <div class="season-title">
+        Beyond the Edge of Time
+    </div>
+
+    <div class="chapter-number">
+        CHAPTER 12
+    </div>
+
+    <div class="finale-badge">
+        SEASON FINALE
+    </div>
+
+    <h1>The Dawn of a Thousand Tomorrows</h1>
+
+    <div class="subtitle">
+        The greatest adventure is not finding a perfect world,
+        but discovering the courage to sail toward an uncertain tomorrow.
+    </div>
+
+</header>
+
+<div class="cover">
+
+    <img
+        src="season3-chapter12-cover.png"
+        alt="Captain KOKI and his companions sail toward a golden sunrise beyond the shattered rings of Meridian Tower"
+    >
+
+</div>
+
+<main class="story-container">
+
+<p class="opening">
+One second was all the universe had left.
+</p>
+
+<p>But within that second, KOKI could hear a thousand bells.</p>
+
+<p>He could hear the laughter of children.</p>
+
+<p>The songs of sailors.</p>
+
+<p>The voices of friends he had lost along the way.</p>
+
+<p>The universe was not silent.</p>
+
+<p>It was fighting to live.</p>
+
+<p>The Final Tomorrow raised its enormous blade.</p>
+
+<p class="highlight">
+"ALL IMPERFECTIONS MUST END."
+</p>
+
+<p>KOKI raised his sword.</p>
+
+<p>"Then you'll have to start with me."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>I. The Battle Within a Second</h2>
+
+<p>The creature brought its blade down.</p>
+
+<p>KOKI leapt toward it.</p>
+
+<p>Their swords collided.</p>
+
+<p>The frozen ocean shattered into millions of floating fragments.</p>
+
+<p>Within every fragment, an entire world was waiting to disappear.</p>
+
+<p>KOKI's sword began to crack.</p>
+
+<p>The creature pushed him toward the edge of the ship.</p>
+
+<p class="highlight">
+"YOU CANNOT DEFEAT ETERNITY."
+</p>
+
+<p>Suddenly, a silver blade struck the creature's arm.</p>
+
+<p>Nox stood beside KOKI.</p>
+
+<p>"Good thing he isn't fighting alone."</p>
+
+<p>A hammer flew through the golden darkness.</p>
+
+<p>Brann stepped forward.</p>
+
+<p>Finn rang the bell again.</p>
+
+<p>Veyra's sails unfolded.</p>
+
+<p>Lyra's lantern burst into light.</p>
+
+<p>One by one, the frozen ships began to move.</p>
+
+<p>Time had not returned.</p>
+
+<p>But the memories connecting them had become stronger than the machine controlling it.</p>
+
+<p>The Final Tomorrow looked toward the approaching fleet.</p>
+
+<p class="highlight">
+"IMPOSSIBLE."
+</p>
+
+<p>KOKI smiled.</p>
+
+<p>"We hear that a lot."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>II. The Father Who Chose Tomorrow</h2>
+
+<p>Beneath the deck, Vaelor held the crystal containing his daughter's heartbeat.</p>
+
+<p>The golden light was fading.</p>
+
+<p>Lyra knelt beside him.</p>
+
+<p>"The connection is almost complete."</p>
+
+<p>"But the engine must be destroyed before the final second ends."</p>
+
+<p>Vaelor looked at Elara.</p>
+
+<p>He had spent centuries trying to escape the worst moment of his life.</p>
+
+<p>He had sacrificed kingdoms.</p>
+
+<p>Erased civilizations.</p>
+
+<p>And turned the future into a prison.</p>
+
+<p>Elara placed her little hand upon his.</p>
+
+<p>"Father, I'm not afraid."</p>
+
+<p>Vaelor began to cry.</p>
+
+<p>"I am."</p>
+
+<p>Milo placed his paper boat beside them.</p>
+
+<p>"My mother was afraid too."</p>
+
+<p>"But she still taught me how to sail."</p>
+
+<p>Vaelor looked at the little mouse.</p>
+
+<p>Then he looked at his daughter.</p>
+
+<p>For the first time in centuries, he stopped searching for certainty.</p>
+
+<p>He removed the crystal from its golden chamber.</p>
+
+<p>The Meridian Tower began to collapse.</p>
+
+<p>"Forgive me," he whispered.</p>
+
+<p>And he broke the connection.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>III. The Fall of the Final Tomorrow</h2>
+
+<p>The creature screamed.</p>
+
+<p>Its seven golden rings shattered.</p>
+
+<p>Millions of stolen stars erupted from its chest.</p>
+
+<p>But instead of falling, they began returning to their own skies.</p>
+
+<p>The creature reached toward KOKI.</p>
+
+<p>Its enormous body was breaking apart.</p>
+
+<p class="highlight">
+"WITHOUT ME, THE FUTURE WILL BE IMPERFECT."
+</p>
+
+<p>KOKI lowered his sword.</p>
+
+<p>"Of course it will."</p>
+
+<p class="highlight">
+"THERE WILL BE PAIN."
+</p>
+
+<p>"I know."</p>
+
+<p class="highlight">
+"THERE WILL BE LOSS."
+</p>
+
+<p>"I know."</p>
+
+<p class="highlight">
+"THEN WHY DO YOU WISH TO CONTINUE?"
+</p>
+
+<p>KOKI looked at his friends.</p>
+
+<p>At the thousand ships.</p>
+
+<p>At the little paper boats glowing beneath the broken sky.</p>
+
+<p>"Because there will also be things worth living for."</p>
+
+<p>The creature became silent.</p>
+
+<p>Its golden armor fell away.</p>
+
+<p>Within it remained a small, trembling light.</p>
+
+<p class="highlight">
+"WHAT WILL HAPPEN TOMORROW?"
+</p>
+
+<p>KOKI smiled.</p>
+
+<p>"I don't know."</p>
+
+<p>"And that's why I want to see it."</p>
+
+<p>The light dissolved into the sky.</p>
+
+<p>For the first time since its creation, the Meridian Engine stopped.</p>
+
+<div class="countdown">
+
+    <div class="countdown-number">
+        00:00:00
+    </div>
+
+    <div class="countdown-label">
+        THE MERIDIAN ENGINE HAS STOPPED
+    </div>
+
+</div>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>IV. The Girl Who Survived Yesterday</h2>
+
+<p>The universe became dark.</p>
+
+<p>Vaelor held Elara in his arms.</p>
+
+<p>Her little hands began to disappear.</p>
+
+<p>"No..."</p>
+
+<p>He held her tighter.</p>
+
+<p>Milo placed his paper boat upon her chest.</p>
+
+<p>Lyra raised her lantern.</p>
+
+<p>Across the fleet, thousands of golden threads gathered around the little fox.</p>
+
+<p>Milo began to speak.</p>
+
+<p>He told the story of a girl he had met beside a fountain.</p>
+
+<p>A girl who could not make her paper boat float.</p>
+
+<p>A girl who wanted everyone to have a home.</p>
+
+<p>Finn remembered her laughter.</p>
+
+<p>Brann remembered her little blue coat.</p>
+
+<p>KOKI remembered the courage with which she had questioned her father.</p>
+
+<p>Elara was no longer only a memory belonging to Vaelor.</p>
+
+<p>She had become part of their lives.</p>
+
+<p>Her hands slowly returned.</p>
+
+<p>Her heart began to beat.</p>
+
+<p>She opened her eyes.</p>
+
+<p>"Father?"</p>
+
+<p>Vaelor could not speak.</p>
+
+<p>He simply held her.</p>
+
+<p>And for the first time, he thanked the universe for a tomorrow he had not created.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>V. The Harbor of a Thousand Flags</h2>
+
+<p>Morning came.</p>
+
+<p>The seven golden rings had become seven magnificent bridges across the ocean.</p>
+
+<p>The remains of Meridian Tower formed an enormous island.</p>
+
+<p>Ships from countless worlds gathered around its shores.</p>
+
+<p>Brann began rebuilding the harbor.</p>
+
+<p>Veyra established a fleet to protect travelers between worlds.</p>
+
+<p>Finn helped lost sailors find their way home.</p>
+
+<p>Lyra planted a tree beside the harbor.</p>
+
+<p>Upon its branches hung thousands of lanterns.</p>
+
+<p>Each lantern carried the name of someone whose history had been lost.</p>
+
+<p>Vaelor approached KOKI.</p>
+
+<p>"Can someone like me ever be forgiven?"</p>
+
+<p>KOKI looked toward the lanterns.</p>
+
+<p>"That isn't something I can decide for everyone."</p>
+
+<p>Vaelor lowered his head.</p>
+
+<p>"But you can decide what you do tomorrow."</p>
+
+<p>Vaelor looked toward the harbor.</p>
+
+<p>There were thousands of broken ships.</p>
+
+<p>Thousands of families who needed help.</p>
+
+<p>And for the first time, he had a purpose that did not require controlling the universe.</p>
+
+<p>He picked up a hammer.</p>
+
+<p>Brann smiled.</p>
+
+<p>"About time you made yourself useful."</p>
+
+<p>Nearby, Milo and Elara placed two paper boats upon the ocean.</p>
+
+<p>The little boats sailed side by side.</p>
+
+<p>Neither was perfect.</p>
+
+<p>Both floated.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>VI. The Captain's Tomorrow</h2>
+
+<p>Several weeks later, the pirate ship was ready to sail again.</p>
+
+<p>Nox stood at the wheel.</p>
+
+<p>Finn checked the ropes.</p>
+
+<p>Brann carried the last barrel aboard.</p>
+
+<p>Veyra studied the stars.</p>
+
+<p>Lyra closed her new book.</p>
+
+<p>Milo waved toward Elara and Vaelor upon the harbor.</p>
+
+<p>"Will you come back?" Elara shouted.</p>
+
+<p>KOKI raised his hat.</p>
+
+<p>"Every good pirate knows the way back to his friends!"</p>
+
+<p>The sails unfolded.</p>
+
+<p>The ship moved toward the open ocean.</p>
+
+<p>Nox looked at KOKI.</p>
+
+<p>"Where are we going?"</p>
+
+<p>KOKI took out his compass.</p>
+
+<p>Its needle pointed toward an unfamiliar horizon.</p>
+
+<p>He smiled.</p>
+
+<p>"Somewhere we haven't been."</p>
+
+<p>Above them, thousands of restored stars illuminated the morning sky.</p>
+
+<p>KOKI remembered the little elephant who had once left a quiet island in a broken wooden boat.</p>
+
+<p>He had wanted to discover how large the world was.</p>
+
+<p>Now he understood.</p>
+
+<p>The greatest thing about the world was not its size.</p>
+
+<p>It was the endless possibility of becoming something more than yesterday.</p>
+
+<p>KOKI placed his hand upon the wheel.</p>
+
+<p>The wind carried seven familiar voices across the ocean.</p>
+
+<p class="highlight">
+NO ONE LEFT BEHIND.
+</p>
+
+<p>And the third voyage came to an end.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<section class="epilogue">
+
+<h2>Epilogue — The Ocean Without Stars</h2>
+
+<p>Far beyond the borders of the known universe, an ancient ship drifted through a colorless ocean.</p>
+
+<p>There were no stars above it.</p>
+
+<p>No wind.</p>
+
+<p>No sound.</p>
+
+<p>At its center stood a lighthouse made entirely of white stone.</p>
+
+<p>Its light had been extinguished for ten thousand years.</p>
+
+<p>Suddenly, a small golden feather fell from the darkness.</p>
+
+<p>The lighthouse awakened.</p>
+
+<p>Deep beneath the ocean, something enormous opened its eyes.</p>
+
+<p>An ancient voice whispered.</p>
+
+<p>"The seven rings have fallen."</p>
+
+<p>A second voice answered.</p>
+
+<p>"Then the barrier is gone."</p>
+
+<p>Beyond the lighthouse, an ocean that had never appeared on any map began to move.</p>
+
+<p>And upon its shores stood an army of forgotten gods.</p>
+
+<p>One of them looked toward the distant universe.</p>
+
+<p>"Find the little elephant."</p>
+
+</section>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<div class="season-end">
+
+    <h2>END OF SEASON THREE</h2>
+
+    <p>THE ADVENTURE WILL CONTINUE...</p>
+
+</div>
+
+<div class="end-card">
+
+    <div class="season-label">
+        The Third Voyage · Complete
+    </div>
+
+    <h3>Beyond the Edge of Time</h3>
+
+    <p>The Dawn of a Thousand Tomorrows</p>
+
+    <div class="separator">✦ ✦ ✦</div>
+
+    <p>Yesterday is a memory.</p>
+
+    <p>Tomorrow is a possibility.</p>
+
+    <p>And today is another chance to become something greater.</p>
+
+    <div class="completion">
+
+        <div class="completion-item">
+
+            <div class="completion-number">
+                3
+            </div>
+
+            <div class="completion-label">
+                SEASONS
+            </div>
+
+        </div>
+
+        <div class="completion-item">
+
+            <div class="completion-number">
+                36
+            </div>
+
+            <div class="completion-label">
+                CHAPTERS
+            </div>
+
+        </div>
+
+        <div class="completion-item">
+
+            <div class="completion-number">
+                12/12
+            </div>
+
+            <div class="completion-label">
+                SEASON THREE
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="motto">
+        NO ONE LEFT BEHIND.
+    </p>
+
+    <p>Thank you for sailing with Captain KOKI.</p>
+
+    <p>Every reader is part of this adventure.</p>
+
+    <div class="next-voyage">
+
+        <div class="season-label">
+            THE FOURTH VOYAGE
+        </div>
+
+        <h3>A New Adventure Awaits</h3>
+
+        <p>Beyond the stars.</p>
+
+        <p>Beyond the known universe.</p>
+
+        <p>An ocean that has never appeared on any map.</p>
+
+        <p class="highlight">
+            SEASON FOUR · COMING SOON
+        </p>
+
+    </div>
+
+</div>
+
+</main>
+
+<div class="chapter-navigation">
+
+    <a href="season3-chapter11.html">
+        ← Previous Chapter
+    </a>
+
+    <a href="story.html">
+        All Chapters
+    </a>
+
+    <span class="coming-soon">
+        Season Four · Coming Soon
+    </span>
+
+</div>
+
+<section class="community">
+
+    <h3>The Adventure Continues</h3>
+
+    <p>
+        Three seasons. Thirty-six chapters.<br>
+        One captain. Endless adventures.<br><br>
+        Follow KOKI as a new voyage begins.
+    </p>
+
+    <a
+        href="https://x.com/KokiAdventures"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Follow KOKI on X →
+    </a>
+
+</section>
+
+<footer>
+
+    <strong>NO ONE LEFT BEHIND.</strong>
+
+    <p>
+        The Adventures of KOKI<br>
+        The KOKI Chronicles · Season Three<br>
+        Beyond the Edge of Time
+    </p>
+
+    <p>
+        Season One · Complete<br>
+        Season Two · Complete<br>
+        Season Three · Complete
+    </p>
+
+    <p>
+        © 2026 KOKI — The Pirate Elephant.<br>
+        All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
