@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +15,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Explore KOKI tokenomics on Base, including fixed supply, proposed allocation, creator holdings, live Uniswap v2 liquidity, contract details, and trading risks.">
+content="Explore KOKI tokenomics on Base, including fixed supply, proposed allocation, founder holdings, Uniswap v2 liquidity, PinkLock liquidity lock verification, and trading risks.">
 
 <title>KOKI | Tokenomics</title>
+
 <link rel="stylesheet" href="style.css">
 
 <style>
+
 :root {
   --gold: #e8b957;
   --muted: #b4b5bd;
@@ -421,6 +422,123 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
   font-weight: bold;
 }
 
+/* LIQUIDITY LOCK */
+
+.lock-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 35px 28px;
+  background: linear-gradient(
+    145deg,
+    #19241f,
+    #171920 65%
+  );
+  border: 1px solid #527b61;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.lock-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #527b61;
+  border-radius: 25px;
+  background: rgba(103,185,154,.09);
+  color: #9bd9b1;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.lock-percentage {
+  color: #9bd9b1;
+  font-size: clamp(45px, 9vw, 72px);
+  font-weight: bold;
+  margin: 20px 0 5px;
+}
+
+.lock-caption {
+  color: #e5e5e5;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.lock-description {
+  max-width: 720px;
+  margin: 18px auto 30px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.lock-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.lock-item {
+  padding: 20px 15px;
+  background: #14191a;
+  border: 1px solid #3c5545;
+  border-radius: 9px;
+}
+
+.lock-item h4 {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+}
+
+.lock-item strong {
+  display: block;
+  color: #c9ebd4;
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.lock-proof {
+  margin: 25px 0 15px;
+}
+
+.lock-small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.security-notice {
+  max-width: 900px;
+  margin: 25px auto 0;
+  padding: 25px;
+  background: rgba(232,185,87,.05);
+  border: 1px solid #70532a;
+  border-radius: 12px;
+}
+
+.security-notice h3 {
+  color: var(--gold);
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+
+.security-notice p,
+.security-notice li {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.security-notice li {
+  margin-bottom: 8px;
+}
+
+.security-notice strong {
+  color: #f1e6cb;
+}
+
 .risk-note {
   max-width: 850px;
   margin: 0 auto;
@@ -441,9 +559,11 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
 }
 
 @media(max-width:750px) {
+
   .token-grid,
   .allocation-description,
-  .policy-grid {
+  .policy-grid,
+  .lock-grid {
     grid-template-columns: 1fr;
   }
 
@@ -463,7 +583,18 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
   .allocation-table td {
     padding: 15px 13px;
   }
+
+  .lock-box {
+    padding: 28px 18px;
+  }
+
+  .lock-proof .token-button {
+    display: block;
+    margin: 12px 0;
+  }
+
 }
+
 </style>
 </head>
 
@@ -499,6 +630,8 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
 </header>
 
 <main>
+
+<!-- TOKEN OVERVIEW -->
 
 <section class="token-container">
 
@@ -550,6 +683,8 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
 
 </section>
 
+<!-- TOKEN FEATURES -->
+
 <section class="token-container">
 
   <h2 class="token-section-title">
@@ -586,6 +721,8 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
   </div>
 
 </section>
+
+<!-- OFFICIAL CONTRACT -->
 
 <section class="token-container">
 
@@ -628,6 +765,220 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
 
 </section>
 
+<!-- LIQUIDITY LOCK VERIFICATION -->
+
+<section class="token-container">
+
+  <h2 class="token-section-title">
+    Liquidity Lock Verification
+  </h2>
+
+  <p class="token-section-intro">
+    Publicly verifiable on-chain information
+    about the KOKI liquidity lock on Base Mainnet.
+    The initial LP position was locked on
+    November 26, 2026.
+  </p>
+
+  <div class="lock-box">
+
+    <div class="lock-badge">
+      LP TOKENS LOCKED · PINKLOCK V2
+    </div>
+
+    <div class="lock-percentage">
+      ~100%
+    </div>
+
+    <div class="lock-caption">
+      Existing LP Supply Locked at Verification
+    </div>
+
+    <p class="lock-description">
+      All LP tokens held by the founder-operated
+      wallet were deposited into PinkLock V2.
+      As confirmed on November 26, 2026,
+      the locked position represents effectively
+      100% of the LP supply at that time,
+      excluding Uniswap v2's standard
+      1,000 wei minimum liquidity.
+    </p>
+
+    <div class="lock-grid">
+
+      <div class="lock-item">
+        <h4>LIQUIDITY LOCKER</h4>
+        <strong>PinkLock V2</strong>
+      </div>
+
+      <div class="lock-item">
+        <h4>NETWORK</h4>
+        <strong>Base Mainnet</strong>
+      </div>
+
+      <div class="lock-item">
+        <h4>LOCK DATE</h4>
+        <strong>November 26, 2026</strong>
+      </div>
+
+      <div class="lock-item">
+        <h4>UNLOCK DATE</h4>
+        <strong>November 26, 2027</strong>
+      </div>
+
+      <div class="lock-item">
+        <h4>LOCKED LP AMOUNT</h4>
+        <strong>
+          3,162.277660168379330998 LP
+        </strong>
+      </div>
+
+      <div class="lock-item">
+        <h4>PUBLIC LOCK ID</h4>
+        <strong>1054509</strong>
+      </div>
+
+      <div class="lock-item">
+        <h4>TRADING PAIR</h4>
+        <strong>WETH / KOKI</strong>
+      </div>
+
+      <div class="lock-item">
+        <h4>LOCK TYPE</h4>
+        <strong>Time-Based LP Lock</strong>
+      </div>
+
+    </div>
+
+    <div class="lock-proof">
+
+      <a class="token-button"
+         href="https://www.pinksale.finance/pinklock/base/record/1054509"
+         target="_blank"
+         rel="noopener noreferrer">
+        Verify Liquidity Lock on PinkLock ↗
+      </a>
+
+      <a class="token-button secondary"
+         href="https://basescan.org/tx/0x549cc33ca7346783a67894273a47c33f0df092a5d72e0b738f403bb3a18f23ad"
+         target="_blank"
+         rel="noopener noreferrer">
+        View Lock Transaction on BaseScan ↗
+      </a>
+
+    </div>
+
+    <p class="lock-small">
+      The lock owner cannot withdraw the locked
+      LP tokens before the unlock date,
+      shorten the lock period, or reduce
+      the locked amount.
+      Lock ownership can be transferred,
+      and the LP tokens can be withdrawn
+      after the lock expires.
+    </p>
+
+    <p class="lock-small">
+      This lock applies only to the specified
+      LP tokens. Newly created LP tokens are
+      not automatically covered by this lock.
+      The percentage of total LP supply locked
+      may change as additional liquidity is added.
+    </p>
+
+    <p class="lock-small">
+      Last verification reported:
+      November 26, 2026.
+      This page is not a real-time on-chain dashboard.
+      Use the public verification links
+      to check the latest status.
+    </p>
+
+  </div>
+
+  <!-- SECURITY CLASSIFICATION -->
+
+  <div class="security-notice">
+
+    <h3>Security Classification &amp; Transparency</h3>
+
+    <p>
+      On November 26, 2026, Blockaid confirmed
+      through an independent on-chain check
+      that the existing KOKI LP position
+      had been successfully locked
+      through PinkLock V2.
+    </p>
+
+    <p>
+      <strong>
+        Blockaid's existing token warning
+        remains in place.
+      </strong>
+      Confirmation of the liquidity lock
+      does not constitute security approval,
+      an independent contract audit,
+      or an endorsement of KOKI.
+    </p>
+
+    <p>
+      Blockaid identified the following
+      outstanding concerns:
+    </p>
+
+    <ul>
+
+      <li>
+        The liquidity pool remains very small,
+        with approximately 0.01 WETH
+        at the time of review.
+      </li>
+
+      <li>
+        Approximately 99.9% of the total
+        KOKI supply remains concentrated
+        in the deployer wallet.
+      </li>
+
+      <li>
+        Only three token holders were
+        identified at the time of review.
+      </li>
+
+      <li>
+        Meaningful organic trading activity
+        has not yet been demonstrated.
+      </li>
+
+    </ul>
+
+    <p>
+      Further review requires independently
+      verifiable liquidity in the thousands
+      of US dollars, a more distributed
+      holder structure, transparent project
+      wallet and vesting information,
+      genuine trading activity across
+      24-hour, 7-day, and 30-day periods,
+      and proof that any newly created
+      LP tokens are also locked or burned.
+    </p>
+
+    <p>
+      The project acknowledges these concerns.
+      No claim is made that the existing
+      warning will be removed.
+      Users should assess all risks
+      independently before interacting
+      with the token.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- PROPOSED TOKEN ALLOCATION -->
+
 <section class="token-container">
 
   <h2 class="token-section-title">
@@ -650,15 +1001,19 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
     <div class="allocation-bar"
          role="img"
          aria-label="Proposed allocation: 10 percent liquidity, 30 percent community, 20 percent content, 20 percent founder, and 20 percent reserve.">
+
       <span class="alloc-liquidity" style="width:10%"></span>
       <span class="alloc-community" style="width:30%"></span>
       <span class="alloc-content" style="width:20%"></span>
       <span class="alloc-founder" style="width:20%"></span>
       <span class="alloc-reserve" style="width:20%"></span>
+
     </div>
 
     <div class="allocation-table-wrap">
+
       <table class="allocation-table">
+
         <thead>
           <tr>
             <th>Category</th>
@@ -668,6 +1023,7 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
         </thead>
 
         <tbody>
+
           <tr>
             <td>
               <div class="alloc-name">
@@ -728,64 +1084,85 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
             <td>100%</td>
             <td>1,000,000,000,000</td>
           </tr>
+
         </tbody>
+
       </table>
+
     </div>
 
     <div class="allocation-description">
 
       <div class="allocation-detail">
+
         <h3>Liquidity Reserve · 10%</h3>
+
         <p>
           Intended for decentralized exchange
           liquidity and potential future trading
           infrastructure. An initial
-          1,000,000,000 KOKI has been deployed
+          1,000,000,000 KOKI was deployed
           to the Uniswap v2 pool.
+          The resulting founder-held LP tokens
+          were locked on November 26, 2026.
           The broader 10% reserve remains
           a proposed allocation, not a completed
           segregation of tokens.
         </p>
+
       </div>
 
       <div class="allocation-detail">
+
         <h3>Community &amp; Ecosystem · 30%</h3>
+
         <p>
           Proposed for future community initiatives,
           reader engagement, and ecosystem activities.
           No reward program or distribution schedule
           has been finalized.
         </p>
+
       </div>
 
       <div class="allocation-detail">
+
         <h3>Story &amp; Content Development · 20%</h3>
+
         <p>
           Proposed to support KOKI storytelling,
           artwork, and possible future creative
           formats. Specific uses and release
           conditions remain undecided.
         </p>
+
       </div>
 
       <div class="allocation-detail">
+
         <h3>Founder Holdings · 20%</h3>
+
         <p>
           Proposed as the founder's long-term
           allocation. Vesting, lockup terms,
-          and any future sale policy have
+          and any future sale policy for
+          founder-held KOKI tokens have
           not yet been established.
         </p>
+
       </div>
 
       <div class="allocation-detail">
+
         <h3>Long-Term Reserve · 20%</h3>
+
         <p>
           Proposed for future project needs
           and unforeseen development expenses.
           Release and management policies
           will require further disclosure.
         </p>
+
       </div>
 
     </div>
@@ -801,17 +1178,31 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
         founder-operated wallet, while
         1,000,000,000 KOKI was deposited into
         the WETH / KOKI pool.
-        The proposed allocations above have
-        not been transferred into separate
-        dedicated wallets or vesting contracts.
-        These figures describe the initial
-        deployment and may change over time.
       </p>
 
       <p>
-        No token vesting, lockup, or
-        automated release mechanism
-        has been implemented.
+        As of the November 26, 2026 review,
+        approximately 99.9% of the total supply
+        remained in the deployer wallet,
+        and only three holders were identified.
+        The proposed allocations above have
+        not been transferred into separate
+        dedicated wallets or vesting contracts.
+      </p>
+
+      <p>
+        The existing founder-held LP tokens
+        have been locked through PinkLock V2
+        until November 26, 2027.
+        However, this LP lock does not lock
+        the KOKI tokens held directly
+        in the founder-operated wallet.
+      </p>
+
+      <p>
+        No separate KOKI token vesting,
+        founder token lockup, or automated
+        token release mechanism has been implemented.
         The proposed founder allocation
         is not currently locked.
       </p>
@@ -832,6 +1223,8 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
 
 </section>
 
+<!-- LIQUIDITY MANAGEMENT POLICY -->
+
 <section class="token-container">
 
   <h2 class="token-section-title">
@@ -841,6 +1234,8 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
   <p class="token-section-intro">
     KOKI's first liquidity pool launched on
     Base Mainnet on October 23, 2026.
+    The founder-held LP position was subsequently
+    locked on November 26, 2026.
     The information below describes the
     initial deployment and management policy.
   </p>
@@ -848,12 +1243,16 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
   <div class="policy-grid">
 
     <div class="policy-card">
+
       <span class="policy-status">
         LIVE · DEPLOYED OCTOBER 23, 2026
       </span>
+
       <h3>Initial Liquidity Deployment</h3>
+
       <p>
-        The initial <strong>Uniswap v2 WETH / KOKI</strong>
+        The initial
+        <strong>Uniswap v2 WETH / KOKI</strong>
         pool was created on Base with
         <strong>0.01 ETH</strong> and
         <strong>1,000,000,000 KOKI</strong>.
@@ -862,48 +1261,95 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
         US$48, based on the starting exchange ratio.
         Pool balances and value can change with trading.
       </p>
+
     </div>
 
     <div class="policy-card">
+
       <h3>Liquidity Ownership</h3>
+
       <p>
         The initial liquidity was provided by
         the founder-operated wallet.
-        At launch, this wallet held
-        <strong>100% of the pool's LP position</strong>.
-        This percentage may change as other
-        liquidity providers participate.
-        The founder retains control of the LP tokens.
+        On November 26, 2026, all LP tokens
+        held by this wallet were transferred
+        into PinkLock V2.
+        The founder no longer directly held
+        LP tokens at the time of verification.
+        The lock owner retains the right
+        to transfer lock ownership and
+        withdraw the locked LP tokens
+        after the unlock date.
       </p>
+
     </div>
 
     <div class="policy-card">
+
+      <span class="policy-status">
+        LOCKED UNTIL NOVEMBER 26, 2027
+      </span>
+
       <h3>Liquidity Lock Status</h3>
+
       <p>
-        <strong>Liquidity is not locked.</strong>
-        No third-party liquidity locker or
-        time-locked contract has been implemented.
-        The founder-controlled wallet can withdraw
-        its liquidity subject to the pool's
-        available balances and contract rules.
+        <strong>
+          The existing founder-held LP position
+          is locked through PinkLock V2.
+        </strong>
+        The locked LP tokens cannot be
+        withdrawn before November 26, 2027.
+        The lock duration cannot be shortened
+        and the locked amount cannot be reduced.
+        This lock does not automatically
+        cover future LP tokens.
       </p>
+
     </div>
 
     <div class="policy-card">
+
       <h3>Founder Token Holdings</h3>
+
       <p>
-        Following the initial liquidity deployment,
-        approximately <strong>999 billion KOKI</strong>
+        As of November 26, 2026,
+        approximately
+        <strong>999 billion KOKI</strong>
         remained in the founder-operated wallet.
-        The proposed allocation categories have
-        not been implemented through separate
-        dedicated wallets or vesting contracts.
+        These directly held KOKI tokens
+        are not covered by the LP lock.
+        The proposed allocation categories
+        have not been implemented through
+        separate dedicated wallets
+        or vesting contracts.
         Wallet balances may change over time.
       </p>
+
     </div>
 
     <div class="policy-card policy-full">
+
+      <h3>Future Liquidity Additions</h3>
+
+      <p>
+        Additional liquidity may be provided
+        in the future, subject to available
+        resources and project development.
+        Any newly created LP tokens will
+        require separate locking or burning
+        to receive equivalent withdrawal
+        restrictions.
+        No additional liquidity amount,
+        deployment date, or future lock period
+        is guaranteed.
+      </p>
+
+    </div>
+
+    <div class="policy-card policy-full">
+
       <h3>Management &amp; Disclosure Principles</h3>
+
       <p>
         The project intends to disclose material
         liquidity additions, withdrawals,
@@ -911,11 +1357,17 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
         through official channels.
         These disclosure intentions do not impose
         on-chain restrictions on the founder wallet.
+        The existing PinkLock contract restricts
+        withdrawal of the specified LP tokens
+        only, according to its contract terms.
       </p>
+
     </div>
 
     <div class="policy-card policy-full">
+
       <h3>Liquidity Risks</h3>
+
       <p>
         The initial pool is extremely small.
         Even modest trades can cause substantial
@@ -924,14 +1376,19 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
         token ownership can increase volatility.
         Liquidity providers face impermanent loss
         and smart contract risks.
+        Locking LP tokens does not prevent
+        token sales, market losses, or price declines.
         There is no guarantee that holders can
         sell KOKI at an expected price or at all.
       </p>
+
     </div>
 
   </div>
 
 </section>
+
+<!-- LIQUIDITY AND TRADING -->
 
 <section class="token-container">
 
@@ -954,6 +1411,14 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
     </p>
 
     <p>
+      <strong>Liquidity Lock:</strong>
+      The existing founder-held LP position
+      was locked through PinkLock V2 on
+      November 26, 2026, with an unlock
+      date of November 26, 2027.
+    </p>
+
+    <p>
       <strong>Official Pool Contract:</strong>
     </p>
 
@@ -962,11 +1427,12 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
     </div>
 
     <p>
+
       <a class="token-button"
          href="https://app.uniswap.org/swap?chain=base&amp;inputCurrency=ETH&amp;outputCurrency=0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
          target="_blank"
          rel="noopener noreferrer">
-        Trade KOKI on Uniswap ↗
+        View KOKI on Uniswap ↗
       </a>
 
       <a class="token-button secondary"
@@ -982,31 +1448,52 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
          rel="noopener noreferrer">
         View Launch Transaction ↗
       </a>
+
+      <a class="token-button secondary"
+         href="https://www.pinksale.finance/pinklock/base/record/1054509"
+         target="_blank"
+         rel="noopener noreferrer">
+        Verify LP Lock ↗
+      </a>
+
     </p>
 
     <p>
       <strong>Important:</strong>
-      The initial liquidity is not locked.
-      Pool reserves, LP ownership, and market
-      prices can change. Always verify the
-      KOKI token contract, Base network,
-      pool address, and trade details before
-      confirming any transaction.
+      Although the existing founder-held
+      LP tokens are locked, the pool
+      remains extremely small.
+      Pool reserves, LP ownership percentages,
+      and market prices can change.
+      Founder-held KOKI tokens remain unlocked.
+    </p>
+
+    <p>
+      Blockaid's existing warning remains active.
+      Users should not interpret the liquidity
+      lock as a guarantee of token safety,
+      sufficient liquidity, or financial returns.
+      Always verify the KOKI token contract,
+      Base network, pool address,
+      and trade details before confirming
+      any transaction.
     </p>
 
     <p>
       Official project updates are published
       through the KOKI website and
-      <a href="https://x.com/koki3546"
+      <a href="https://x.com/KokiAdventures"
          target="_blank"
          rel="noopener noreferrer">
-        KOKI's X account
+        KOKI's official X account
       </a>.
     </p>
 
   </div>
 
 </section>
+
+<!-- IMPORTANT INFORMATION -->
 
 <section class="token-container">
 
@@ -1039,8 +1526,21 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
     </p>
 
     <p>
-      Contract source verification does not
-      constitute an independent security audit.
+      Liquidity locking reduces the risk of
+      early withdrawal of the specified
+      locked LP tokens.
+      It does not eliminate other risks,
+      including concentrated token ownership,
+      token sales, price manipulation,
+      smart contract vulnerabilities,
+      or withdrawal after the lock expires.
+    </p>
+
+    <p>
+      Contract source verification and
+      independent confirmation of an LP lock
+      do not constitute an independent
+      security audit or endorsement.
       This website does not provide financial advice.
       Always verify the contract and conduct
       independent research.
@@ -1061,34 +1561,51 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
     ·
     <a href="community.html">Community</a>
     ·
+    <a href="https://x.com/KokiAdventures"
+       target="_blank"
+       rel="noopener noreferrer">X</a>
+    ·
     <a href="mailto:aadhzz@hanmail.net">Contact</a>
   </p>
 
 </footer>
 
 <script>
+
 const KOKI_CONTRACT =
   "0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6";
 
 async function copyContract() {
+
   const status = document.getElementById("copyStatus");
 
   try {
+
     await navigator.clipboard.writeText(KOKI_CONTRACT);
+
     status.textContent = "✓ Contract address copied!";
+
   } catch (error) {
+
     const address = document.getElementById("contractAddress");
+
     const range = document.createRange();
+
     const selection = window.getSelection();
 
     range.selectNodeContents(address);
+
     selection.removeAllRanges();
+
     selection.addRange(range);
 
     status.textContent =
       "Address selected. Press Ctrl+C to copy.";
+
   }
+
 }
+
 </script>
 
 </body>
