@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="KOKI ($KOKI) is a story-driven meme token on Base. Explore the Pirate Elephant, KOKI Chronicles, official token contract, and live Uniswap v2 liquidity.">
+content="KOKI ($KOKI) is a story-driven meme token on Base. Explore 3 seasons and 36 chapters of the KOKI Chronicles and join the KOKI Treasure Hunt.">
 
 <title>KOKI ($KOKI) | The Pirate Elephant on Base</title>
 
@@ -63,6 +63,10 @@ nav a {
 }
 
 nav a:hover { color: white; }
+
+nav .hunt-link {
+  color: #ffdc91;
+}
 
 .hero {
   position: relative;
@@ -302,6 +306,167 @@ h1 {
   font-weight: bold;
 }
 
+/* TREASURE HUNT */
+
+.treasure-section {
+  padding: 65px 24px;
+  scroll-margin-top: 110px;
+  background:
+    radial-gradient(ellipse at top,
+      #38291a 0%, #19161a 48%, #0c0d12 100%);
+  border-top: 1px solid #806033;
+  border-bottom: 1px solid #806033;
+}
+
+.treasure-box {
+  max-width: 1070px;
+  margin: 0 auto;
+  padding: 50px 35px;
+  border: 1px solid #9c763a;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(12,13,18,.76);
+  box-shadow: 0 10px 50px rgba(0,0,0,.3);
+}
+
+.treasure-tag {
+  display: inline-block;
+  padding: 7px 18px;
+  color: #c6e8ca;
+  border: 1px solid #567c5c;
+  border-radius: 30px;
+  background: rgba(38,83,48,.18);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.treasure-symbol {
+  font-size: 60px;
+  margin-top: 18px;
+}
+
+.treasure-title {
+  color: var(--gold);
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.2;
+  letter-spacing: 2px;
+  margin: 12px 0;
+}
+
+.treasure-subtitle {
+  color: #f5f3ee;
+  font-size: 21px;
+  margin: 10px 0 20px;
+}
+
+.treasure-description {
+  max-width: 680px;
+  margin: 15px auto;
+  color: var(--muted);
+}
+
+.reward-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-width: 850px;
+  margin: 35px auto;
+}
+
+.reward-item {
+  padding: 25px 12px;
+  border: 1px solid #574322;
+  background: #171920;
+  border-radius: 12px;
+}
+
+.reward-item strong {
+  display: block;
+  color: var(--gold);
+  font-size: clamp(20px, 3vw, 29px);
+}
+
+.reward-item span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.hunt-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 850px;
+  margin: 35px auto;
+}
+
+.hunt-step {
+  padding: 22px 15px;
+  background: rgba(255,255,255,.025);
+  border: 1px solid #403522;
+  border-radius: 12px;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 14px;
+  background: var(--gold);
+  color: #121212;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.hunt-step h3 {
+  color: var(--gold);
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.hunt-step p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.hunt-button {
+  display: inline-block;
+  background: linear-gradient(135deg,#f8d785,#c58b35);
+  color: #14110c;
+  padding: 17px 38px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(232,185,87,.2);
+  transition: transform .2s;
+}
+
+.hunt-button:hover {
+  transform: translateY(-3px);
+}
+
+.hunt-terms {
+  max-width: 780px;
+  margin: 30px auto 0;
+  padding: 20px;
+  border-top: 1px solid #574322;
+  color: #b4b5bd;
+  font-size: 13px;
+}
+
+.hunt-motto {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-top: 25px;
+}
+
+/* LIQUIDITY */
+
 .liquidity-section {
   background: #111218;
   border-top: 1px solid #40321e;
@@ -336,6 +501,11 @@ h1 {
   color: #f5f3ee;
 }
 
+.liquidity-card a {
+  color: var(--gold);
+  font-size: 14px;
+}
+
 .pool-address {
   font-family: monospace;
   font-size: 12px;
@@ -345,6 +515,33 @@ h1 {
   background: #0c0d12;
   border-radius: 6px;
   margin: 15px 0;
+}
+
+.lock-panel {
+  margin-top: 25px;
+  padding: 28px;
+  border: 1px solid #567c5c;
+  border-radius: 12px;
+  background: rgba(38,83,48,.12);
+}
+
+.lock-panel h3 {
+  color: #b8e6bd;
+  margin-top: 0;
+  font-size: 23px;
+}
+
+.lock-panel p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.lock-panel strong {
+  color: #e2f2e3;
+}
+
+.lock-panel a {
+  color: #b8e6bd;
 }
 
 .info-note {
@@ -422,15 +619,26 @@ footer a { color: var(--gold); }
 @media (max-width: 750px) {
   nav { gap: 13px; padding: 15px 10px; }
   nav a { font-size: 12px; }
-  .hero { min-height: 0; padding: 60px 20px; }
-  .cards, .stats, .liquidity-grid {
+
+  .hero {
+    min-height: 0;
+    padding: 60px 20px;
+  }
+
+  .cards, .stats, .liquidity-grid,
+  .reward-grid, .hunt-steps {
     grid-template-columns: 1fr;
   }
+
   .card p { min-height: 0; }
   .container { padding: 65px 20px; }
   h1 { letter-spacing: 4px; }
   .contract-address { font-size: 11px; }
   .btn { width: 100%; max-width: 350px; }
+  .treasure-section { padding: 40px 15px; }
+  .treasure-box { padding: 30px 18px; }
+  .treasure-title { letter-spacing: 0; }
+  .hunt-button { width: 100%; padding: 15px; }
 }
 </style>
 </head>
@@ -444,6 +652,7 @@ footer a { color: var(--gold); }
   <a href="roadmap.html">Roadmap</a>
   <a href="community.html">Community</a>
   <a href="faq.html">FAQ</a>
+  <a class="hunt-link" href="#treasure-hunt">🏴‍☠️ Treasure Hunt</a>
 </nav>
 
 <header class="hero">
@@ -481,20 +690,25 @@ footer a { color: var(--gold); }
     <div class="actions">
 
       <a class="btn btn-primary"
-         href="https://app.uniswap.org/swap?chain=base&amp;inputCurrency=ETH&amp;outputCurrency=0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
-         target="_blank"
-         rel="noopener noreferrer">
-        Trade KOKI on Uniswap ↗
+         href="#treasure-hunt">
+        🏴‍☠️ Join the Treasure Hunt
       </a>
 
       <a class="btn btn-secondary"
+         href="story.html">
+        Discover the Story
+      </a>
+
+      <a class="btn btn-outline"
          href="tokenomics.html">
         Explore $KOKI →
       </a>
 
       <a class="btn btn-outline"
-         href="story.html">
-        Discover the Story
+         href="https://app.uniswap.org/swap?chain=base&amp;inputCurrency=ETH&amp;outputCurrency=0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
+         target="_blank"
+         rel="noopener noreferrer">
+        Trade KOKI on Uniswap ↗
       </a>
 
     </div>
@@ -535,6 +749,146 @@ footer a { color: var(--gold); }
 
 <main>
 
+<!-- KOKI TREASURE HUNT -->
+
+<section class="treasure-section" id="treasure-hunt">
+
+  <div class="treasure-box">
+
+    <span class="treasure-tag">
+      COMMUNITY EVENT · QUEST #01
+    </span>
+
+    <div class="treasure-symbol">🏴‍☠️</div>
+
+    <h2 class="treasure-title">
+      KOKI TREASURE HUNT
+    </h2>
+
+    <p class="treasure-subtitle">
+      Read the Story. Solve the Mystery. Discover the Treasure.
+    </p>
+
+    <p class="treasure-description">
+      Every great adventure begins with a single step.
+      Join Captain KOKI on his first voyage beyond the horizon.
+      Read the opening chapter, complete the quiz,
+      and become part of the KOKI community.
+    </p>
+
+    <div class="reward-grid">
+
+      <div class="reward-item">
+        <strong>1,000,000</strong>
+        <span>KOKI per eligible participant</span>
+      </div>
+
+      <div class="reward-item">
+        <strong>100</strong>
+        <span>Eligible reward recipients</span>
+      </div>
+
+      <div class="reward-item">
+        <strong>100 Million</strong>
+        <span>Total KOKI reward pool</span>
+      </div>
+
+    </div>
+
+    <div class="eyebrow">
+      HOW TO JOIN THE ADVENTURE
+    </div>
+
+    <div class="hunt-steps">
+
+      <div class="hunt-step">
+        <div class="step-number">1</div>
+        <h3>Read the Story</h3>
+        <p>
+          Explore Season One, Chapter One:
+          Beyond the Horizon.
+        </p>
+      </div>
+
+      <div class="hunt-step">
+        <div class="step-number">2</div>
+        <h3>Solve the Quiz</h3>
+        <p>
+          Join our official Zealy quest
+          and answer the story question.
+        </p>
+      </div>
+
+      <div class="hunt-step">
+        <div class="step-number">3</div>
+        <h3>Claim Your Reward</h3>
+        <p>
+          Submit your public Base wallet address
+          and wait for eligibility verification.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="actions">
+
+      <a class="hunt-button"
+         href="https://zealy.io/cw/kokiadventures/questboard/46c9ee89-6e32-4f36-80ca-9ac11d1d11ee/67d0b117-ba16-44e7-ba1c-75127292124b"
+         target="_blank"
+         rel="noopener noreferrer"
+         onclick="trackTreasureHunt()">
+        🗺️ START THE TREASURE HUNT ↗
+      </a>
+
+      <a class="btn btn-secondary"
+         href="chapter1.html">
+        Read Chapter One →
+      </a>
+
+    </div>
+
+    <div class="hunt-terms">
+
+      <strong>Event Rules &amp; Reward Information</strong>
+
+      <p>
+        Free to participate. No purchase required.
+        Rewards are limited to the first 100 eligible
+        participants, subject to verification and availability.
+        One reward per person and wallet.
+      </p>
+
+      <p>
+        Rewards are distributed manually every weekend
+        after eligibility and wallet address verification.
+        All rewards are issued on the Base network.
+      </p>
+
+      <p>
+        Only submit your public wallet address.
+        Never share your private key or recovery phrase.
+        No token approval or payment is required
+        to receive the reward.
+      </p>
+
+      <p>
+        KOKI has limited liquidity and no guaranteed
+        monetary value. Rewards are not a promise of profit.
+        Check Zealy for current reward availability.
+      </p>
+
+    </div>
+
+    <div class="hunt-motto">
+      NO ONE LEFT BEHIND.
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TOKEN OVERVIEW -->
+
 <section class="container">
 
   <h2 class="section-title">
@@ -568,6 +922,8 @@ footer a { color: var(--gold); }
   </div>
 
 </section>
+
+<!-- LIQUIDITY AND TRADING -->
 
 <section class="liquidity-section">
 
@@ -640,10 +996,84 @@ footer a { color: var(--gold); }
 
         <p>
           <strong>Liquidity lock:</strong>
-          Not locked.
-          The liquidity provider can withdraw
-          liquidity from the pool.
+          LP tokens locked through PinkLock V2
+          on November 26, 2026.
         </p>
+
+        <a href="https://dexscreener.com/base/0x74bb775f2bc3a4f85b7d48498725bbddd9716261"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Pool on DEX Screener ↗
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- LIQUIDITY LOCK -->
+
+    <div class="lock-panel">
+
+      <h3>🔒 Liquidity Lock — PinkLock V2</h3>
+
+      <p>
+        The project's existing Uniswap v2 LP tokens
+        were locked through PinkLock V2 on Base.
+      </p>
+
+      <p>
+        <strong>Lock ID:</strong> 1054509
+      </p>
+
+      <p>
+        <strong>Locked LP tokens:</strong>
+        3162.277660168379330998
+      </p>
+
+      <p>
+        <strong>Lock date:</strong>
+        November 26, 2026
+      </p>
+
+      <p>
+        <strong>Unlock date:</strong>
+        November 26, 2027 — 01:36 UTC
+      </p>
+
+      <p>
+        <strong>Coverage at verification:</strong>
+        Approximately 100% of the existing LP token supply,
+        excluding permanently locked minimum liquidity.
+      </p>
+
+      <p>
+        The locked LP tokens cannot be withdrawn before
+        the scheduled unlock date. Lock ownership may
+        be transferred. Newly added liquidity is not
+        automatically covered by this lock.
+      </p>
+
+      <p>
+        This lock applies to LP tokens only.
+        It does not lock the founder's directly held KOKI
+        tokens or guarantee the token's price or safety.
+      </p>
+
+      <div class="actions">
+
+        <a class="btn btn-secondary"
+           href="https://www.pinksale.finance/pinklock/base/record/1054509"
+           target="_blank"
+           rel="noopener noreferrer">
+          Verify PinkLock Record ↗
+        </a>
+
+        <a class="btn btn-outline"
+           href="https://basescan.org/tx/0x549cc33ca7346783a67894273a47c33f0df092a5d72e0b738f403bb3a18f23ad"
+           target="_blank"
+           rel="noopener noreferrer">
+          Verify Lock Transaction ↗
+        </a>
 
       </div>
 
@@ -678,9 +1108,18 @@ footer a { color: var(--gold); }
       </p>
 
       <p>
-        Liquidity provider tokens were not locked
-        at launch. Liquidity may be withdrawn,
-        and trading may become difficult or impossible.
+        Existing project LP tokens were locked
+        on November 26, 2026.
+        However, the liquidity lock does not guarantee
+        sufficient liquidity or continuous trading.
+      </p>
+
+      <p>
+        As of November 26, 2026, approximately 99.9%
+        of the total token supply was held by the deployer.
+        This concentration presents significant market risks.
+        Planned token distribution is not the same as
+        completed on-chain distribution.
       </p>
 
       <p>
@@ -688,10 +1127,15 @@ footer a { color: var(--gold); }
         for KOKI through its security screening.
         A review request was submitted to Blockaid
         on October 23, 2026.
-        The warning has not been confirmed as
-        resolved or removed.
-        This request does not constitute
-        security approval or certification.
+      </p>
+
+      <p>
+        Blockaid confirmed the LP lock on November 26, 2026,
+        but the security warning remains.
+        Liquidity depth, token ownership concentration
+        and organic trading activity remain concerns.
+        The review does not constitute security approval
+        or certification.
       </p>
 
       <p>
@@ -707,6 +1151,8 @@ footer a { color: var(--gold); }
   </div>
 
 </section>
+
+<!-- EXPLORE KOKI -->
 
 <section class="container">
 
@@ -740,10 +1186,9 @@ footer a { color: var(--gold); }
       <div class="symbol">🏴‍☠️</div>
       <h3>The KOKI Chronicles</h3>
       <p>
-        Season One is complete.
-        Explore twelve chapters
-        of courage, friendship,
-        sacrifice and adventure.
+        Three seasons. Thirty-six chapters.
+        Explore an epic adventure of courage,
+        friendship, sacrifice and discovery.
       </p>
       <a href="story.html">
         Read the Story →
@@ -768,21 +1213,50 @@ footer a { color: var(--gold); }
 
 </section>
 
+<!-- STORY BANNER -->
+
 <section class="banner">
+
+  <div class="eyebrow">
+    THE KOKI CHRONICLES
+  </div>
 
   <h2>One Token. One Story. Endless Adventures.</h2>
 
   <p>
-    The KOKI Chronicles Season One is complete.
+    Three complete seasons. Thirty-six chapters.
+    One unforgettable adventure.
+  </p>
+
+  <p>
+    Season One — The Forgotten Sea
+    <br>
+    Season Two — The Twelve Stars
+    <br>
+    Season Three — Beyond the Edge of Time
+  </p>
+
+  <p style="color:#e8b957;font-weight:bold;">
     The next voyage is on the horizon.
   </p>
 
-  <a class="btn btn-primary"
-     href="story.html">
-    Explore Season One →
-  </a>
+  <div class="actions">
+
+    <a class="btn btn-primary"
+       href="story.html">
+      Explore All 36 Chapters →
+    </a>
+
+    <a class="btn btn-secondary"
+       href="#treasure-hunt">
+      Join the Treasure Hunt →
+    </a>
+
+  </div>
 
 </section>
+
+<!-- COMMUNITY AND CONTACT -->
 
 <section class="contact-section">
 
@@ -802,11 +1276,25 @@ footer a { color: var(--gold); }
   <div class="actions">
 
     <a class="btn btn-primary"
+       href="https://x.com/KokiAdventures"
+       target="_blank"
+       rel="noopener noreferrer">
+      Follow KOKI on X ↗
+    </a>
+
+    <a class="btn btn-secondary"
+       href="https://zealy.io/cw/kokiadventures"
+       target="_blank"
+       rel="noopener noreferrer">
+      Join KOKI on Zealy ↗
+    </a>
+
+    <a class="btn btn-outline"
        href="mailto:aadhzz@hanmail.net?subject=KOKI%20Project%20Inquiry">
       ✉ Contact KOKI
     </a>
 
-    <a class="btn btn-secondary"
+    <a class="btn btn-outline"
        href="community.html">
       Community →
     </a>
@@ -838,6 +1326,10 @@ footer a { color: var(--gold); }
       Liquidity &amp; Risks
     </a>
     ·
+    <a href="#treasure-hunt">
+      Treasure Hunt
+    </a>
+    ·
     <a href="mailto:aadhzz@hanmail.net">
       Contact
     </a>
@@ -847,12 +1339,18 @@ footer a { color: var(--gold); }
     KOKI is a meme token and creative community project.
     Digital assets involve significant risks, including
     the possible loss of their entire value.
-    Initial liquidity is small and not locked.
+    Liquidity is limited and token ownership is concentrated.
+    Existing LP tokens are locked until November 26, 2027,
+    but this does not guarantee price stability or safety.
     KOKI has not undergone an independent security audit.
     Nothing on this website constitutes financial advice
     or a promise of future returns.
     Always verify the official contract address
     and conduct your own research.
+  </p>
+
+  <p style="color:#e8b957;letter-spacing:3px;margin-top:25px;">
+    NO ONE LEFT BEHIND.
   </p>
 
 </footer>
@@ -878,6 +1376,15 @@ async function copyContract() {
 
     status.textContent =
       "Select the address above and press Ctrl+C to copy.";
+  }
+}
+
+function trackTreasureHunt() {
+  if (typeof gtag === "function") {
+    gtag("event", "treasure_hunt_click", {
+      event_category: "KOKI Community",
+      event_label: "Treasure Hunt 01"
+    });
   }
 }
 </script>
