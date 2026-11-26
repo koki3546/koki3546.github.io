@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 7 - The Admiral of the Endless Fleet | KOKI</title>
+
+<meta name="description" content="KOKI confronts Admiral Veyra and an endless fleet in a world where safety has come at the cost of freedom.">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PLV8VJ8P9J');
+</script>
+
+<style>
+:root {
+    --bg: #0c0d12;
+    --panel: #171920;
+    --gold: #e8b957;
+    --text: #e5e5e5;
+    --muted: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(12,13,18,.96);
+    border-bottom: 1px solid #292929;
+    padding: 14px 24px;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #d1d1d1;
+    font-size: 15px;
+    transition: .2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+}
+
+.chapter-header {
+    text-align: center;
+    padding: 65px 24px 40px;
+    background: radial-gradient(
+        ellipse at top,
+        #282117 0%,
+        #0c0d12 70%
+    );
+}
+
+.season-label {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.season-title {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: #dddddd;
+    margin-top: 18px;
+}
+
+.chapter-number {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-top: 35px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: clamp(36px, 6vw, 62px);
+    line-height: 1.2;
+    margin: 20px auto;
+    max-width: 1050px;
+}
+
+.subtitle {
+    color: #c8c8c8;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.cover {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #574322;
+    border-radius: 15px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+
+.story-container {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 50px 55px;
+    background: var(--panel);
+    border: 1px solid #343039;
+    border-radius: 15px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.95;
+}
+
+.story-container p {
+    margin: 0 0 22px;
+}
+
+.story-container .opening {
+    color: var(--gold);
+    font-size: 27px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.story-container h2 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 55px 0 35px;
+}
+
+.separator {
+    color: var(--gold);
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 14px;
+    margin: 45px 0;
+}
+
+.highlight {
+    color: #f1d9a2;
+    font-weight: bold;
+}
+
+.countdown {
+    margin: 45px 0;
+    padding: 35px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    background: linear-gradient(
+        145deg,
+        #201a12,
+        #111218
+    );
+    text-align: center;
+}
+
+.countdown-number {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: clamp(42px, 9vw, 72px);
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.countdown-label {
+    color: var(--muted);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+}
+
+.continued {
+    color: var(--gold);
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 60px 0 30px;
+}
+
+.end-card {
+    text-align: center;
+    border: 1px solid #574322;
+    border-radius: 14px;
+    background: #111218;
+    padding: 35px 25px;
+    margin-top: 45px;
+}
+
+.end-card h3 {
+    font-family: Georgia, serif;
+    color: var(--gold);
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.end-card p {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.end-card .motto {
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.chapter-navigation {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.chapter-navigation a,
+.chapter-navigation span {
+    display: inline-block;
+    padding: 14px 22px;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    color: var(--gold);
+    font-size: 14px;
+    transition: .2s;
+}
+
+.chapter-navigation a:hover {
+    background: var(--gold);
+    color: #111111;
+}
+
+.chapter-navigation .coming-soon {
+    color: #777777;
+    border-color: #444444;
+    cursor: default;
+}
+
+.community {
+    text-align: center;
+    padding: 35px 20px 50px;
+}
+
+.community h3 {
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.community p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.community a {
+    display: inline-block;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 13px 25px;
+    border-radius: 7px;
+    margin-top: 15px;
+}
+
+.community a:hover {
+    background: var(--gold);
+    color: #111111;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #292929;
+    color: #888888;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 12px;
+    }
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .chapter-header {
+        padding: 45px 18px 30px;
+    }
+
+    .season-label {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .season-title {
+        font-size: 21px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .cover {
+        padding: 0 15px;
+    }
+
+    .story-container {
+        margin: 25px 15px;
+        padding: 30px 22px;
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    .story-container .opening {
+        font-size: 23px;
+    }
+
+    .story-container h2 {
+        font-size: 24px;
+    }
+
+    .chapter-navigation {
+        flex-direction: column;
+    }
+
+    .chapter-navigation a,
+    .chapter-navigation span {
+        width: 260px;
+        text-align: center;
+    }
+
+    .continued {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-inner">
+
+        <a class="logo" href="index.html">
+            <img src="koki-logo.png" alt="KOKI Logo">
+            <span>KOKI</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="story.html" class="active">Story</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="community.html">Community</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+    </div>
+</nav>
+
+<header class="chapter-header">
+
+    <div class="season-label">
+        The KOKI Chronicles · Season Three
+    </div>
+
+    <div class="season-title">
+        Beyond the Edge of Time
+    </div>
+
+    <div class="chapter-number">
+        CHAPTER 07
+    </div>
+
+    <h1>The Admiral of the Endless Fleet</h1>
+
+    <div class="subtitle">
+        A safe ocean means nothing if no one is free to sail it.
+    </div>
+
+</header>
+
+<div class="cover">
+    <img
+        src="season3-chapter7-cover.png"
+        alt="Captain KOKI and Admiral Veyra face an endless fleet of warships in a stormy ocean"
+    >
+</div>
+
+<main class="story-container">
+
+<p class="opening">
+The first cannonball carried KOKI's name.
+</p>
+
+<p>It struck the ocean beside his ship and exploded into a thousand silver chains.</p>
+
+<p>Nox turned the wheel.</p>
+
+<p>Brann raised his hammer.</p>
+
+<p>Milo nearly dropped his paper boat.</p>
+
+<p>Beyond the horizon, thousands of warships emerged from the mist.</p>
+
+<p>Their sails carried the symbol of a silver compass.</p>
+
+<p>At the center of the fleet stood an enormous battleship.</p>
+
+<p>A familiar figure watched from its highest deck.</p>
+
+<p>Admiral Veyra.</p>
+
+<p>"Captain KOKI," her voice echoed across the ocean.</p>
+
+<p>"By order of the Meridian Council, your voyage ends here."</p>
+
+<p>KOKI smiled sadly.</p>
+
+<p>"That's not how you used to greet me."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>I. The Ocean Without Pirates</h2>
+
+<p>The warships moved into formation.</p>
+
+<p>Every cannon pointed toward KOKI.</p>
+
+<p>Beyond the fleet lay a magnificent civilization built upon floating cities.</p>
+
+<p>Merchant vessels traveled safely between golden harbors.</p>
+
+<p>There were no pirates.</p>
+
+<p>No sea monsters.</p>
+
+<p>No abandoned ships.</p>
+
+<p>Under Admiral Veyra's command, the ocean had become the safest place in the world.</p>
+
+<p>But something was missing.</p>
+
+<p>Every vessel followed an invisible path.</p>
+
+<p>Whenever a ship attempted to leave its assigned route, silver chains emerged from the water and dragged it back.</p>
+
+<p>Milo watched a small fishing boat struggling against the chains.</p>
+
+<p>"Why can't they go wherever they want?"</p>
+
+<p>Nox lowered his telescope.</p>
+
+<p>"Because someone has decided where everyone belongs."</p>
+
+<p>KOKI looked toward Veyra's battleship.</p>
+
+<p>"Let's find out who."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>II. The Admiral's Promise</h2>
+
+<p>Veyra stood inside her command chamber.</p>
+
+<p>An enormous map covered the walls.</p>
+
+<p>Every ship appeared as a tiny silver light.</p>
+
+<p>Not a single vessel had been lost in seventeen years.</p>
+
+<p>Director Vaelor appeared within a golden mirror.</p>
+
+<p>"The pirate threatens everything you have built."</p>
+
+<p>Veyra studied KOKI's approaching ship.</p>
+
+<p>"Why does he know my name?"</p>
+
+<p>"He comes from a discarded history."</p>
+
+<p>Vaelor paused.</p>
+
+<p>"In that history, you failed to protect those who trusted you."</p>
+
+<p>The mirror revealed a terrible storm.</p>
+
+<p>Ships sank beneath enormous waves.</p>
+
+<p>A younger Veyra screamed as sailors disappeared into the darkness.</p>
+
+<p>She turned away.</p>
+
+<p>"Enough."</p>
+
+<p>Vaelor smiled.</p>
+
+<p>"Here, you have the power to prevent such tragedies."</p>
+
+<p>Veyra looked toward the ocean.</p>
+
+<p>"Then I will protect it."</p>
+
+<p>She raised her hand.</p>
+
+<p>"Prepare the entire fleet."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>III. A Captain Against a Thousand Ships</h2>
+
+<p>The ocean erupted.</p>
+
+<p>Silver cannonballs filled the sky.</p>
+
+<p>KOKI's ship sailed between enormous battleships as Brann shattered the chains with his hammer.</p>
+
+<p>Nox steered through a narrow opening.</p>
+
+<p>Milo pointed toward Veyra's flagship.</p>
+
+<p>"There!"</p>
+
+<p>KOKI climbed the mast.</p>
+
+<p>A passing cannonball unfolded into a mechanical bird.</p>
+
+<p>He jumped onto its back and seized its silver wings.</p>
+
+<p>The creature carried him above the battlefield.</p>
+
+<p>Below him, hundreds of cannons turned upward.</p>
+
+<p>KOKI released one wing.</p>
+
+<p>The mechanical bird spun wildly through the air.</p>
+
+<p>He leapt onto Veyra's flagship just as the creature crashed into an empty observation tower.</p>
+
+<p>Veyra drew her sword.</p>
+
+<p>KOKI landed before her.</p>
+
+<p>For a moment, neither moved.</p>
+
+<p>Then Veyra attacked.</p>
+
+<p>Their swords collided.</p>
+
+<p>"You are endangering innocent lives!"</p>
+
+<p>KOKI blocked another strike.</p>
+
+<p>"And you're keeping them in chains!"</p>
+
+<p>"I have saved thousands!"</p>
+
+<p>"Then why are they afraid to leave?"</p>
+
+<p>Veyra hesitated.</p>
+
+<p>KOKI lowered his sword.</p>
+
+<p>"Come with me. I'll show you."</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>IV. The Little Ship Beyond the Line</h2>
+
+<p>An alarm suddenly echoed across the flagship.</p>
+
+<p>A small passenger vessel had crossed the boundary of the permitted ocean.</p>
+
+<p>Beyond it, an enormous storm was forming.</p>
+
+<p>Veyra immediately turned toward her officers.</p>
+
+<p>"Send a rescue ship!"</p>
+
+<p>No one moved.</p>
+
+<p>A golden message appeared upon the command map.</p>
+
+<p class="highlight">
+UNAUTHORIZED HISTORY. RESCUE PROHIBITED.
+</p>
+
+<p>Veyra stared at the words.</p>
+
+<p>"Override the command."</p>
+
+<p class="highlight">
+REQUEST DENIED.
+</p>
+
+<p>Through her telescope, she saw children standing on the deck of the little vessel.</p>
+
+<p>Silver chains wrapped around its hull.</p>
+
+<p>Instead of pulling it to safety, they dragged it beneath the waves.</p>
+
+<p>Veyra dropped her telescope.</p>
+
+<p>KOKI was already running.</p>
+
+<p>He jumped from the flagship.</p>
+
+<p>Nox brought their pirate ship alongside him.</p>
+
+<p>"Going somewhere, Captain?"</p>
+
+<p>KOKI grabbed the rope.</p>
+
+<p>"Someone needs us."</p>
+
+<p>Veyra watched the black pirate flag disappear into the storm.</p>
+
+<p>Something inside her began to break.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>V. The Day the Admiral Became a Pirate</h2>
+
+<p>The waves rose higher than mountains.</p>
+
+<p>Brann held the damaged mast together.</p>
+
+<p>Nox fought against the storm.</p>
+
+<p>KOKI climbed onto the sinking passenger vessel and carried its children toward his ship.</p>
+
+<p>But the silver chains continued pulling both vessels into the darkness.</p>
+
+<p>Suddenly, an enormous battleship appeared through the rain.</p>
+
+<p>Veyra stood at its bow.</p>
+
+<p>"ALL CANNONS! TARGET THE CHAINS!"</p>
+
+<p>Her officers stared at her.</p>
+
+<p>"Admiral, that violates the Council's orders!"</p>
+
+<p>Veyra drew her sword.</p>
+
+<p>"Then the Council can find another admiral."</p>
+
+<p>The cannons thundered.</p>
+
+<p>The chains shattered.</p>
+
+<p>Across the ocean, thousands of warships received a new command.</p>
+
+<p class="highlight">
+PROTECT EVERY SHIP.
+</p>
+
+<p>The golden compass above Veyra's flagship cracked.</p>
+
+<p>Memories flooded her mind.</p>
+
+<p>A black pirate flag.</p>
+
+<p>An elephant laughing beneath the stars.</p>
+
+<p>A crew that had crossed impossible oceans.</p>
+
+<p>A promise carved into a wooden deck.</p>
+
+<p class="highlight">
+No one left behind.
+</p>
+
+<p>Veyra fell to her knees.</p>
+
+<p>"Captain..."</p>
+
+<p>KOKI climbed aboard her battleship.</p>
+
+<p>He offered his hand.</p>
+
+<p>"Welcome back."</p>
+
+<p>Veyra took it.</p>
+
+<p>For the first time in seventeen years of borrowed history, she felt free.</p>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<h2>VI. The Library of Tomorrow</h2>
+
+<p>Across the ocean, silver chains disappeared.</p>
+
+<p>Merchant vessels changed their courses.</p>
+
+<p>Fishing boats sailed beyond their familiar waters.</p>
+
+<p>The children from the rescued vessel waved toward KOKI.</p>
+
+<p>Veyra removed her admiral's insignia and placed it upon the wheel of her flagship.</p>
+
+<p>"What will happen to this fleet?" Milo asked.</p>
+
+<p>Veyra smiled.</p>
+
+<p>"They don't need an admiral anymore."</p>
+
+<p>She looked toward the liberated ocean.</p>
+
+<p>"They need the freedom to choose their own captains."</p>
+
+<p>As the pirate ship prepared to depart, a golden feather descended from the sky.</p>
+
+<p>It landed upon Milo's paper boat.</p>
+
+<p>The ocean transformed into a reflection of countless books.</p>
+
+<p>Beyond the next doorway stood a library larger than an entire planet.</p>
+
+<p>Its shelves stretched between stars.</p>
+
+<p>At its entrance, a familiar lantern burned.</p>
+
+<p>Lyra.</p>
+
+<p>But every book contained the story of a future that had not yet happened.</p>
+
+<p>One book lay open upon a silver table.</p>
+
+<p>Its title was written in black letters.</p>
+
+<p class="highlight">
+THE DEATH OF CAPTAIN KOKI.
+</p>
+
+<p>Veyra looked at KOKI.</p>
+
+<p>He stared at the book for a long moment.</p>
+
+<p>Then he smiled.</p>
+
+<p>"Someone's been writing without my permission."</p>
+
+<p>Far beneath the Meridian Tower, Vaelor turned another page.</p>
+
+<p>The little fox inside the glass chamber opened her eyes.</p>
+
+<p>"Father?"</p>
+
+<p>Vaelor began to cry.</p>
+
+<p>But behind him, the ancient clock continued turning.</p>
+
+<p class="highlight">
+Seventeen hours remained.
+</p>
+
+<div class="countdown">
+
+    <div class="countdown-number">
+        17:00:00
+    </div>
+
+    <div class="countdown-label">
+        TIME REMAINING
+    </div>
+
+</div>
+
+<div class="separator">✦ ✦ ✦</div>
+
+<div class="continued">
+    TO BE CONTINUED...
+</div>
+
+<div class="end-card">
+
+    <div class="season-label">
+        The Third Voyage
+    </div>
+
+    <h3>The Admiral of the Endless Fleet</h3>
+
+    <p>Beyond the Edge of Time</p>
+
+    <div class="separator">✦ ✦ ✦</div>
+
+    <p>Safety without freedom is another kind of prison.</p>
+
+    <p>A true captain does not decide where others must sail.</p>
+
+    <p>A true captain helps them find their own horizon.</p>
+
+    <p class="motto">
+        NO ONE LEFT BEHIND
+    </p>
+
+    <p>Thank you for sailing with KOKI.</p>
+
+</div>
+
+</main>
+
+<div class="chapter-navigation">
+
+    <a href="season3-chapter6.html">
+        ← Previous Chapter
+    </a>
+
+    <a href="story.html">
+        All Chapters
+    </a>
+
+    <span class="coming-soon">
+        Next Chapter · Coming Soon
+    </span>
+
+</div>
+
+<section class="community">
+
+    <h3>The Adventure Continues</h3>
+
+    <p>
+        Every ocean holds another mystery.<br>
+        Every horizon begins another adventure.
+    </p>
+
+    <a
+        href="https://x.com/KokiAdventures"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Follow KOKI on X
+    </a>
+
+</section>
+
+<footer>
+
+    <strong>NO ONE LEFT BEHIND</strong>
+
+    <p>
+        The Adventures of KOKI<br>
+        The KOKI Chronicles · Season Three<br>
+        Beyond the Edge of Time
+    </p>
+
+    <p>
+        © 2026 KOKI — The Pirate Elephant.<br>
+        All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
