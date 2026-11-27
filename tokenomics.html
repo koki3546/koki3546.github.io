@@ -1119,8 +1119,7 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
         <p>
           Proposed for future community initiatives,
           reader engagement, and ecosystem activities.
-          No reward program or distribution schedule
-          has been finalized.
+          A pilot Treasure Hunt offers 1,000,000 KOKI each to the first 100 eligible participants, with manual weekend distribution after verification. This pilot does not implement the proposed 30% allocation. See <a href="https://zealy.io/cw/kokiadventures/questboard/46c9ee89-6e32-4f36-80ca-9ac11d1d11ee/67d0b117-ba16-44e7-ba1c-75127292124b">official quest terms</a>.
         </p>
 
       </div>
@@ -1566,6 +1565,7 @@ content="Explore KOKI tokenomics on Base, including fixed supply, proposed alloc
        rel="noopener noreferrer">X</a>
     ·
     <a href="mailto:aadhzz@hanmail.net">Contact</a>
+    <span class="koki-email-fallback"><span>aadhzz@hanmail.net</span> <button type="button" class="koki-copy-email">Copy email</button> <span class="koki-copy-status" role="status" aria-live="polite"></span></span>
   </p>
 
 </footer>
@@ -1608,5 +1608,18 @@ async function copyContract() {
 
 </script>
 
+<script>
+  document.querySelectorAll('.koki-copy-email').forEach(function(button) {
+    button.addEventListener('click', async function() {
+      const status = button.parentElement.querySelector('.koki-copy-status');
+      try {
+        await navigator.clipboard.writeText('aadhzz@hanmail.net');
+        status.textContent = 'Copied!';
+      } catch (error) {
+        status.textContent = 'Please copy manually: aadhzz@hanmail.net';
+      }
+    });
+  });
+</script>
 </body>
 </html>

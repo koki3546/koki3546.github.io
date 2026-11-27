@@ -641,6 +641,13 @@ footer a { color: var(--gold); }
   .hunt-button { width: 100%; padding: 15px; }
 }
 </style>
+<style>
+
+.koki-email-fallback { display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem; margin: .5rem; overflow-wrap: anywhere; }
+.koki-copy-email { font: inherit; font-size: .85rem; color: #e8b957; background: #171920; border: 1px solid #e8b957; border-radius: 6px; padding: .35rem .65rem; cursor: pointer; }
+.koki-copy-email:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+</style>
 </head>
 
 <body>
@@ -1305,6 +1312,7 @@ footer a { color: var(--gold); }
      href="mailto:aadhzz@hanmail.net">
     aadhzz@hanmail.net
   </a>
+    <span class="koki-email-fallback"><button type="button" class="koki-copy-email">Copy email</button> <span class="koki-copy-status" role="status" aria-live="polite"></span></span>
 
 </section>
 
@@ -1389,5 +1397,18 @@ function trackTreasureHunt() {
 }
 </script>
 
+<script>
+  document.querySelectorAll('.koki-copy-email').forEach(function(button) {
+    button.addEventListener('click', async function() {
+      const status = button.parentElement.querySelector('.koki-copy-status');
+      try {
+        await navigator.clipboard.writeText('aadhzz@hanmail.net');
+        status.textContent = 'Copied!';
+      } catch (error) {
+        status.textContent = 'Please copy manually: aadhzz@hanmail.net';
+      }
+    });
+  });
+</script>
 </body>
 </html>

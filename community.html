@@ -388,10 +388,10 @@ footer a {
       </p>
 
       <a class="community-button"
-         href="https://x.com/koki3546"
+         href="https://x.com/KokiAdventures"
          target="_blank"
          rel="noopener noreferrer">
-        Follow @koki3546 →
+        Follow @KokiAdventures →
       </a>
 
     </article>
@@ -405,8 +405,7 @@ footer a {
       <p>
         Explore the adventures of KOKI,
         Finn, Veyra, and their friends.
-        Season One is complete
-        with twelve chapters.
+        Three seasons are complete with 36 chapters.
       </p>
 
       <a class="community-button"
@@ -542,9 +541,7 @@ footer a {
       The initial liquidity was approximately
       0.01 ETH and 1 billion KOKI.
       This is a very small pool.
-      Liquidity provider tokens were not locked
-      at launch, and the liquidity provider
-      can withdraw liquidity.
+      The initial LP position was locked through PinkLock V2 on November 26, 2026, until November 26, 2027. New LP tokens are not covered by this lock. The locked LP tokens cannot be withdrawn early.
       Token holdings were highly concentrated
       in the creator's wallet.
     </p>
@@ -621,6 +618,7 @@ footer a {
        href="mailto:aadhzz@hanmail.net">
       aadhzz@hanmail.net
     </a>
+    <span class="koki-email-fallback"><button type="button" class="koki-copy-email">Copy email</button> <span class="koki-copy-status" role="status" aria-live="polite"></span></span>
 
   </div>
 
@@ -667,8 +665,7 @@ footer a {
     </p>
 
     <p>
-      KOKI has not promised any token rewards,
-      guaranteed profits, or exchange listings.
+      The <a href="https://zealy.io/cw/kokiadventures/questboard/46c9ee89-6e32-4f36-80ca-9ac11d1d11ee/67d0b117-ba16-44e7-ba1c-75127292124b">official Treasure Hunt</a> offers 1,000,000 KOKI to each of the first 100 eligible participants, subject to verification and manual weekend distribution. One reward per person and wallet; no purchase required. No guaranteed profits or exchange listings.
       Announcements should be verified
       through official project channels.
     </p>
@@ -714,5 +711,18 @@ async function copyContract() {
 }
 </script>
 
+<script>
+  document.querySelectorAll('.koki-copy-email').forEach(function(button) {
+    button.addEventListener('click', async function() {
+      const status = button.parentElement.querySelector('.koki-copy-status');
+      try {
+        await navigator.clipboard.writeText('aadhzz@hanmail.net');
+        status.textContent = 'Copied!';
+      } catch (error) {
+        status.textContent = 'Please copy manually: aadhzz@hanmail.net';
+      }
+    });
+  });
+</script>
 </body>
 </html>

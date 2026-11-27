@@ -165,3 +165,8 @@ footer {
   border-radius: 50%;
   filter: drop-shadow(0 0 25px rgba(232,185,87,.2));
 }
+
+/* Contact email fallback */
+.koki-email-fallback { display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem; margin: .5rem; overflow-wrap: anywhere; }
+.koki-copy-email { font: inherit; font-size: .85rem; color: #e8b957; background: #171920; border: 1px solid #e8b957; border-radius: 6px; padding: .35rem .65rem; cursor: pointer; }
+.koki-copy-email:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }

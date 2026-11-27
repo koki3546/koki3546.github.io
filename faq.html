@@ -334,8 +334,7 @@ footer a {
         and connected storylines.
       </p>
       <p>
-        Season One contains twelve chapters.
-        Future stories are planned.
+        Three seasons and 36 chapters are complete. Future stories are planned.
       </p>
       <p>
         <a href="story.html">
@@ -583,20 +582,15 @@ footer a {
     <summary>Is KOKI liquidity locked?</summary>
     <div class="faq-answer">
       <p>
-        <strong>No.</strong>
-        The liquidity provider tokens
-        were not locked at launch.
+        <strong>Yes, the initial LP position is locked.</strong> The initial LP position was locked through PinkLock V2 on November 26, 2026, until November 26, 2027. New LP tokens are not covered by this lock.
       </p>
       <p>
-        The creator held the liquidity
-        provider position at launch
-        and could withdraw liquidity.
+        The locked LP tokens cannot be withdrawn early. <a href="https://www.pinksale.finance/pinklock/base/record/1054509" target="_blank" rel="noopener noreferrer">Verify the PinkLock record ↗</a>.
       </p>
       <p>
         Liquidity removal may make
         trading difficult or impossible.
-        There is no guaranteed liquidity
-        lock or minimum liquidity period.
+        The lock does not guarantee market liquidity, price stability, or safety. Founder-held KOKI tokens are not locked.
       </p>
     </div>
   </details>
@@ -770,10 +764,10 @@ footer a {
         and new stories.
       </p>
       <p>
-        <a href="https://x.com/koki3546"
+        <a href="https://x.com/KokiAdventures"
            target="_blank"
            rel="noopener noreferrer">
-          Follow @koki3546 on X ↗
+          Follow @KokiAdventures on X ↗
         </a>
       </p>
     </div>
@@ -791,6 +785,7 @@ footer a {
         <a href="mailto:aadhzz@hanmail.net">
           aadhzz@hanmail.net
         </a>
+    <span class="koki-email-fallback"><button type="button" class="koki-copy-email">Copy email</button> <span class="koki-copy-status" role="status" aria-live="polite"></span></span>
       </p>
     </div>
   </details>
@@ -800,8 +795,7 @@ footer a {
     <p>
       KOKI is an early-stage meme token
       and creative project.
-      Initial liquidity was small and
-      liquidity provider tokens were not locked.
+      Initial liquidity was small. The initial LP position was locked through PinkLock V2 on November 26, 2026, until November 26, 2027. New LP tokens are not covered by this lock.
       Token ownership was highly concentrated
       at launch. No independent security audit
       has been completed.
@@ -845,10 +839,10 @@ footer a {
     </a>
 
     <a class="faq-button secondary"
-       href="https://x.com/koki3546"
+       href="https://x.com/KokiAdventures"
        target="_blank"
        rel="noopener noreferrer">
-      Follow @koki3546 ↗
+      Follow @KokiAdventures ↗
     </a>
 
   </div>
@@ -873,5 +867,18 @@ footer a {
 
 </footer>
 
+<script>
+  document.querySelectorAll('.koki-copy-email').forEach(function(button) {
+    button.addEventListener('click', async function() {
+      const status = button.parentElement.querySelector('.koki-copy-status');
+      try {
+        await navigator.clipboard.writeText('aadhzz@hanmail.net');
+        status.textContent = 'Copied!';
+      } catch (error) {
+        status.textContent = 'Please copy manually: aadhzz@hanmail.net';
+      }
+    });
+  });
+</script>
 </body>
 </html>

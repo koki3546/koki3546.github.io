@@ -349,7 +349,7 @@ content="Explore the KOKI roadmap: completed Base Mainnet token deployment, Unis
         <li>Deployed the KOKI ERC-20 token on Base Mainnet</li>
         <li>Established the official KOKI website</li>
         <li>Created the official KOKI X account</li>
-        <li>Completed Season One of the KOKI Chronicles — 12 chapters</li>
+        <li>Completed three seasons of the KOKI Chronicles — 36 chapters</li>
         <li>
           Published the official token contract:
           <a href="https://basescan.org/token/0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6"
@@ -400,7 +400,7 @@ content="Explore the KOKI roadmap: completed Base Mainnet token deployment, Unis
 
       <p>
         The initial liquidity was very small.
-        Liquidity provider tokens were not locked.
+        The initial LP position was locked through PinkLock V2 on November 26, 2026, until November 26, 2027. New LP tokens are not covered by this lock.
         These milestones confirm deployment,
         not a guarantee of continuous trading,
         security, or market liquidity.
@@ -431,8 +431,8 @@ content="Explore the KOKI roadmap: completed Base Mainnet token deployment, Unis
       <ul>
         <li>Continue maintaining and updating the official website</li>
         <li>Develop and publish a detailed token allocation and distribution plan</li>
-        <li>Evaluate liquidity management, potential locks, and disclosure practices</li>
-        <li>Expand community engagement through the official X account</li>
+        <li>Maintain liquidity disclosures and monitor the existing PinkLock position</li>
+        <li>Expand community engagement through the official X account and the published Zealy Treasure Hunt</li>
         <li>Review security information and consider independent contract auditing</li>
         <li>
           Follow up on the Blockaid impersonation warning review
@@ -468,7 +468,7 @@ content="Explore the KOKI roadmap: completed Base Mainnet token deployment, Unis
       </p>
 
       <ul>
-        <li>Begin Season Two of the KOKI Chronicles</li>
+        <li>Explore future seasons of the KOKI Chronicles</li>
         <li>Continue publishing original KOKI stories and artwork</li>
         <li>Explore community participation in future story development</li>
         <li>Evaluate eligibility for CoinGecko and CoinMarketCap token information pages</li>
@@ -529,7 +529,7 @@ content="Explore the KOKI roadmap: completed Base Mainnet token deployment, Unis
 
     <p>
       KOKI is an early-stage meme token.
-      Initial liquidity was small and not locked.
+      Initial liquidity was small. The initial LP position was locked through PinkLock V2 on November 26, 2026, until November 26, 2027. New LP tokens are not covered by this lock.
       Token ownership was highly concentrated
       in the creator's wallet at launch.
       No independent security audit has been completed.
@@ -568,10 +568,10 @@ content="Explore the KOKI roadmap: completed Base Mainnet token deployment, Unis
     </a>
 
     <a class="roadmap-button secondary"
-       href="https://x.com/koki3546"
+       href="https://x.com/KokiAdventures"
        target="_blank"
        rel="noopener noreferrer">
-      Follow @koki3546 ↗
+      Follow @KokiAdventures ↗
     </a>
 
   </div>
@@ -590,9 +590,23 @@ content="Explore the KOKI roadmap: completed Base Mainnet token deployment, Unis
     <a href="community.html">Community</a>
     ·
     <a href="mailto:aadhzz@hanmail.net">Contact</a>
+    <span class="koki-email-fallback"><span>aadhzz@hanmail.net</span> <button type="button" class="koki-copy-email">Copy email</button> <span class="koki-copy-status" role="status" aria-live="polite"></span></span>
   </p>
 
 </footer>
 
+<script>
+  document.querySelectorAll('.koki-copy-email').forEach(function(button) {
+    button.addEventListener('click', async function() {
+      const status = button.parentElement.querySelector('.koki-copy-status');
+      try {
+        await navigator.clipboard.writeText('aadhzz@hanmail.net');
+        status.textContent = 'Copied!';
+      } catch (error) {
+        status.textContent = 'Please copy manually: aadhzz@hanmail.net';
+      }
+    });
+  });
+</script>
 </body>
 </html>
