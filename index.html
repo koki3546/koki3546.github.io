@@ -6,647 +6,554 @@
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLV8VJ8P9J"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PLV8VJ8P9J');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-PLV8VJ8P9J');
 </script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="KOKI ($KOKI) is a story-driven meme token on Base. Explore 3 seasons and 36 chapters of the KOKI Chronicles and join the KOKI Treasure Hunt.">
-
+<meta name="description" content="KOKI ($KOKI) is a story-driven meme token on Base. Explore 3 seasons and 36 chapters of the KOKI Chronicles and join the KOKI Treasure Hunt.">
 <title>KOKI ($KOKI) | The Pirate Elephant on Base</title>
 
 <style>
 :root {
-  --bg: #0c0d12;
-  --panel: #171920;
-  --gold: #e8b957;
-  --muted: #b4b5bd;
-  --border: #574322;
+  --bg:#0c0d12;
+  --panel:#171920;
+  --gold:#e8b957;
+  --muted:#b4b5bd;
+  --border:#574322;
 }
 
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
+* {box-sizing:border-box;}
+html {scroll-behavior:smooth;}
 body {
-  margin: 0;
-  background: var(--bg);
-  color: #f5f3ee;
-  font-family: Arial, sans-serif;
-  line-height: 1.7;
+  margin:0;
+  background:var(--bg);
+  color:#f5f3ee;
+  font-family:Arial,sans-serif;
+  line-height:1.7;
 }
-
-a { text-decoration: none; }
+a {text-decoration:none;}
 
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  padding: 19px;
-  background: rgba(17,18,24,.97);
-  border-bottom: 1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:25px;
+  padding:19px;
+  background:rgba(17,18,24,.97);
+  border-bottom:1px solid var(--border);
 }
-
 nav a {
-  color: var(--gold);
-  font-weight: bold;
-  font-size: 14px;
+  color:var(--gold);
+  font-weight:bold;
+  font-size:14px;
+}
+nav a:hover {color:white;}
+nav .hunt-link {color:#ffdc91;}
+
+/* CINEMATIC VIDEO */
+
+.koki-film {
+  position:relative;
+  width:100%;
+  background:#050609;
+  overflow:hidden;
+  border-bottom:1px solid var(--border);
+}
+.koki-film video {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:7/4;
+  object-fit:contain;
+}
+.film-controls {
+  position:absolute;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.film-controls button {
+  background:rgba(0,0,0,.75);
+  border:1px solid var(--gold);
+  border-radius:6px;
+  color:var(--gold);
+  padding:10px 16px;
+  font-size:12px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.film-controls button:hover {
+  background:var(--gold);
+  color:#111;
+}
+.film-controls button:focus-visible {
+  outline:2px solid white;
+  outline-offset:3px;
 }
 
-nav a:hover { color: white; }
-
-nav .hunt-link {
-  color: #ffdc91;
-}
+/* HERO */
 
 .hero {
-  position: relative;
-  overflow: hidden;
-  min-height: 690px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 70px 20px 85px;
-  background:
-    radial-gradient(ellipse at 50% 35%,
-      #49351b 0%, #1b1714 40%, #0c0d12 80%);
+  position:relative;
+  overflow:hidden;
+  min-height:690px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px 85px;
+  background:radial-gradient(ellipse at 50% 35%,#49351b 0%,#1b1714 40%,#0c0d12 80%);
 }
-
-.hero-content {
-  max-width: 900px;
-  width: 100%;
-}
-
+.hero-content {max-width:900px;width:100%;}
 .logo {
-  display: block;
-  width: min(270px, 65vw);
-  height: auto;
-  margin: 0 auto 15px;
-  filter: drop-shadow(0 0 35px rgba(232,185,87,.22));
+  display:block;
+  width:min(270px,65vw);
+  height:auto;
+  margin:0 auto 15px;
+  filter:drop-shadow(0 0 35px rgba(232,185,87,.22));
 }
-
 .eyebrow {
-  color: var(--gold);
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: bold;
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-weight:bold;
 }
-
 h1 {
-  color: var(--gold);
-  font-size: clamp(64px, 12vw, 110px);
-  letter-spacing: 8px;
-  line-height: 1.1;
-  margin: 10px 0;
+  color:var(--gold);
+  font-size:clamp(64px,12vw,110px);
+  letter-spacing:8px;
+  line-height:1.1;
+  margin:10px 0;
 }
-
 .hero h2 {
-  font-size: clamp(22px, 4vw, 35px);
-  margin: 15px 0;
+  font-size:clamp(22px,4vw,35px);
+  margin:15px 0;
 }
-
 .hero-description {
-  color: var(--muted);
-  font-size: 17px;
-  max-width: 680px;
-  margin: 15px auto;
+  color:var(--muted);
+  font-size:17px;
+  max-width:680px;
+  margin:15px auto;
 }
-
 .token-label {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 7px 17px;
-  border: 1px solid var(--gold);
-  border-radius: 30px;
-  color: var(--gold);
-  font-size: 13px;
-  font-weight: bold;
+  display:inline-block;
+  margin-top:15px;
+  padding:7px 17px;
+  border:1px solid var(--gold);
+  border-radius:30px;
+  color:var(--gold);
+  font-size:13px;
+  font-weight:bold;
 }
-
 .live-label {
-  display: inline-block;
-  margin-top: 14px;
-  padding: 7px 15px;
-  border: 1px solid #567c5c;
-  border-radius: 30px;
-  color: #b8e6bd;
-  background: rgba(38,83,48,.18);
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
+  display:inline-block;
+  margin-top:14px;
+  padding:7px 15px;
+  border:1px solid #567c5c;
+  border-radius:30px;
+  color:#b8e6bd;
+  background:rgba(38,83,48,.18);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:1px;
 }
-
 .actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 28px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
 }
-
 .btn {
-  display: inline-block;
-  padding: 14px 25px;
-  border-radius: 7px;
-  font-weight: bold;
-  transition: transform .2s, background .2s;
+  display:inline-block;
+  padding:14px 25px;
+  border-radius:7px;
+  font-weight:bold;
+  transition:transform .2s,background .2s;
 }
-
-.btn:hover { transform: translateY(-3px); }
-
-.btn-primary {
-  background: var(--gold);
-  color: #121212;
-}
-
-.btn-secondary {
-  color: var(--gold);
-  border: 1px solid var(--gold);
-}
-
-.btn-outline {
-  color: #f5f3ee;
-  border: 1px solid #79737a;
-}
+.btn:hover {transform:translateY(-3px);}
+.btn-primary {background:var(--gold);color:#121212;}
+.btn-secondary {color:var(--gold);border:1px solid var(--gold);}
+.btn-outline {color:#f5f3ee;border:1px solid #79737a;}
 
 .contract-box {
-  max-width: 690px;
-  margin: 35px auto 0;
-  padding: 22px;
-  background: rgba(12,13,18,.8);
-  border: 1px solid #70532a;
-  border-radius: 12px;
+  max-width:690px;
+  margin:35px auto 0;
+  padding:22px;
+  background:rgba(12,13,18,.8);
+  border:1px solid #70532a;
+  border-radius:12px;
 }
-
 .contract-title {
-  color: var(--gold);
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  color:var(--gold);
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:10px;
 }
-
 .contract-address {
-  color: #e9e9ed;
-  font-family: monospace;
-  font-size: 13px;
-  overflow-wrap: anywhere;
-  margin-bottom: 15px;
+  color:#e9e9ed;
+  font-family:monospace;
+  font-size:13px;
+  overflow-wrap:anywhere;
+  margin-bottom:15px;
 }
-
 .copy-btn {
-  background: var(--gold);
-  color: #111;
-  border: 0;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-weight: bold;
-  cursor: pointer;
+  background:var(--gold);
+  color:#111;
+  border:0;
+  border-radius:6px;
+  padding:10px 20px;
+  font-weight:bold;
+  cursor:pointer;
 }
-
-.copy-btn:hover { background: #ffd780; }
-
+.copy-btn:hover {background:#ffd780;}
 .copy-status {
-  color: #c4e7c7;
-  font-size: 12px;
-  margin-top: 8px;
-  min-height: 18px;
+  color:#c4e7c7;
+  font-size:12px;
+  margin-top:8px;
+  min-height:18px;
 }
 
 .container {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 80px 24px;
+  max-width:1120px;
+  margin:0 auto;
+  padding:80px 24px;
 }
-
 .section-title {
-  color: var(--gold);
-  font-size: clamp(28px, 5vw, 39px);
-  text-align: center;
-  margin: 0 0 15px;
+  color:var(--gold);
+  font-size:clamp(28px,5vw,39px);
+  text-align:center;
+  margin:0 0 15px;
 }
-
 .section-intro {
-  max-width: 720px;
-  margin: 0 auto 45px;
-  color: var(--muted);
-  text-align: center;
+  max-width:720px;
+  margin:0 auto 45px;
+  color:var(--muted);
+  text-align:center;
 }
-
 .stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 35px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:35px;
 }
-
 .stat {
-  text-align: center;
-  padding: 30px 18px;
-  background: var(--panel);
-  border: 1px solid #403522;
-  border-radius: 12px;
+  text-align:center;
+  padding:30px 18px;
+  background:var(--panel);
+  border:1px solid #403522;
+  border-radius:12px;
 }
-
 .stat strong {
-  display: block;
-  color: var(--gold);
-  font-size: 27px;
-  margin-bottom: 7px;
+  display:block;
+  color:var(--gold);
+  font-size:27px;
+  margin-bottom:7px;
 }
-
-.stat span {
-  color: var(--muted);
-  font-size: 14px;
-}
-
+.stat span {color:var(--muted);font-size:14px;}
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
-
 .card {
-  background: var(--panel);
-  border: 1px solid #3d3527;
-  border-radius: 15px;
-  padding: 35px 28px;
-  transition: transform .2s, border-color .2s;
+  background:var(--panel);
+  border:1px solid #3d3527;
+  border-radius:15px;
+  padding:35px 28px;
+  transition:transform .2s,border-color .2s;
 }
-
 .card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold);
+  transform:translateY(-6px);
+  border-color:var(--gold);
 }
-
-.card .symbol { font-size: 35px; }
-
-.card h3 {
-  color: var(--gold);
-  font-size: 22px;
-}
-
-.card p {
-  color: var(--muted);
-  min-height: 95px;
-}
-
-.card a {
-  color: var(--gold);
-  font-weight: bold;
-}
+.card .symbol {font-size:35px;}
+.card h3 {color:var(--gold);font-size:22px;}
+.card p {color:var(--muted);min-height:95px;}
+.card a {color:var(--gold);font-weight:bold;}
 
 /* TREASURE HUNT */
 
 .treasure-section {
-  padding: 65px 24px;
-  scroll-margin-top: 110px;
-  background:
-    radial-gradient(ellipse at top,
-      #38291a 0%, #19161a 48%, #0c0d12 100%);
-  border-top: 1px solid #806033;
-  border-bottom: 1px solid #806033;
+  padding:65px 24px;
+  scroll-margin-top:110px;
+  background:radial-gradient(ellipse at top,#38291a 0%,#19161a 48%,#0c0d12 100%);
+  border-top:1px solid #806033;
+  border-bottom:1px solid #806033;
 }
-
 .treasure-box {
-  max-width: 1070px;
-  margin: 0 auto;
-  padding: 50px 35px;
-  border: 1px solid #9c763a;
-  border-radius: 20px;
-  text-align: center;
-  background: rgba(12,13,18,.76);
-  box-shadow: 0 10px 50px rgba(0,0,0,.3);
+  max-width:1070px;
+  margin:0 auto;
+  padding:50px 35px;
+  border:1px solid #9c763a;
+  border-radius:20px;
+  text-align:center;
+  background:rgba(12,13,18,.76);
+  box-shadow:0 10px 50px rgba(0,0,0,.3);
 }
-
 .treasure-tag {
-  display: inline-block;
-  padding: 7px 18px;
-  color: #c6e8ca;
-  border: 1px solid #567c5c;
-  border-radius: 30px;
-  background: rgba(38,83,48,.18);
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  display:inline-block;
+  padding:7px 18px;
+  color:#c6e8ca;
+  border:1px solid #567c5c;
+  border-radius:30px;
+  background:rgba(38,83,48,.18);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:2px;
 }
-
-.treasure-symbol {
-  font-size: 60px;
-  margin-top: 18px;
-}
-
+.treasure-symbol {font-size:60px;margin-top:18px;}
 .treasure-title {
-  color: var(--gold);
-  font-size: clamp(30px, 5vw, 48px);
-  line-height: 1.2;
-  letter-spacing: 2px;
-  margin: 12px 0;
+  color:var(--gold);
+  font-size:clamp(30px,5vw,48px);
+  line-height:1.2;
+  letter-spacing:2px;
+  margin:12px 0;
 }
-
 .treasure-subtitle {
-  color: #f5f3ee;
-  font-size: 21px;
-  margin: 10px 0 20px;
+  color:#f5f3ee;
+  font-size:21px;
+  margin:10px 0 20px;
 }
-
 .treasure-description {
-  max-width: 680px;
-  margin: 15px auto;
-  color: var(--muted);
+  max-width:680px;
+  margin:15px auto;
+  color:var(--muted);
 }
-
 .reward-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 850px;
-  margin: 35px auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  max-width:850px;
+  margin:35px auto;
 }
-
 .reward-item {
-  padding: 25px 12px;
-  border: 1px solid #574322;
-  background: #171920;
-  border-radius: 12px;
+  padding:25px 12px;
+  border:1px solid #574322;
+  background:#171920;
+  border-radius:12px;
 }
-
 .reward-item strong {
-  display: block;
-  color: var(--gold);
-  font-size: clamp(20px, 3vw, 29px);
+  display:block;
+  color:var(--gold);
+  font-size:clamp(20px,3vw,29px);
 }
-
-.reward-item span {
-  color: var(--muted);
-  font-size: 13px;
-}
-
+.reward-item span {color:var(--muted);font-size:13px;}
 .hunt-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  max-width: 850px;
-  margin: 35px auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  max-width:850px;
+  margin:35px auto;
 }
-
 .hunt-step {
-  padding: 22px 15px;
-  background: rgba(255,255,255,.025);
-  border: 1px solid #403522;
-  border-radius: 12px;
+  padding:22px 15px;
+  background:rgba(255,255,255,.025);
+  border:1px solid #403522;
+  border-radius:12px;
 }
-
 .step-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  margin: 0 auto 14px;
-  background: var(--gold);
-  color: #121212;
-  border-radius: 50%;
-  font-weight: bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  margin:0 auto 14px;
+  background:var(--gold);
+  color:#121212;
+  border-radius:50%;
+  font-weight:bold;
 }
-
 .hunt-step h3 {
-  color: var(--gold);
-  margin: 8px 0;
-  font-size: 18px;
+  color:var(--gold);
+  margin:8px 0;
+  font-size:18px;
 }
-
 .hunt-step p {
-  color: var(--muted);
-  font-size: 14px;
-  margin-bottom: 0;
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:0;
 }
-
 .hunt-button {
-  display: inline-block;
-  background: linear-gradient(135deg,#f8d785,#c58b35);
-  color: #14110c;
-  padding: 17px 38px;
-  font-size: 17px;
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: 0 5px 25px rgba(232,185,87,.2);
-  transition: transform .2s;
+  display:inline-block;
+  background:linear-gradient(135deg,#f8d785,#c58b35);
+  color:#14110c;
+  padding:17px 38px;
+  font-size:17px;
+  font-weight:bold;
+  border-radius:8px;
+  box-shadow:0 5px 25px rgba(232,185,87,.2);
+  transition:transform .2s;
 }
-
-.hunt-button:hover {
-  transform: translateY(-3px);
-}
-
+.hunt-button:hover {transform:translateY(-3px);}
 .hunt-terms {
-  max-width: 780px;
-  margin: 30px auto 0;
-  padding: 20px;
-  border-top: 1px solid #574322;
-  color: #b4b5bd;
-  font-size: 13px;
+  max-width:780px;
+  margin:30px auto 0;
+  padding:20px;
+  border-top:1px solid #574322;
+  color:#b4b5bd;
+  font-size:13px;
 }
-
 .hunt-motto {
-  color: var(--gold);
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  margin-top: 25px;
+  color:var(--gold);
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:3px;
+  margin-top:25px;
 }
 
 /* LIQUIDITY */
 
 .liquidity-section {
-  background: #111218;
-  border-top: 1px solid #40321e;
-  border-bottom: 1px solid #40321e;
+  background:#111218;
+  border-top:1px solid #40321e;
+  border-bottom:1px solid #40321e;
 }
-
 .liquidity-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 30px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-top:30px;
 }
-
 .liquidity-card {
-  background: var(--panel);
-  border: 1px solid #574322;
-  border-radius: 12px;
-  padding: 28px;
+  background:var(--panel);
+  border:1px solid #574322;
+  border-radius:12px;
+  padding:28px;
 }
-
-.liquidity-card h3 {
-  color: var(--gold);
-  margin-top: 0;
-}
-
-.liquidity-card p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.liquidity-card strong {
-  color: #f5f3ee;
-}
-
-.liquidity-card a {
-  color: var(--gold);
-  font-size: 14px;
-}
-
+.liquidity-card h3 {color:var(--gold);margin-top:0;}
+.liquidity-card p {color:var(--muted);font-size:14px;}
+.liquidity-card strong {color:#f5f3ee;}
+.liquidity-card a {color:var(--gold);font-size:14px;}
 .pool-address {
-  font-family: monospace;
-  font-size: 12px;
-  color: #e8e8ec;
-  overflow-wrap: anywhere;
-  padding: 12px;
-  background: #0c0d12;
-  border-radius: 6px;
-  margin: 15px 0;
+  font-family:monospace;
+  font-size:12px;
+  color:#e8e8ec;
+  overflow-wrap:anywhere;
+  padding:12px;
+  background:#0c0d12;
+  border-radius:6px;
+  margin:15px 0;
 }
-
 .lock-panel {
-  margin-top: 25px;
-  padding: 28px;
-  border: 1px solid #567c5c;
-  border-radius: 12px;
-  background: rgba(38,83,48,.12);
+  margin-top:25px;
+  padding:28px;
+  border:1px solid #567c5c;
+  border-radius:12px;
+  background:rgba(38,83,48,.12);
 }
-
 .lock-panel h3 {
-  color: #b8e6bd;
-  margin-top: 0;
-  font-size: 23px;
+  color:#b8e6bd;
+  margin-top:0;
+  font-size:23px;
 }
-
-.lock-panel p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.lock-panel strong {
-  color: #e2f2e3;
-}
-
-.lock-panel a {
-  color: #b8e6bd;
-}
-
+.lock-panel p {color:var(--muted);font-size:14px;}
+.lock-panel strong {color:#e2f2e3;}
+.lock-panel a {color:#b8e6bd;}
 .info-note {
-  max-width: 800px;
-  margin: 30px auto 0;
-  padding: 20px 24px;
-  border: 1px solid #70532a;
-  border-radius: 10px;
-  background: rgba(232,185,87,.04);
-  color: #c7c4bd;
-  font-size: 13px;
+  max-width:800px;
+  margin:30px auto 0;
+  padding:20px 24px;
+  border:1px solid #70532a;
+  border-radius:10px;
+  background:rgba(232,185,87,.04);
+  color:#c7c4bd;
+  font-size:13px;
 }
-
-.info-note strong {
-  color: var(--gold);
-}
-
-.info-note a {
-  color: var(--gold);
-}
+.info-note strong,.info-note a {color:var(--gold);}
 
 .banner {
-  text-align: center;
-  padding: 75px 24px;
-  background: #17171c;
-  border-top: 1px solid #40321e;
-  border-bottom: 1px solid #40321e;
+  text-align:center;
+  padding:75px 24px;
+  background:#17171c;
+  border-top:1px solid #40321e;
+  border-bottom:1px solid #40321e;
 }
-
-.banner h2 {
-  color: var(--gold);
-  font-size: 32px;
-}
-
-.banner p { color: var(--muted); }
-
+.banner h2 {color:var(--gold);font-size:32px;}
+.banner p {color:var(--muted);}
 .contact-section {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 75px 24px;
+  text-align:center;
+  max-width:800px;
+  margin:0 auto;
+  padding:75px 24px;
 }
-
-.contact-section h2 {
-  color: var(--gold);
-  font-size: 32px;
-}
-
-.contact-section p { color: var(--muted); }
-
+.contact-section h2 {color:var(--gold);font-size:32px;}
+.contact-section p {color:var(--muted);}
 .contact-email {
-  display: block;
-  color: var(--gold);
-  margin-top: 20px;
-  overflow-wrap: anywhere;
+  display:block;
+  color:var(--gold);
+  margin-top:20px;
+  overflow-wrap:anywhere;
 }
-
+.koki-email-fallback {
+  display:inline-flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:.5rem;
+  margin:.5rem;
+  overflow-wrap:anywhere;
+}
+.koki-copy-email {
+  font:inherit;
+  font-size:.85rem;
+  color:#e8b957;
+  background:#171920;
+  border:1px solid #e8b957;
+  border-radius:6px;
+  padding:.35rem .65rem;
+  cursor:pointer;
+}
+.koki-copy-email:focus-visible {
+  outline:2px solid #fff;
+  outline-offset:2px;
+}
 footer {
-  text-align: center;
-  padding: 35px 20px;
-  border-top: 1px solid #40321e;
-  color: #93939c;
-  font-size: 13px;
+  text-align:center;
+  padding:35px 20px;
+  border-top:1px solid #40321e;
+  color:#93939c;
+  font-size:13px;
 }
-
-footer a { color: var(--gold); }
-
+footer a {color:var(--gold);}
 .disclaimer {
-  max-width: 760px;
-  margin: 20px auto 0;
-  font-size: 12px;
-  color: #9999a3;
+  max-width:760px;
+  margin:20px auto 0;
+  font-size:12px;
+  color:#9999a3;
 }
 
-@media (max-width: 750px) {
-  nav { gap: 13px; padding: 15px 10px; }
-  nav a { font-size: 12px; }
+/* MOBILE */
 
-  .hero {
-    min-height: 0;
-    padding: 60px 20px;
+@media(max-width:750px) {
+  nav {gap:13px;padding:15px 10px;}
+  nav a {font-size:12px;}
+  .hero {min-height:0;padding:60px 20px;}
+  .cards,.stats,.liquidity-grid,.reward-grid,.hunt-steps {
+    grid-template-columns:1fr;
   }
-
-  .cards, .stats, .liquidity-grid,
-  .reward-grid, .hunt-steps {
-    grid-template-columns: 1fr;
-  }
-
-  .card p { min-height: 0; }
-  .container { padding: 65px 20px; }
-  h1 { letter-spacing: 4px; }
-  .contract-address { font-size: 11px; }
-  .btn { width: 100%; max-width: 350px; }
-  .treasure-section { padding: 40px 15px; }
-  .treasure-box { padding: 30px 18px; }
-  .treasure-title { letter-spacing: 0; }
-  .hunt-button { width: 100%; padding: 15px; }
+  .card p {min-height:0;}
+  .container {padding:65px 20px;}
+  h1 {letter-spacing:4px;}
+  .contract-address {font-size:11px;}
+  .btn {width:100%;max-width:350px;}
+  .treasure-section {padding:40px 15px;}
+  .treasure-box {padding:30px 18px;}
+  .treasure-title {letter-spacing:0;}
+  .hunt-button {width:100%;padding:15px;}
+  .film-controls {right:10px;bottom:10px;gap:6px;}
+  .film-controls button {font-size:10px;padding:7px 10px;}
 }
-</style>
-<style>
-
-.koki-email-fallback { display: inline-flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .5rem; margin: .5rem; overflow-wrap: anywhere; }
-.koki-copy-email { font: inherit; font-size: .85rem; color: #e8b957; background: #171920; border: 1px solid #e8b957; border-radius: 6px; padding: .35rem .65rem; cursor: pointer; }
-.koki-copy-email:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-
 </style>
 </head>
 
@@ -661,6 +568,30 @@ footer a { color: var(--gold); }
   <a href="faq.html">FAQ</a>
   <a class="hunt-link" href="#treasure-hunt">🏴‍☠️ Treasure Hunt</a>
 </nav>
+
+<!-- KOKI CINEMATIC INTRO -->
+
+<section class="koki-film" aria-label="KOKI cinematic introduction">
+
+  <video id="kokiFilm"
+         autoplay
+         muted
+         loop
+         playsinline
+         preload="metadata"
+         aria-label="KOKI sailing through an ocean storm">
+    <source src="koki-hero.mp4" type="video/mp4">
+    Your browser does not support video playback.
+  </video>
+
+  <div class="film-controls">
+    <button type="button" id="filmPlay">PAUSE</button>
+    <button type="button" id="filmSound" aria-pressed="false">🔊 SOUND ON</button>
+  </div>
+
+</section>
+
+<!-- HERO -->
 
 <header class="hero">
   <div class="hero-content">
@@ -696,18 +627,15 @@ footer a { color: var(--gold); }
 
     <div class="actions">
 
-      <a class="btn btn-primary"
-         href="#treasure-hunt">
+      <a class="btn btn-primary" href="#treasure-hunt">
         🏴‍☠️ Join the Treasure Hunt
       </a>
 
-      <a class="btn btn-secondary"
-         href="story.html">
+      <a class="btn btn-secondary" href="story.html">
         Discover the Story
       </a>
 
-      <a class="btn btn-outline"
-         href="tokenomics.html">
+      <a class="btn btn-outline" href="tokenomics.html">
         Explore $KOKI →
       </a>
 
@@ -847,8 +775,7 @@ footer a { color: var(--gold); }
         🗺️ START THE TREASURE HUNT ↗
       </a>
 
-      <a class="btn btn-secondary"
-         href="chapter1.html">
+      <a class="btn btn-secondary" href="chapter1.html">
         Read Chapter One →
       </a>
 
@@ -1028,9 +955,7 @@ footer a { color: var(--gold); }
         were locked through PinkLock V2 on Base.
       </p>
 
-      <p>
-        <strong>Lock ID:</strong> 1054509
-      </p>
+      <p><strong>Lock ID:</strong> 1054509</p>
 
       <p>
         <strong>Locked LP tokens:</strong>
@@ -1095,8 +1020,7 @@ footer a { color: var(--gold); }
         Open Uniswap Trading ↗
       </a>
 
-      <a class="btn btn-secondary"
-         href="tokenomics.html">
+      <a class="btn btn-secondary" href="tokenomics.html">
         Full Tokenomics &amp; Risks →
       </a>
 
@@ -1249,13 +1173,11 @@ footer a { color: var(--gold); }
 
   <div class="actions">
 
-    <a class="btn btn-primary"
-       href="story.html">
+    <a class="btn btn-primary" href="story.html">
       Explore All 36 Chapters →
     </a>
 
-    <a class="btn btn-secondary"
-       href="#treasure-hunt">
+    <a class="btn btn-secondary" href="#treasure-hunt">
       Join the Treasure Hunt →
     </a>
 
@@ -1301,18 +1223,24 @@ footer a { color: var(--gold); }
       ✉ Contact KOKI
     </a>
 
-    <a class="btn btn-outline"
-       href="community.html">
+    <a class="btn btn-outline" href="community.html">
       Community →
     </a>
 
   </div>
 
-  <a class="contact-email"
-     href="mailto:aadhzz@hanmail.net">
+  <a class="contact-email" href="mailto:aadhzz@hanmail.net">
     aadhzz@hanmail.net
   </a>
-    <span class="koki-email-fallback"><button type="button" class="koki-copy-email">Copy email</button> <span class="koki-copy-status" role="status" aria-live="polite"></span></span>
+
+  <span class="koki-email-fallback">
+    <button type="button" class="koki-copy-email">
+      Copy email
+    </button>
+    <span class="koki-copy-status"
+          role="status"
+          aria-live="polite"></span>
+  </span>
 
 </section>
 
@@ -1364,16 +1292,23 @@ footer a { color: var(--gold); }
 </footer>
 
 <script>
+
+/* COPY CONTRACT ADDRESS */
+
 const KOKI_CONTRACT =
   "0xDd7b1b38eF421C4Cf19195f59D987e99f5d055c6";
 
 async function copyContract() {
+
   const status = document.getElementById("copyStatus");
 
   try {
+
     await navigator.clipboard.writeText(KOKI_CONTRACT);
     status.textContent = "✓ Contract address copied!";
+
   } catch (error) {
+
     const selection = window.getSelection();
     const range = document.createRange();
     const address = document.getElementById("contractAddress");
@@ -1387,6 +1322,8 @@ async function copyContract() {
   }
 }
 
+/* TREASURE HUNT ANALYTICS */
+
 function trackTreasureHunt() {
   if (typeof gtag === "function") {
     gtag("event", "treasure_hunt_click", {
@@ -1395,20 +1332,87 @@ function trackTreasureHunt() {
     });
   }
 }
+
+/* COPY EMAIL */
+
+document.querySelectorAll('.koki-copy-email').forEach(function(button) {
+
+  button.addEventListener('click', async function() {
+
+    const status =
+      button.parentElement.querySelector('.koki-copy-status');
+
+    try {
+
+      await navigator.clipboard.writeText('aadhzz@hanmail.net');
+      status.textContent = 'Copied!';
+
+    } catch (error) {
+
+      status.textContent =
+        'Please copy manually: aadhzz@hanmail.net';
+
+    }
+
+  });
+
+});
+
+/* CINEMATIC VIDEO CONTROLS */
+
+const video = document.getElementById('kokiFilm');
+const playButton = document.getElementById('filmPlay');
+const soundButton = document.getElementById('filmSound');
+
+function syncVideoControls() {
+
+  playButton.textContent =
+    video.paused ? 'PLAY' : 'PAUSE';
+
+  soundButton.textContent =
+    video.muted ? '🔊 SOUND ON' : '🔇 SOUND OFF';
+
+  soundButton.setAttribute(
+    'aria-pressed',
+    String(!video.muted)
+  );
+
+}
+
+playButton.addEventListener('click', function() {
+
+  if (video.paused) {
+    video.play().catch(syncVideoControls);
+  } else {
+    video.pause();
+  }
+
+});
+
+soundButton.addEventListener('click', function() {
+
+  video.muted = !video.muted;
+
+  if (!video.muted && video.paused) {
+    video.play().catch(syncVideoControls);
+  }
+
+  syncVideoControls();
+
+});
+
+['play','pause','volumechange'].forEach(function(event) {
+  video.addEventListener(event, syncVideoControls);
+});
+
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  video.autoplay = false;
+  video.pause();
+}
+
+syncVideoControls();
+
 </script>
 
-<script>
-  document.querySelectorAll('.koki-copy-email').forEach(function(button) {
-    button.addEventListener('click', async function() {
-      const status = button.parentElement.querySelector('.koki-copy-status');
-      try {
-        await navigator.clipboard.writeText('aadhzz@hanmail.net');
-        status.textContent = 'Copied!';
-      } catch (error) {
-        status.textContent = 'Please copy manually: aadhzz@hanmail.net';
-      }
-    });
-  });
-</script>
 </body>
 </html>
